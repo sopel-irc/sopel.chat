@@ -31,10 +31,12 @@ repositories, Arch User Repository, the
 
 * Fully documented API for writing new modules
 * SSL Support
+* [IRCv3](http://ircv3.org) support, with SASL authentication
 * Easy quickstart wizard
 * Dynamic topic support using topic masks
 * Numerous modules: meetbot, YouTube, Reddit, movie information, and more
-* Support for remembering timezone and weather location for users
+* Support for remembering timezone, weather location, and other information for
+users
 * Presistant user and channel settings database using MySQL or SQLite
 * Ability to easily run as a daemon
 * Safe asynchronous inter-module communication
