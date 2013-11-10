@@ -1,4 +1,8 @@
-name: Willie - The Python IRC Bot
+name: Willie
+tagline: The Python IRC Bot
+subtitle: A project of Nerdfighteria Network
+repo: https://github.com/embolalia/willie
+
 markdown: redcarpet
 pygments: true
 redcarpet:
