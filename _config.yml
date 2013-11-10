@@ -1,3 +1,5 @@
 name: Willie - The Python IRC Bot
 markdown: redcarpet
 pygments: true
+redcarpet:
+    extensions: [tables]
