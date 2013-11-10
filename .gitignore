@@ -1,2 +1,4 @@
 *.sw*
 _site/*
+commands.md
+module_config.md
