@@ -75,3 +75,33 @@ a {
     font-family: 'McLaren', cursive;
     font-size: 20px;
 }
+
+
+.content table {
+    border-width: 1px;
+    border-spacing: 0px;
+    border-style: solid;
+    border-color: gray;
+    border-collapse: collapse;
+}
+.content th {
+    border-width: 2px;
+    padding: 5px;
+    border-style: solid;
+    border-color: gray;
+    background-color: #CAD4D4;
+    -moz-border-radius: ;
+}
+.content td {
+    border-width: 2px;
+    padding: 5px;
+    border-style: solid;
+    border-color: gray;
+    -moz-border-radius: ;
+}
+.content tr:nth-child(odd) {
+    background-color: #E0EBEB;
+}
+.content tr:nth-child(even) {
+    background-color: #D3DEDE;
+}
