@@ -105,3 +105,9 @@ a {
 .content tr:nth-child(even) {
     background-color: #D3DEDE;
 }
+
+.creativecommons {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+}
