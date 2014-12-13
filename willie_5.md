@@ -67,3 +67,10 @@ years ago, has been removed, and some other undocumented behaviors may have
 changed.
 
 [intents]: http://ircv3.atheme.org/specification/message-intents-3.2
+
+## Logging changes
+
+Willie 5 will switch to using Python's built in `logging` for logging. The
+`debug()` function will be removed. To log messages to the debugging channel
+from a module, `willie.logger.get_logger(__name__)` to get a logger, and then
+use the usual Python logging methods.
