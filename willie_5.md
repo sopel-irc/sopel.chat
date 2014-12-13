@@ -45,3 +45,25 @@ system. SQLAlchemy is highly recommended for this. While we don't currently
 provide SQLAlchemy ORM definitions, if you make some for your own use and they
 prove helpful, we would consider merging them and would greatly appreciate the
 contribution.
+
+## Trigger changes
+
+### CTCP (including /me) handling
+
+In order to create a consistent interface when IRCv3 [intents][intents] are
+enabled, CTCP messages are handled differently. The `'\\x01'` bytes are
+removed, and the command (e.g. `ACTION`) is removed and mapped to the `'intent'` key in
+`trigger.tags`. `trigger.raw` will be unaffected by this change.
+
+### Removal of duplicate and deprecated attributes
+
+3.x-compatible privilege handling (the `ops`, `halfplus`, `isop`, `voices`, and
+`isvoice` attributes), deprecated since 4.1, has been removed. Use
+`bot.privileges` instead. Additionally, `trigger.bytes` has been removed, as it
+is the same thing as `trigger.raw`; use the latter.
+
+Additionally, `trigger.origin`, which had been deprecated in phenny nearly 7
+years ago, has been removed, and some other undocumented behaviors may have
+changed.
+
+[intents]: http://ircv3.atheme.org/specification/message-intents-3.2
