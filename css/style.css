@@ -111,3 +111,7 @@ a.nohighlight:visited {
     text-align: center;
     margin: auto;
 }
+code {
+    border: 1px dotted;
+    border-radius: 0px 1px 0px 1px;
+}
