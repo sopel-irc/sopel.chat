@@ -33,7 +33,7 @@ a {
     font-family: 'McLaren', cursive;
     display: inline-block;
 }
-.nohighlight a, a:hover, a:active, a:visited {
+a.nohighlight:visited {
     color: black;
 }
 .header h2 {
