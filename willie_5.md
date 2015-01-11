@@ -19,8 +19,12 @@ things will be changed because of this.
 
 ### Table migrations
 
-Data will have to be migrated to the new schema. More information on this will
-be provided as the release of 5.0 approaches.
+Data will have to be migrated to the new schema. A script to handle this is
+provided [here][db_script] for all of the included functionality. Note that
+there's no guarantee any custom modules will migrate with that script; you may
+need to migrate them manually.
+
+[db_script]: https://github.com/embolalia/willie/blob/master/contrib/update_db.py
 
 ### Database system support
 
