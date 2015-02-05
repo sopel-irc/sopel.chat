@@ -67,13 +67,39 @@ Willie's source code.
 
 <li class="a">You can file a ticket in our <a
 href="https://github.com/embolalia/willie/issues">GitHub issue tracker</a>, or
-join the developers Embolalia, Tyrope, and elad in #tech on irc.dftba.net (<a
-href="https://chat.dftba.net/?channels=#tech">access via web
-interface</a>).</li>
+join the developers Embolalia, Tyrope, and elad in 
+<a href="irc://irc.dftba.net/#tech">#tech</a> on irc.dftba.net.</li>
+
+<li class="q">Is there somewhere I can go to find modules other people have
+written for Willie?</li>
+
+<li class="a">The closest we have is
+<a href="https://github.com/embolalia/willie-extras">willie-extras</a>. We are
+<a href="https://github.com/embolalia/willie/issues/733">considering</a> some
+options for making something better.</li>
 
 <li class="q">Will Phenny/jenni modules work with Willie?</li>
 
 <li class="a">Probably. There are a small number of features in the older
 versions which are implemented differently in Willie. The vast majority of
 modules should work without problems, though.</li>
+
+<li class="q">Can I use Willie with Docker?</li>
+
+<li class="a">Probably, but there's not much reason to. We only provide support
+for one version of Willie at a time, and it already supports running multiple
+instances side-by-side. If you really need to containerize dependencies,
+virtualenv is a lot easier.</li>
+
+<li class="q">Does Willie work on Google App Engine?</li>
+
+<li class="a">Probably not. App Engine doesn't currently do sqlite, which
+Willie requires for its database.</li>
+
+<li class="q">How do I make Willie give me ops when I enter a channel?</li>
+
+<li class="a">You should use your network's services to do this. If you're on a
+network like EFnet which doesn't have services, you can write a module to make
+Willie do it. Willie will never be as good at it as network services, though,
+so we don't include that functionality in our default set of modules.</li>
 </ul>
