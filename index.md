@@ -68,7 +68,7 @@ Willie's source code.
 <li class="a">You can file a ticket in our <a
 href="https://github.com/embolalia/willie/issues">GitHub issue tracker</a>, or
 join the developers Embolalia, Tyrope, and elad in 
-<a href="irc://irc.dftba.net/#tech">#tech</a> on irc.dftba.net.</li>
+<a href="irc://irc.freenode.net/#willie">#willie</a> on Freenode.</li>
 
 <li class="q">Is there somewhere I can go to find modules other people have
 written for Willie?</li>
