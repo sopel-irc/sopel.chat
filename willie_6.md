@@ -44,3 +44,11 @@ will only affect `config.core`.
 A bunch of stuff is getting moved around and refactored so that we can load
 modules from folders. Unless you're messing with the loading internals in your
 modules, this won't break anything for you.
+
+## Removing ancient rule formats
+
+This really only affects you if you're porting a phenny or jenni module. Those
+bots supported callables with a tuple in the rule attribute. Willie quietly
+accepted this, when you set the attribute directly rather than with a
+decorator, though it was considered deprecated from 3.1. It added confusing
+code with no clear benefit, so we've removed it.
