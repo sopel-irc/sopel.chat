@@ -76,7 +76,8 @@ written for Willie?</li>
 <li class="a">The closest we have is
 <a href="https://github.com/embolalia/willie-extras">willie-extras</a>. We are
 <a href="https://github.com/embolalia/willie/issues/733">considering</a> some
-options for making something better.</li>
+options for making something better. They'll be available in
+<a href="/willie_6.html">Willie 6</a>.</li>
 
 <li class="q">Will Phenny/jenni modules work with Willie?</li>
 
