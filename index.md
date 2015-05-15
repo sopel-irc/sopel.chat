@@ -103,4 +103,15 @@ Willie requires for its database.</li>
 network like EFnet which doesn't have services, you can write a module to make
 Willie do it. Willie will never be as good at it as network services, though,
 so we don't include that functionality in our default set of modules.</li>
+
+<li class="q">Why is Willie saying <code>...</code>?</li>
+
+<li class="a">Willie is built to avoid being spammy as much as possible, so it
+keeps track of the last few things its said. If too many of those last few
+things are the same, it says <code>...</code> a few times instead of repeating
+itself (and then stops trying to say that thing entirely, until its said some
+other things). Usually, this happens because someone is spamming the same
+command over and over, or something is just broken. It doesn't keep the bot
+from saying anything else, and it can say the same thing as often as you want,
+as long as it says some other stuff, too.</li>
 </ul>
