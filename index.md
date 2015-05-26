@@ -50,7 +50,7 @@ he called phenny.
 [Michael Yanovich](https://yanovich.net) improved it, and changed the name to
 [jenni](https://github.com/myano/jenni/).
 
-[Edward Powell](https://embolalia.com) improved it even more, with a lot of
+[Embolalia](https://embolalia.com) improved it even more, with a lot of
 help from [Dimitri Molenaars](http://tyrope.nl/index.php?lang=EN) and
 [Elad Alfassa](http://eladalfassa.com), and renamed it to Willie. This is the
 current and most advanced version of the bot, which is supported by
