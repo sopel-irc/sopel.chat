@@ -97,6 +97,15 @@ virtualenv is a lot easier.</li>
 <li class="a">Probably not. App Engine doesn't currently do sqlite, which
 Willie requires for its database.</li>
 
+<li class="q">Does Willie run on OSX? Windows? PyPy? Jython?</li>
+
+<li class="a">Probably, probably, probably, probably. Willie itself is pure
+Python (though some included modules have dependencies that aren't, like lxml),
+and an effort is made to be as platform-independant as possible. That said,
+most of the development is done on Linux, so some platform-specific bugs may be
+missed. If you do run into a bug, be sure to report it, because otherwise we
+won't know about it.</li>
+
 <li class="q">How do I make Willie give me ops when I enter a channel?</li>
 
 <li class="a">You should use your network's services to do this. If you're on a

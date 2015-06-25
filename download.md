@@ -24,10 +24,13 @@ running `sudo apt-get install python-pip` in a terminal. For OSX and Windows,
 follow PIP's setup instructions
 [here](http://pip.readthedocs.org/en/latest/installing.html).
 
-Once you have pip set up, just do `sudo pip install willie`. **NOTE:** There is
-a [known bug](https://github.com/embolalia/willie/issues/661) with Python 2.7
-installation. To work around it, just run
-`sudo pip install backports.ssl_match_hostname`.
+Once you have pip set up, just do `sudo pip install willie`. If you get an
+error about lxml (or, probably, any other big messy looking error), it's
+beacuse `pip` is having problems installing `lxml`, which some modules depend
+on. You're best off installing `python-lxml` from your package repos and trying
+again. If you can't for some reason (you're using a virtualenv or alternate
+python, you don't have root access, you're on Windows), follow their
+instructions [here](http://lxml.de/installation.html).
 
 ## Manual installation
 The latest version of Willie is available
