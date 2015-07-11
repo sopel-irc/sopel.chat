@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Willie 6.0 Migration
+title: Willie 6.0 Name Change and Migration
 ---
 
-# Willie 6.0 Migration
+# Willie 6.0 Name Change and Migration
 
 Writing Willie modules is cool. But what's cooler is *sharing* them. We want to
 make that easier. With that in mind, we're preparing for Willie 6 to focus on
@@ -16,7 +16,16 @@ be updated with more information as development toward Willie 6 continues.
 Don't worry; this will likely be the last release with breaking changes for a
 while.
 
-An early alpha version is available [here](https://github.com/embolalia/willie/releases/tag/6.0.0a0)
+An early alpha version is available [here](https://github.com/embolalia/willie/releases/tag/6.0.0a1).
+
+## Name change
+
+For a number of reasons, we're changing Willie's name. The tentative new name
+is Sopel; further suggestions can be given
+[here](http://goo.gl/forms/f7AxcbOiTo). This will have a very big impact on
+everyone. Users will need to install the bot using the new package name. Module
+authors will need to import things from the new package name (that is,
+replacing `import willie.module` and the like with `import newname.module`).
 
 ## Login configurations
 
