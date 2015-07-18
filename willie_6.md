@@ -1,18 +1,18 @@
 ---
 layout: default
-title: Willie 6.0 Name Change and Migration
+title: Sopel 6.0 Name Change and Migration
 ---
 
-# Willie 6.0 Name Change and Migration
+# Sopel 6.0 Name Change and Migration
 
-Writing Willie modules is cool. But what's cooler is *sharing* them. We want to
-make that easier. With that in mind, we're preparing for Willie 6 to focus on
+Writing Sopel modules is cool. But what's cooler is *sharing* them. We want to
+make that easier. With that in mind, we're preparing for Sopel 6 to focus on
 enabling that. It will include some new features to make it easier to share and
 enjoy modules.
 
 However, in order to facilitate these changes, we do have to make some breaking
 changes. This page tells you what you need to do to account for them. It will
-be updated with more information as development toward Willie 6 continues.
+be updated with more information as development toward Sopel 6 continues.
 Don't worry; this will likely be the last release with breaking changes for a
 while.
 
@@ -20,26 +20,25 @@ An early alpha version is available [here](https://github.com/embolalia/willie/r
 
 ## Name change
 
-For a number of reasons, we're changing Willie's name. The tentative new name
-is Sopel; further suggestions can be given
-[here](http://goo.gl/forms/f7AxcbOiTo). This will have a very big impact on
-everyone. Users will need to install the bot using the new package name. Module
-authors will need to import things from the new package name (that is,
-replacing `import willie.module` and the like with `import newname.module`).
+For a number of reasons, we're changing Willie's name to Sopel. This will have
+a very big impact on everyone. Users will need to install the bot using the new
+package name. Module authors will need to import things from the new package
+name (that is, replacing `import willie.module` and the like with
+`import sopel.module`).
 
 ## Login configurations
 
 This is the only user-facing breaking change we're planning. In 5.3.0, the
 `auth_password`, `auth_user`, and `auth_method` settings in the config, were
-added, and apply to all the different ways of authenticating that Willie
+added, and apply to all the different ways of authenticating that Sopel
 supports. They will replace the old settings (like `nickserv_password`) which
 will be removed in 6.0.  If you configure with the wizard, you won't notice
 this change; it only really concerns you if you're manually editing the config
 file.
 
-## Reorganization of `willie.tools`
+## Reorganization of `sopel.tools`
 
-A few things have been shifted around in `willie.tools` for 5.3.0, splitting
+A few things have been shifted around in `sopel.tools` for 5.3.0, splitting
 the module up into a few smaller, easier to maintain modules. While they're
 still importable directly from `willie.tools` in 5.3.0, they'll only be
 importable from their new locations in 6.0.

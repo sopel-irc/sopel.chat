@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Willie - The Python IRC Bot
+title: Sopel - The Python IRC Bot
 ---
 
 # Installation
 ## From Linux repositories (Fedora, Arch)
-The easiest way to install Willie is from the package repositories.
+The easiest way to install Sopel is from the package repositories.
 
 For Fedora, just run `sudo yum install willie` in a terminal.
 
-On Arch, Willie is available in the AUR.
+On Arch, Sopel is available in the AUR.
 
 ## From PyPI
-Installing from PyPI is the next best way to install Willie, since it'll handle
+Installing from PyPI is the next best way to install Sopel, since it'll handle
 installing all of the extra stuff you need to run all of the modules properly.
 
-Willie works on both Python 2 and Python 3. If you're planning on using Python
+Sopel works on both Python 2 and Python 3. If you're planning on using Python
 3 with CentOS, you may want to see [this guide](/python3-centos7.html) on
 getting that set up easily.
 
@@ -33,9 +33,9 @@ python, you don't have root access, you're on Windows), follow their
 instructions [here](http://lxml.de/installation.html).
 
 ## Manual installation
-The latest version of Willie is available
+The latest version of Sopel is available
 [here](https://github.com/embolalia/willie/releases/latest). Download it, and
-run `python setup.py install`. You will need to download all of Willie's
+run `python setup.py install`. You will need to download all of Sopel's
 dependencies and install them manually as well. These can be found on the
 [Python Package Index](https://pypi.python.org/pypi). The only one that's
 needed for the bot itself to work is

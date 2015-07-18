@@ -5,7 +5,7 @@ title: Using Python 3 on CentOS 7 (the easy way)
 
 # Using Python 3 on CentOS 7 (the easy way)
 
-Whether you're running Willie, or any other Python application, the best way to
+Whether you're running Sopel, or any other Python application, the best way to
 install Python 3 on CentOS 7 is with [Software Collection Libraries][scl]. Many
 guides will tell you to compile it, but that's much more time consuming, makes
 you mess with your path, and can't be kept up to date with `yum`. SCL is a
@@ -24,17 +24,17 @@ it. If you want to run your shell, do `scl enable python33 -- $SHELL`.
 
 `pip` is not included (outside of `virtualenv`, which *is* included). To
 install it, do `easy_install pip` with the SCL active. Then, with it still
-active, you can `pip install willie` (or whatever other package you want).
+active, you can `pip install sopel` (or whatever other package you want).
 
 ## Using SCL in `systemd` services
 
 If you're already familiar with `systemd`, it should be clear what to do.
 Prepend all the commands in your unit file with
 `/usr/bin/scl enable python33 --`. The `ExecStart` in
-[Willie's service file][service-example], when modified to use SCL, becomes
+[Sopel's service file][service-example], when modified to use SCL, becomes
 this:
 
-    ExecStart=/usr/bin/scl enable python33 -- willie -c /etc/willie.cfg --quiet
+    ExecStart=/usr/bin/scl enable python33 -- sopel -c /etc/sopel.cfg --quiet
 
 ---
 
@@ -49,4 +49,4 @@ it's a good habit.
 
 [scl]: https://www.softwarecollections.org/en/
 [python33-scl]: https://www.softwarecollections.org/en/scls/rhscl/python33/
-[service-example]: https://github.com/embolalia/willie/blob/master/contrib/willie.service#L10
+[service-example]: https://github.com/sople-irc/sopel/blob/master/contrib/sopel.service#L10

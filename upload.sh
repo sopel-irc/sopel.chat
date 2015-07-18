@@ -5,4 +5,4 @@
 USER=${1:-$USER}
 
 jekyll build
-scp -r build/* $USER@willie.dftba.net:/var/www/willie/
+scp -r build/* $USER@sopel.chat:/var/www/sopel/
