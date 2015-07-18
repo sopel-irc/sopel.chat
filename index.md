@@ -37,7 +37,7 @@ repositories, Arch User Repository, the
 * Numerous modules: meetbot, YouTube, Reddit, movie information, and more
 * Support for remembering timezone, weather location, and other information for
 users
-* Presistant user and channel settings database using MySQL or SQLite
+* Persistent user and channel settings database using MySQL or SQLite
 * Ability to easily run as a daemon
 * Safe asynchronous inter-module communication
 * And much, much more
