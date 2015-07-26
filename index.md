@@ -11,12 +11,12 @@ designed to be easy to use, easy to run, and easy to make new features for.
 
 <span class="Sopel">Sopel</span> comes with a ton of ready-made features for
 you to use. It can leave notes for people, give you reminders, check RSS feeds,
-and [much more](https://github.com/embolalia/willie/wiki/Commands).
+and [much more](https://github.com/sopel-irc/sopel/wiki/Commands).
 
 <span class="Sopel">Sopel</span> also comes with a
 [fully-documented](/docs) and
 easy-to-use API, so you can write your own features. There's also an
-[easy tutorial](https://github.com/embolalia/willie/wiki/Willie-tutorial,-Part-1)
+[easy tutorial](https://github.com/sopel-irc/sopel/wiki/Sopel-tutorial,-Part-1)
 you can follow along with, to help you learn.
 
 Developing for Sopel is a great way to familiarize yourself with Python. It's
@@ -24,8 +24,9 @@ easy to start, but there's no limit to the cool things you can do with it.
 
 <span class="Sopel">Sopel</span> is available in the Fedora package
 repositories, Arch User Repository, the
-[Python Package Index](http://pypi.python.org/pypi/willie/), and in a
-[tarball](http://sopel.chat/files/willie-4.0.0.tar.gz).
+[Python Package Index](http://pypi.python.org/pypi/willie/) 
+([6.0 alpha](http://pypi.python.org/pypi/sopel)), and in a
+[tarball](https://github.com/sopel-irc/sopel/releases/latest).
 
 # Features
 
@@ -57,7 +58,7 @@ current and most advanced version of the bot, which is supported by
 Nerdfighteria Network.
 
 A number of other people have helped out along the way, and they can be seen in
-the [CREDITS](https://github.com/embolalia/willie/blob/master/CREDITS) file in
+the [CREDITS](https://github.com/sopel-irc/sopel/blob/master/CREDITS) file in
 Sopel's source code.
 
 # Frequently Asked Questions
@@ -66,18 +67,16 @@ Sopel's source code.
 <li class="q">Where can I report a problem with Sopel?</li>
 
 <li class="a">You can file a ticket in our <a
-href="https://github.com/embolalia/willie/issues">GitHub issue tracker</a>, or
+href="https://github.com/sopel-irc/sopel/issues">GitHub issue tracker</a>, or
 join the developers Embolalia, Tyrope, and elad in 
-<a href="irc://irc.freenode.net/#willie">#willie</a> on Freenode.</li>
+<a href="irc://irc.freenode.net/#sopel">#sopel</a> on Freenode.</li>
 
 <li class="q">Is there somewhere I can go to find modules other people have
 written for Sopel?</li>
 
-<li class="a">The closest we have is
-<a href="https://github.com/embolalia/willie-extras">willie-extras</a>. We are
-<a href="https://github.com/embolalia/willie/issues/733">considering</a> some
-options for making something better. They'll be available in
-<a href="/willie_6.html">Sopel 6</a>.</li>
+<li class="a">Starting in <a href="/willie_6.html">Sopel 6</a>, you'll be able
+to just search PyPI for <pre>sopel_modules</pre>. In the mean time, the closest we have is
+<a href="https://github.com/sopel-irc/sopel-extras">sopel-extras</a>.</li>
 
 <li class="q">Will Phenny/jenni modules work with Sopel?</li>
 

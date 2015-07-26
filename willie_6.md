@@ -16,7 +16,7 @@ be updated with more information as development toward Sopel 6 continues.
 Don't worry; this will likely be the last release with breaking changes for a
 while.
 
-An early alpha version is available [here](https://github.com/embolalia/willie/releases/tag/6.0.0a1).
+An early alpha version is available [here](https://github.com/sopel-irc/sopel/releases/tag/6.0.0a4).
 
 ## Name change
 

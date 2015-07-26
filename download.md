@@ -4,15 +4,8 @@ title: Sopel - The Python IRC Bot
 ---
 
 # Installation
-## From Linux repositories (Fedora, Arch)
-The easiest way to install Sopel is from the package repositories.
-
-For Fedora, just run `sudo yum install willie` in a terminal.
-
-On Arch, Sopel is available in the AUR.
-
 ## From PyPI
-Installing from PyPI is the next best way to install Sopel, since it'll handle
+Installing from PyPI is the best way to install Sopel, since it'll handle
 installing all of the extra stuff you need to run all of the modules properly.
 
 Sopel works on both Python 2 and Python 3. If you're planning on using Python
@@ -24,7 +17,8 @@ running `sudo apt-get install python-pip` in a terminal. For OSX and Windows,
 follow PIP's setup instructions
 [here](http://pip.readthedocs.org/en/latest/installing.html).
 
-Once you have pip set up, just do `sudo pip install willie`. If you get an
+Once you have pip set up, just do `sudo pip install willie` (until 6.0 is
+released, whence it will be `sudo pip install sopel`). If you get an
 error about lxml (or, probably, any other big messy looking error), it's
 beacuse `pip` is having problems installing `lxml`, which some modules depend
 on. You're best off installing `python-lxml` from your package repos and trying
@@ -34,7 +28,7 @@ instructions [here](http://lxml.de/installation.html).
 
 ## Manual installation
 The latest version of Sopel is available
-[here](https://github.com/embolalia/willie/releases/latest). Download it, and
+[here](https://github.com/sopel-irc/sopel/releases/latest). Download it, and
 run `python setup.py install`. You will need to download all of Sopel's
 dependencies and install them manually as well. These can be found on the
 [Python Package Index](https://pypi.python.org/pypi). The only one that's

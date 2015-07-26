@@ -1,7 +1,7 @@
 name: Sopel
 tagline: The Python IRC Bot
 subtitle: A project of Nerdfighteria Network
-repo: https://github.com/embolalia/willie
+repo: https://github.com/sopel-irc/sopel
 
 markdown: redcarpet
 pygments: true
