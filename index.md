@@ -74,7 +74,7 @@ join the developers Embolalia, Tyrope, and elad in
 written for Sopel?</li>
 
 <li class="a">Starting in <a href="/willie_6.html">Sopel 6</a>, you'll be able
-to just search PyPI for <pre>sopel_modules</pre>. In the mean time, the closest we have is
+to just search PyPI for "sopel_modules". In the mean time, the closest we have is
 <a href="https://github.com/sopel-irc/sopel-extras">sopel-extras</a>.</li>
 
 <li class="q">Will Phenny/jenni modules work with Sopel?</li>
