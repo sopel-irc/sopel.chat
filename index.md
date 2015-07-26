@@ -5,13 +5,13 @@ title: Sopel - The Python IRC Bot
 
 # Introduction
 
-<span class="Sopel">Sopel</span> is a simple, lightweight, open source,
-easy-to-use IRC utility bot, written in [Python](http://python.org). It's
-designed to be easy to use, easy to run, and easy to make new features for.
+<span class="Sopel">Sopel</span> is a simple, easy-to-use, open-source IRC
+utility bot, written in [Python](http://python.org). It's designed to be easy
+to use, easy to run, and easy to make new features for.
 
 <span class="Sopel">Sopel</span> comes with a ton of ready-made features for
-you to use. It can leave notes for people, give you reminders, check RSS feeds,
-and [much more](https://github.com/sopel-irc/sopel/wiki/Commands).
+you to use. It can leave notes for people, give you reminders, and
+[much more](https://github.com/sopel-irc/sopel/wiki/Commands).
 
 <span class="Sopel">Sopel</span> also comes with a
 [fully-documented](/docs) and
@@ -19,12 +19,12 @@ easy-to-use API, so you can write your own features. There's also an
 [easy tutorial](https://github.com/sopel-irc/sopel/wiki/Sopel-tutorial,-Part-1)
 you can follow along with, to help you learn.
 
-Developing for Sopel is a great way to familiarize yourself with Python. It's
-easy to start, but there's no limit to the cool things you can do with it.
+Developing for <span class="Sopel">Sopel</span> is a great way to familiarize
+yourself with Python. It's easy to start, but there's no limit to the cool
+things you can do with it.
 
-<span class="Sopel">Sopel</span> is available in the Fedora package
-repositories, Arch User Repository, the
-[Python Package Index](http://pypi.python.org/pypi/willie/) 
+<span class="Sopel">Sopel</span> is available on the
+[Python Package Index](http://pypi.python.org/pypi/willie/)
 ([6.0 alpha](http://pypi.python.org/pypi/sopel)), and in a
 [tarball](https://github.com/sopel-irc/sopel/releases/latest).
 
@@ -35,10 +35,10 @@ repositories, Arch User Repository, the
 * [IRCv3](http://ircv3.org) support, with SASL authentication
 * Easy quickstart wizard
 * Dynamic topic support using topic masks
-* Numerous modules: meetbot, YouTube, Reddit, movie information, and more
+* Numerous modules: Wikipedia, Reddit, Bugzilla, unit conversion, and more
 * Support for remembering timezone, weather location, and other information for
 users
-* Persistent user and channel settings database using MySQL or SQLite
+* Persistent user and channel settings database using SQLite
 * Ability to easily run as a daemon
 * Safe asynchronous inter-module communication
 * And much, much more
@@ -53,9 +53,8 @@ he called phenny.
 
 [Embolalia](https://embolalia.com) improved it even more, with a lot of
 help from [Dimitri Molenaars](http://tyrope.nl/index.php?lang=EN) and
-[Elad Alfassa](http://eladalfassa.com), and renamed it to Sopel. This is the
-current and most advanced version of the bot, which is supported by
-Nerdfighteria Network.
+[Elad Alfassa](http://eladalfassa.com), and renamed it to Willie, and later
+Sopel. This is the current and most advanced version of the bot.
 
 A number of other people have helped out along the way, and they can be seen in
 the [CREDITS](https://github.com/sopel-irc/sopel/blob/master/CREDITS) file in
