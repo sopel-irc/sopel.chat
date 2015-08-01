@@ -36,6 +36,29 @@ will be removed in 6.0.  If you configure with the wizard, you won't notice
 this change; it only really concerns you if you're manually editing the config
 file.
 
+## Messaging function changes
+
+The functions used in modules to send messages have been made more consistent
+with each other, and between triggered (like in commands) and un-triggered
+contexts (like in @interval callables). The changes are as follows:
+
+* The arguments of `notice()` are reversed in un-triggered context; it now
+  takes the message as the first argument, and the destination as the second,
+  as it always had in triggered contexts.
+* `say()` and `action()` are now available all the time. When not in a
+  triggered context, they take an additional argument `destination`. When in a
+  triggered context, this argument is optional and defaults to the trigger
+  sender. If you were passing `recipient` as a keyword (rather than positional)
+  argument to `action()`, you'll need to change it appropriately.
+* `reply()` is also available all the time, with new arguments
+  `destination` and `reply_to`, the latter being the name to prepend to the
+  message. These are optional in triggered contexts, and default to the
+  trigger's sender and triggering nick. The `notice` argument is always
+  optional, as before. However, if you were passing it positionally, its
+  position has changed to accommodate the other new arguments, so you'll need
+  to change that.
+
+
 ## Reorganization of `sopel.tools`
 
 A few things have been shifted around in `sopel.tools` for 5.3.0, splitting
