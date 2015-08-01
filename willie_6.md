@@ -57,6 +57,10 @@ contexts (like in @interval callables). The changes are as follows:
   optional, as before. However, if you were passing it positionally, its
   position has changed to accommodate the other new arguments, so you'll need
   to change that.
+* `msg()` is considered deprecated, and will be removed from the documentation.
+  However, since it would obviously be a serious pain for everyone to actually
+  move away from it, it will continue to work without a warning for the time
+  being.
 
 
 ## Reorganization of `sopel.tools`
