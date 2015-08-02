@@ -52,7 +52,7 @@ he called phenny.
 [jenni](https://github.com/myano/jenni/).
 
 [Embolalia](https://embolalia.com) improved it even more, with a lot of
-help from [Dimitri Molenaars](http://tyrope.nl/index.php?lang=EN) and
+help from [Dimitri Molenaars](http://tyrope.nl) and
 [Elad Alfassa](http://eladalfassa.com), and renamed it to Willie, and later
 Sopel. This is the current and most advanced version of the bot.
 
