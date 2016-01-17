@@ -33,6 +33,7 @@ things you can do with it.
 * Fully documented API for writing new modules
 * SSL Support
 * [IRCv3](http://ircv3.org) support, with SASL authentication
+* Can authenticate admins with services on networks which support it
 * Easy quickstart wizard
 * Dynamic topic support using topic masks
 * Numerous modules: Wikipedia, Reddit, Bugzilla, unit conversion, and more
@@ -73,9 +74,9 @@ join the developers Embolalia, Tyrope, and elad in
 <li class="q">Is there somewhere I can go to find modules other people have
 written for Sopel?</li>
 
-<li class="a">Starting in <a href="/willie_6.html">Sopel 6</a>, you'll be able
-to just search PyPI for "sopel_modules". In the mean time, the closest we have is
-<a href="https://github.com/sopel-irc/sopel-extras">sopel-extras</a>.</li>
+<li class="a">You can install modules from <a href="https://pypi.python.org/pypi?:action=search&term=sopel_modules&submit=search">PyPI</a>,
+and there's a <a href="https://github.com/sopel-irc/sopel-cookiecutter">template</a>
+you can work from to easily upload your own there.
 
 <li class="q">Will Phenny/jenni modules work with Sopel?</li>
 
@@ -98,11 +99,10 @@ Sopel requires for its database.</li>
 <li class="q">Does Sopel run on OSX? Windows? PyPy? Jython?</li>
 
 <li class="a">Probably, probably, probably, probably. Sopel itself is pure
-Python (though some included modules have dependencies that aren't, like lxml),
-and an effort is made to be as platform-independant as possible. That said,
-most of the development is done on Linux, so some platform-specific bugs may be
-missed. If you do run into a bug, be sure to report it, because otherwise we
-won't know about it.</li>
+Python, and an effort is made to be as platform-independant as possible. That
+said, most of the development is done on Linux, so some platform-specific bugs
+may be missed. If you do run into a bug, be sure to report it, because
+otherwise we won't know about it.</li>
 
 <li class="q">How do I make Sopel give me ops when I enter a channel?</li>
 
