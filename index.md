@@ -24,8 +24,7 @@ yourself with Python. It's easy to start, but there's no limit to the cool
 things you can do with it.
 
 <span class="Sopel">Sopel</span> is available on the
-[Python Package Index](http://pypi.python.org/pypi/willie/)
-([6.0 alpha](http://pypi.python.org/pypi/sopel)), and in a
+[Python Package Index](http://pypi.python.org/pypi/sopel/), and in a
 [tarball](https://github.com/sopel-irc/sopel/releases/latest).
 
 # Features
