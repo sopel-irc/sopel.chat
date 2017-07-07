@@ -17,8 +17,7 @@ running `sudo apt-get install python-pip` in a terminal. For macOS and Windows,
 follow PIP's setup instructions
 [here](http://pip.readthedocs.org/en/latest/installing.html).
 
-Once you have pip set up, just do `sudo pip install willie` (until 6.0 is
-released, whence it will be `sudo pip install sopel`). If you get an
+Once you have pip set up, just do `sudo pip install sopel`. If you get an
 error about `lxml` (or, probably, any other big messy looking error), it's
 beacuse `pip` is having problems installing `lxml`, which some modules depend
 on. You're best off installing `python-lxml` from your package repos and trying
