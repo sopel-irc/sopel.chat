@@ -13,13 +13,13 @@ Sopel works on both Python 2 and Python 3. If you're planning on using Python
 getting that set up easily.
 
 You will need to have pip installed. On Debian and Ubuntu, you can do this by
-running `sudo apt-get install python-pip` in a terminal. For OSX and Windows,
+running `sudo apt-get install python-pip` in a terminal. For macOS and Windows,
 follow PIP's setup instructions
 [here](http://pip.readthedocs.org/en/latest/installing.html).
 
 Once you have pip set up, just do `sudo pip install willie` (until 6.0 is
 released, whence it will be `sudo pip install sopel`). If you get an
-error about lxml (or, probably, any other big messy looking error), it's
+error about `lxml` (or, probably, any other big messy looking error), it's
 beacuse `pip` is having problems installing `lxml`, which some modules depend
 on. You're best off installing `python-lxml` from your package repos and trying
 again. If you can't for some reason (you're using a virtualenv or alternate
