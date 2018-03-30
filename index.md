@@ -98,7 +98,7 @@ Sopel requires for its database.</li>
 <li class="q">Does Sopel run on OSX? Windows? PyPy? Jython?</li>
 
 <li class="a">Probably, probably, probably, probably. Sopel itself is pure
-Python, and an effort is made to be as platform-independant as possible. That
+Python, and an effort is made to be as platform-independent as possible. That
 said, most of the development is done on Linux, so some platform-specific bugs
 may be missed. If you do run into a bug, be sure to report it, because
 otherwise we won't know about it.</li>
