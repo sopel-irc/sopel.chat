@@ -4,5 +4,5 @@
 
 USER=${1:-$USER}
 
-jekyll build
-scp -r build/* $USER@sopel.chat:/var/www/sopel/
+bundler exec jekyll build
+scp -r _site/* $USER@sopel.chat:/var/www/sopel/
