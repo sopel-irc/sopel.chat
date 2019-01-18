@@ -6,15 +6,15 @@ title: Sopel - The Python IRC Bot
 # Introduction
 
 <span class="Sopel">Sopel</span> is a simple, easy-to-use, open-source IRC
-utility bot, written in [Python](http://python.org). It's designed to be easy
-to use, easy to run, and easy to make new features for.
+utility bot, written in [Python](https://www.python.org/). It's designed to be
+easy to use, easy to run, and easy to make new features for.
 
 <span class="Sopel">Sopel</span> comes with a ton of ready-made features for
 you to use. It can leave notes for people, give you reminders, and
 [much more](https://github.com/sopel-irc/sopel/wiki/Commands).
 
 <span class="Sopel">Sopel</span> also comes with a
-[fully-documented](/docs) and
+[fully-documented](/docs/) and
 easy-to-use API, so you can write your own features. There's also an
 [easy tutorial](https://github.com/sopel-irc/sopel/wiki/Sopel-tutorial,-Part-1)
 you can follow along with, to help you learn.
@@ -24,14 +24,14 @@ yourself with Python. It's easy to start, but there's no limit to the cool
 things you can do with it.
 
 <span class="Sopel">Sopel</span> is available on the
-[Python Package Index](http://pypi.python.org/pypi/sopel/), and in a
+[Python Package Index](https://pypi.org/project/sopel/), and in a
 [tarball](https://github.com/sopel-irc/sopel/releases/latest).
 
 # Features
 
 * Fully documented API for writing new modules
 * SSL Support
-* [IRCv3](http://ircv3.org) support, with SASL authentication
+* [IRCv3](https://ircv3.net/) support, with SASL authentication
 * Can authenticate admins with services on networks which support it
 * Easy quickstart wizard
 * Dynamic topic support using topic masks
@@ -48,13 +48,16 @@ users
 [Sean Palmer](http://inamidst.com/) was the original creator of the bot, which
 he called phenny.
 
-[Michael Yanovich](https://yanovich.net) improved it, and changed the name to
-[jenni](https://github.com/myano/jenni/).
+[Michael Yanovich](https://yanovich.net/) improved it, and changed the name to
+[jenni](https://github.com/myano/jenni).
 
-[Embolalia](https://embolalia.com) improved it even more, with a lot of
-help from [Dimitri Molenaars](http://tyrope.nl) and
-[Elad Alfassa](http://eladalfassa.com), and renamed it to Willie, and later
-Sopel. This is the current and most advanced version of the bot.
+[Embolalia](https://embolalia.com/) improved it even more, with a lot of
+help from [Dimitri Molenaars](http://tyrope.nl/) and
+[Elad Alfassa](https://eladalfassa.com/), and renamed it to Willie, and later
+Sopel.
+
+[dgw](https://technobabbl.es/) took over the project from Embolalia, but didn't
+change the name. This is the current and most advanced version of the bot.
 
 A number of other people have helped out along the way, and they can be seen in
 the [CREDITS](https://github.com/sopel-irc/sopel/blob/master/CREDITS) file in
@@ -67,15 +70,16 @@ Sopel's source code.
 
 <li class="a">You can file a ticket in our <a
 href="https://github.com/sopel-irc/sopel/issues">GitHub issue tracker</a>, or
-join the developers Embolalia, Tyrope, and elad in 
-<a href="irc://irc.freenode.net/#sopel">#sopel</a> on Freenode.</li>
+join the developers in <a href="irc://irc.freenode.net/#sopel">#sopel</a>
+on Freenode.</li>
 
 <li class="q">Is there somewhere I can go to find modules other people have
 written for Sopel?</li>
 
-<li class="a">You can install modules from <a href="https://pypi.python.org/pypi?:action=search&term=sopel_modules&submit=search">PyPI</a>,
-and there's a <a href="https://github.com/sopel-irc/sopel-cookiecutter">template</a>
-you can work from to easily upload your own there.
+<li class="a">You can install modules from <a href="https://pypi.org/search/?q=%22sopel_modules%22">PyPI</a>,
+or use your favorite search engine to find modules on GitHub, etc.
+There's also a <a href="https://github.com/sopel-irc/sopel-cookiecutter">template</a>
+you can work from to publish your own modules on PyPI.
 
 <li class="q">Will Phenny/jenni modules work with Sopel?</li>
 
