@@ -1,5 +1,6 @@
 *.sw*
 _site/*
 build/*
+Gemfile.lock
 commands.md
 module_config.md
