@@ -4,6 +4,6 @@ subtitle: A project of Nerdfighteria Network
 repo: https://github.com/sopel-irc/sopel
 
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 redcarpet:
     extensions: [tables]
