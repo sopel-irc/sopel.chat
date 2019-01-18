@@ -1,6 +1,5 @@
-name: Sopel
+title: Sopel
 tagline: The Python IRC Bot
-subtitle: A project of Nerdfighteria Network
 repo: https://github.com/sopel-irc/sopel
 
 markdown: redcarpet
