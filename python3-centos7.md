@@ -49,4 +49,4 @@ it's a good habit.
 
 [scl]: https://www.softwarecollections.org/en/
 [python33-scl]: https://www.softwarecollections.org/en/scls/rhscl/python33/
-[service-example]: https://github.com/sople-irc/sopel/blob/master/contrib/sopel.service#L10
+[service-example]: https://github.com/sopel-irc/sopel/blob/master/contrib/sopel.service#L10

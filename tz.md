@@ -3,7 +3,7 @@ layout: default
 title: Sopel Timezone Settings
 ---
 
-<h1 id="yourTimezone">Your timezone couldn't be detected. Enable Javascript, or see instructions below.</h1>
+<h1 id="yourTimezone">Your timezone couldn't be detected. Enable JavaScript, or see instructions below.</h1>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
 <script>
