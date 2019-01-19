@@ -9,7 +9,7 @@ Installing from PyPI is the best way to install Sopel, since it'll handle
 installing all of the extra stuff you need to run all of the modules properly.
 
 Sopel works on both Python 2 and Python 3. If you're planning on using Python
-3 with CentOS, you may want to see [this guide](/python3-centos7.html) on
+3 with CentOS, you may want to see [this guide]({% link python3-centos7.md %}) on
 getting that set up easily.
 
 You will need to have `pip` installed. On Debian and Ubuntu, you can do this by
