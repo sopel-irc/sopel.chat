@@ -8,5 +8,36 @@ layout: default
     <p>It might be a little outdated and/or have a broken layout.</p>
     <p>Your help fixing any errors is appreciated! <a href="https://github.com/sopel-irc/sopel-website/edit/wiki-migration/{{ page.path }}">Edit this page</a></p>
   </aside>
-  {% endif %}{{ content }}
-</article>
+  {% endif %}{{ content }}{% if page.collection %}
+    {% unless page.is_index %}
+      {% assign list = site[page.collection] | where_exp: "item", "item.is_index != true" %}
+      {% for item in list %}
+        {% if item.title == page.title %}
+          {% unless forloop.first %}
+            {% assign prevurl = prev.url %}
+            {% assign prevtitle = prev.title %}
+          {% endunless %}
+          {% unless forloop.last %}
+            {% assign next = list[forloop.index] %}
+            {% assign nexturl = next.url %}
+            {% assign nexttitle = next.title %}
+          {% endunless %}
+        {% endif %}
+        {% assign prev = item %}
+      {% endfor %}
+  <nav>
+    <ul>
+      {% if prevurl %}
+      <li class="prevlink">
+        <a href="{{ prevurl }}">{{ prevtitle }}</a>
+      </li>
+      {% endif %}
+      {% if nexturl %}
+      <li class="nextlink">
+        <a href="{{ nexturl }}">{{ nexttitle }}</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endunless %}
+{% endif %}</article>

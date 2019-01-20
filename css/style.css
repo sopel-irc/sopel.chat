@@ -106,6 +106,29 @@ a.nohighlight:visited {
     background-color: #D3DEDE;
 }
 
+.content article nav ul {
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.content article nav ul li {
+    display: inline;
+    list-style: none;
+}
+.content article nav ul li.prevlink {
+    margin-right: auto;
+}
+.content article nav ul li.prevlink a:before {
+    content: "←";
+}
+.content article nav ul li.nextlink {
+    margin-left: auto;
+}
+.content article nav ul li.nextlink a:after {
+    content: "→";
+}
+
 .content article.migrated aside {
     margin: 0 1em;
     float: right;
