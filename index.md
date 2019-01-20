@@ -56,8 +56,8 @@ help from [Dimitri Molenaars](http://tyrope.nl/) and
 [Elad Alfassa](https://eladalfassa.com/), and renamed it to Willie, and later
 Sopel.
 
-[dgw](https://technobabbl.es/) took over the project from Embolalia, but didn't
-change the name. This is the current and most advanced version of the bot.
+[dgw](https://technobabbl.es/) took over the project from Embolalia but didn't
+change the name (Yet™). This is the current and most advanced version of the bot.
 
 A number of other people have helped out along the way, and they can be seen in
 the [CREDITS](https://github.com/sopel-irc/sopel/blob/master/CREDITS) file in
