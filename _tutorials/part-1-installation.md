@@ -21,8 +21,8 @@ most other languages you should be able to infer enough from the examples to
 get things done.
 
 While this guide does cover a lot of what is available, there is much more than
-can be described here. The API documentation is available [online](/docs/), and
-serves as a useful reference.
+can be described here. The API documentation is available [online]({{ site.docs }}),
+and serves as a useful reference.
 
 ## Installing
 
@@ -43,7 +43,7 @@ brackets, that's the default setting, and you can just hit enter to keep it.
 When asked for the channels to connect to, enter them separated by commas
 (e.g. `#spam,#eggs,#cheese`) This wizard doesn't cover every option, only the
 ones which are needed to get the bot running. The core config settings are all
-[documented](https://sopel.chat/docs/config.html#the-core-configuration-section),
+[documented]({{ site.docs }}config.html#the-core-configuration-section),
 if you want to make other tweaks.
 
 Finally, it will ask you about configuration settings for modules. This will
@@ -66,9 +66,9 @@ connect to the network, and join the channels you specified.
 
 Most IRC networks have a service that allows you to authenticate yourself as
 the owner of a username. This is configurable in Sopel with these settings:
-[`auth_method`](https://sopel.chat/docs/config.html#sopel.config.core_section.CoreSection.auth_method),
-[`auth_password`](https://sopel.chat/docs/config.html#sopel.config.core_section.CoreSection.auth_password),
-[`auth_target`](https://sopel.chat/docs/config.html#sopel.config.core_section.CoreSection.auth_target),
-and [`auth_username`](https://sopel.chat/docs/config.html#sopel.config.core_section.CoreSection.auth_username).
+[`auth_method`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_method),
+[`auth_password`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_password),
+[`auth_target`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_target),
+and [`auth_username`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_username).
 
 Want to learn how to write modules for Sopel? [Continue to part 2!]({% link _tutorials/part-2-writing-modules.md %})

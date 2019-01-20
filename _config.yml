@@ -1,6 +1,7 @@
 title: Sopel
 tagline: The Python IRC Bot
 repo: https://github.com/sopel-irc/sopel
+docs: https://sopel.chat/docs/
 
 markdown: redcarpet
 highlighter: rouge

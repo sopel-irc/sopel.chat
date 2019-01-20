@@ -56,8 +56,7 @@ this will look very familiar, but if you haven't it's easy to learn.
 
 A config section is defined by a class, subclassing `StaticSection`
 and with any number of `ValidatedAttribute`s (or other subclasses of
-`BaseValidated`; see
-[the docs](https://sopel.chat/docs/#module-sopel.config.types) for more detail)
+`BaseValidated`; see [the docs]({{ site.docs }}config.html) for more detail)
 on it. So if you want to have a key `velocity` in the `swallow` section always
 be a number, you can do this:
 

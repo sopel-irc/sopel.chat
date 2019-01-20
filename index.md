@@ -14,7 +14,7 @@ you to use. It can leave notes for people, give you reminders, and
 [much more](https://github.com/sopel-irc/sopel/wiki/Commands).
 
 <span class="Sopel">Sopel</span> also comes with a
-[fully-documented](/docs/) and
+[fully-documented]({{ site.docs }}) and
 easy-to-use API, so you can write your own features. There's also an
 [easy tutorial](https://github.com/sopel-irc/sopel/wiki/Sopel-tutorial,-Part-1)
 you can follow along with, to help you learn.
