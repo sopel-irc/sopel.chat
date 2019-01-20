@@ -19,19 +19,21 @@ The config file is made up of a number of *sections*, each of which has a number
 of *keys* or *attributes*. If you open up your config file, you'll see
 something like this.
 
-    [core]
-    nick = Sopel
-    host = irc.dftba.net
-    use_ssl = False
-    port = 6667
-    owner = Embolalia
-    channels = #YourPants,#tech
+```ini
+[core]
+nick = Sopel
+host = irc.dftba.net
+use_ssl = False
+port = 6667
+owner = Embolalia
+channels = #YourPants,#tech
 
-    [admin]
-    hold_ground = False
+[admin]
+hold_ground = False
 
-    [bugzilla]
-    domains = bugzilla.redhat.com,bugzilla.gnome.org
+[bugzilla]
+domains = bugzilla.redhat.com,bugzilla.gnome.org
+```
 
 Here, `core`, `admin`, and `bugzilla` are sections. As you may have guessed,
 `core` contains attributes relevant to the bot's core functionality - it's
@@ -71,7 +73,7 @@ def setup(bot):
 def configure(config):
     config.define_section('swallow', SwallowSection, validate=False)
     config.swallow.configure_setting('velocity',
-                                     'What is the speed of an unlaiden swallow?')
+                                     'What is the speed of an unladen swallow?')
 ```
 
 Now, when you use `bot.config.swallow.velocity`, you will always get an

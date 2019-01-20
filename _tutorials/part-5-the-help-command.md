@@ -8,23 +8,27 @@ source: wiki
 or above, but below 6.0 you may need to replace "sopel" with "willie" in some
 places.**
 
-Sopel has a built in command .help that can be used to get information about a
+Sopel has a built in `.help` command that can be used to get information about a
 particular command. You can add information to `.help` about your command in two
 basic ways. The first is to add a docstring and the second is to add an example
 usage with the ```@example``` decorator. Take the following module for example:
 
-    @sopel.module.commands('hello')
-    def helloworld(bot, trigger):
-        bot.say('Hello, %s!' % (trigger.group(2),))
+```py
+@sopel.module.commands('hello')
+def helloworld(bot, trigger):
+    bot.say('Hello, %s!' % (trigger.group(2),))
+```
 
 It has no docstring or example so saying `.help hello` will do nothing. If the
 program is modified to include either of them like so:
 
-    @sopel.module.commands('hello')
-    @sopel.module.example('.hello world', 'Hello, world!')
-    def helloworld(bot, trigger):
-        """Replies with what ever the first parameter is."""
-        bot.say('Hello, %s!' % (trigger.group(2),))
+```py
+@sopel.module.commands('hello')
+@sopel.module.example('.hello world', 'Hello, world!')
+def helloworld(bot, trigger):
+    """Replies with what ever the first parameter is."""
+    bot.say('Hello, %s!' % (trigger.group(2),))
+```
 
 Then we might get the following output:
 
@@ -60,11 +64,13 @@ To run the unit tests and see the results you must have pytest installed and run
 You can also run the unit tests of your module directly by appending the
 following to the end of your module:
 
-    if __name__ == "__main__":
-        from sopel.test_tools import run_example_tests
-        run_example_tests(__file__)
+```py
+if __name__ == "__main__":
+    from sopel.test_tools import run_example_tests
+    run_example_tests(__file__)
+```
 
-Now that you run the the module directly in your IDE or in command line, you
+Now if you run the the module directly in your IDE or in command line, you
 should get something like the following:
 
     C:\Users\Venti\workspace2\sopel>set PYTHONPATH=C:\Users\Venti\workspace2\sopel
@@ -84,7 +90,9 @@ useful when making changes or adding new features.
 We could for example add a test for the edge condition of calling `.hello` with
 no arguments:
 
-    @sopel.module.example('.hello', 'Hello, !')
+```py
+@sopel.module.example('.hello', 'Hello, !')
+```
 
 And then we can rerun the tests without restarting Sopel or even reloading the
 module, instantly seeing the difference between expectation and reality:

@@ -38,12 +38,12 @@ DuckDuckGo search of a given query? The answer is to put that link into memory.
 What different memory keys exist and are used for is entirely by convention;
 the API spells out no special rules here. However, one of the ones used by the
 modules the bot ships with is `last_seen_url` which, as you'd expect, contains
-the last seen URL. They key itself is a Python dict of channel names to the
+the last seen URL. The key itself is a Python dict of channel names to the
 last URL seen in that channel. So when the `.duck` command wants to update it,
 it uses this line of code:
-```Python
-bot.reply(url)
-bot.memory['last_seen_url'][trigger.sender] = url
+
+```py
+    bot.memory['last_seen_url'][trigger.sender] = url
 ```
 
 Where `trigger.sender`, as you'll recall, is the channel (or nick, if a PM)
@@ -62,7 +62,7 @@ module you want to write) doesn't have to handle shortened links or `.title`
 itself. And thanks to memory, this magic is pretty simple to perform. We start
 in `youtube.py`'s `setup` function:
 
-```Python
+```py
 def setup(bot):
     regex = re.compile('(youtube.com/watch\S*v=|youtu.be/)([\w-]+)')
     if not bot.memory.contains('url_callbacks'):
@@ -87,7 +87,7 @@ Next, we need to see how the `ytinfo` function works. We only need to see four
 lines of it to get the gist; the rest is just retrieving the information from
 YouTube.
 
-```Python
+```py
 @rule('.*(youtube.com/watch\S*v=|youtu.be/)([\w-]+).*')
 def ytinfo(bot, trigger, found_match=None):
     match = found_match or trigger
