@@ -16,7 +16,7 @@ you to use. It can leave notes for people, give you reminders, and
 <span class="Sopel">Sopel</span> also comes with a
 [fully-documented]({{ site.docs }}) and
 easy-to-use API, so you can write your own features. There's also an
-[easy tutorial](https://github.com/sopel-irc/sopel/wiki/Sopel-tutorial,-Part-1)
+[easy tutorial]({% link _tutorials/index.md %})
 you can follow along with, to help you learn.
 
 Developing for <span class="Sopel">Sopel</span> is a great way to familiarize
