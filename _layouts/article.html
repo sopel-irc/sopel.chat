@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article{% if page.migrated %} class="migrated"{% endif %}>
+  <h1>{{ page.title }}</h1>{% if page.source == "wiki" %}
+  <aside>
+    <p>This article was migrated here from the old GitHub wiki.</p>
+    <p>It might be a little outdated and/or have a broken layout.</p>
+    <p>Your help fixing any errors is appreciated! <a href="https://github.com/sopel-irc/sopel-website/edit/wiki-migration/{{ page.path }}">Edit this page</a></p>
+  </aside>
+  {% endif %}{{ content }}
+</article>

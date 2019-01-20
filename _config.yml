@@ -8,3 +8,14 @@ redcarpet:
     extensions: [tables]
 
 exclude: ['LICENSE', 'README.md', 'Gemfile', 'Gemfile.lock', 'upload.sh']
+
+collections:
+  tutorials:
+    output: true
+
+defaults:
+  - scope:
+      path: "_tutorials"
+    values:
+      layout: article
+      permalink: /tutorials/:name/
