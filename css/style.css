@@ -110,6 +110,14 @@ a.nohighlight:visited {
     background-color: #D3DEDE;
 }
 
+.content article a.to-parent {
+    float: right;
+    margin: 1em 1em 1em 4em;
+    position: relative;
+    top: -1em;
+    font-size: small;
+}
+
 .content article nav ul {
     margin: 1em 0;
     padding: 0;

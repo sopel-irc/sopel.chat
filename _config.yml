@@ -13,6 +13,8 @@ exclude: ['LICENSE', 'README.md', 'Gemfile', 'Gemfile.lock', 'upload.sh']
 collections:
   tutorials:
     output: true
+  usage:
+    output: true
 
 defaults:
   - scope:
@@ -20,6 +22,11 @@ defaults:
     values:
       layout: article
       permalink: /tutorials/:name/
+  - scope:
+      path: "_usage"
+    values:
+      layout: article
+      permalink: /usage/:name/
   - scope:
       path: "_*/index.*"
     values:

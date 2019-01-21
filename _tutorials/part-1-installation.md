@@ -72,3 +72,5 @@ the owner of a username. This is configurable in Sopel with these settings:
 and [`auth_username`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_username).
 
 Want to learn how to write modules for Sopel? [Continue to part 2!]({% link _tutorials/part-2-writing-modules.md %})
+
+Just want to play around with your new IRC bot? [Head for the usage articles!]({% link _usage/index.md %})

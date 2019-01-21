@@ -2,6 +2,7 @@
 layout: default
 ---
 <article{% if page.migrated %} class="migrated"{% endif %}>
+  <a class="to-parent" href="../">Up a level</a>
   <h1>{{ page.title }}</h1>{% if page.migrated and page.source == "wiki" %}
   <aside>
     <p>This article was migrated here from the old GitHub wiki.</p>
@@ -11,14 +12,19 @@ layout: default
   {% endif %}{{ content }}{% if page.collection %}
     {% unless page.is_index %}
       {% assign list = site[page.collection] | where_exp: "item", "item.is_index != true" %}
-      {% for item in list %}
+      {% if page.order %}
+        {% assign sortedList = list | sort: "order" %}
+      {% else %}
+        {% assign sortedList = list %}
+      {% endif %}
+      {% for item in sortedList %}
         {% if item.title == page.title %}
           {% unless forloop.first %}
             {% assign prevurl = prev.url %}
             {% assign prevtitle = prev.title %}
           {% endunless %}
           {% unless forloop.last %}
-            {% assign next = list[forloop.index] %}
+            {% assign next = sortedList[forloop.index] %}
             {% assign nexturl = next.url %}
             {% assign nexttitle = next.title %}
           {% endunless %}
