@@ -11,7 +11,7 @@ easy to use, easy to run, and easy to make new features for.
 
 <span class="Sopel">Sopel</span> comes with a ton of ready-made features for
 you to use. It can leave notes for people, give you reminders, and
-[much more](https://github.com/sopel-irc/sopel/wiki/Commands).
+[much more]({% link _usage/commands.md %}).
 
 <span class="Sopel">Sopel</span> also comes with a
 [fully-documented]({{ site.docs }}) and
