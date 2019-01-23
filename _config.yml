@@ -15,6 +15,8 @@ collections:
     output: true
   usage:
     output: true
+  appendices:
+    output: true
 
 defaults:
   - scope:
@@ -27,6 +29,11 @@ defaults:
     values:
       layout: article
       permalink: /usage/:name/
+  - scope:
+      path: "_appendices"
+    values:
+      layout: article
+      permalink: /appendix/:name/
   - scope:
       path: "_*/index.*"
     values:
