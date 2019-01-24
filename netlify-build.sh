@@ -2,6 +2,9 @@
 
 echo "Starting custom build script..."
 
+echo "Installing Sphinx"
+pip install sphinx
+
 echo "Building Jekyll site"
 bundler exec jekyll build
 
