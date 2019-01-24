@@ -8,7 +8,7 @@ pip3 install sphinx sphinxcontrib-versioning
 echo "Building Jekyll site"
 bundler exec jekyll build
 
-if [ ! -d "sopel/" ]; then
+if [ -d "sopel/" ]; then
     cd sopel
     git checkout master
     git pull origin master
