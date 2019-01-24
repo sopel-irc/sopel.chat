@@ -2,16 +2,24 @@
 
 echo "Starting custom build script..."
 
-echo "Installing Sphinx"
-pip install sphinx
+echo "Installing Sphinx & plugins"
+pip3 install sphinx sphinxcontrib-versioning
 
 echo "Building Jekyll site"
 bundler exec jekyll build
 
+if [ ! -d "sopel/" ]; then
+    cd sopel
+    git checkout master
+    git pull origin master
+    cd docs
+else
+    git clone --depth 1 https://github.com/sopel-irc/sopel.git sopel
+    cd sopel/docs
+fi
+
 echo "Building Sphinx docs"
-git clone --depth 1 https://github.com/sopel-irc/sopel.git sopel
-cd sopel/docs
-make html
+sphinx-versioning build docs build/html
 cd ../../
 
 echo "Moving Sphinx docs to Jekyll output folder"
