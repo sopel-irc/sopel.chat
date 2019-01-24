@@ -11,13 +11,13 @@ modules will not be shown here.
 | Command(s) | Purpose | Example | Module |
 | ---------- | ------- | ------- | ------ |
 | .join | Join the specified channel. This is an admin-only command. | `.join #example or .join #example key` | admin |
-| .me | Send an ACTION (/me) to a given channel or nick. Can only be done in privmsg<br>by an admin. |  | admin |
+| .me | Send an ACTION (/me) to a given channel or nick. Can only be done in<br>privmsg by an admin. |  | admin |
 | .mode | Set a user mode on Sopel. Can only be done in privmsg by an admin. |  | admin |
-| .msg | Send a message to a given channel or nick. Can only be done in privmsg by an<br>admin. | `.msg #YourPants Does anyone else smell neurotoxin?` | admin |
+| .msg | Send a message to a given channel or nick. Can only be done in privmsg by<br>an admin. | `.msg #YourPants Does anyone else smell neurotoxin?` | admin |
 | .part | Part the specified channel. This is an admin-only command. | `.part #example` | admin |
 | .quit | Quit from the server. This is an owner-only command. |  | admin |
-| .save | Save state of sopels config object to the configuration file. | `.save` | admin |
-| .set | See and modify values of sopels config object.<br><br>Trigger args:<br>    arg1 - section and option, in the form "section.option"<br>    arg2 - value<br><br>If there is no section, section will default to "core".<br>If value is None, the option will be deleted. | `.set core.owner Me` | admin |
+| .save | Save state of Sopel's config object to the configuration file. | `.save` | admin |
+| .set | See and modify values of Sopel's config object.<br><br>Trigger args:<br>    arg1 - section and option, in the form "section.option"<br>    arg2 - value<br><br>If there is no section, section will default to "core".<br>If value is None, the option will be deleted. | `.set core.owner Me` | admin |
 | .ban | This give admins the ability to ban a user.<br>The bot must be a Channel Operator for this command to work. |  | adminchannel |
 | .kick | Kick a user from the channel. |  | adminchannel |
 | .kickban<br>.kb | This gives admins the ability to kickban a user.<br>The bot must be a Channel Operator for this command to work.<br>.kickban [#chan] user1 user!*@* get out of here |  | adminchannel |
