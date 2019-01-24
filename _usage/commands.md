@@ -31,13 +31,13 @@ modules will not be shown here.
 | .c<br>.calc | Evaluate some calculation. | .c 5 / 2 | calc |
 | .py | Evaluate a Python expression. | .py len([1,2,3]) | calc |
 | .t<br>.time | Returns the current time. | .t America/New_York | clock |
-| .getchanneltimeformat<br>.getctf | Gets the channel's preferred time format; will return current channel's if<br>no channel name is given | .getctf [channel] | clock |
-| .getchanneltz<br>.getctz | Gets the channel's preferred timezone; returns the current channel's<br>if no channel given. | .getctz [channel] | clock |
+| .getchanneltimeformat<br>.getctf | Gets the channel's preferred time format; will return current channel's if<br>no channel name is given. | .getctf [channel] | clock |
+| .getchanneltz<br>.getctz | Gets the channel's preferred timezone; returns the current channel's<br>if no channel name is given. | .getctz [channel] | clock |
 | .gettimeformat<br>.gettf | Gets a user's preferred time format; will show yours if no user specified. | .gettf [nick] | clock |
-| .gettz<br>.gettimezone | Gets a user's preferred time zone; will show yours if no user specified | .gettz [nick] | clock |
+| .gettz<br>.gettimezone | Gets a user's preferred time zone; will show yours if no user specified. | .gettz [nick] | clock |
 | .setchanneltz<br>.setctz | Set the preferred timezone for the channel. | .setctz America/New_York | clock |
 | .setchanneltimeformat<br>.setctf | Sets your preferred format for time. Uses the standard strftime format. You<br>can use <http://strftime.net> or your favorite search engine to learn more. | .setctf %Y-%m-%dT%T%z | clock |
-| .settz<br>.settimezone | Set your preferred time zone. Most timezones will work, but it's best to<br>use one from <https://sopel.chat/tz> | .settz America/New_York | clock |
+| .settz<br>.settimezone | Set your preferred time zone. Most timezones will work, but it's best to<br>use one from <https://sopel.chat/tz>. | .settz America/New_York | clock |
 | .settimeformat<br>.settf | Sets your preferred format for time. Uses the standard strftime format. You<br>can use <http://strftime.net> or your favorite search engine to learn more. | .settf %Y-%m-%dT%T%z | clock |
 | .countdown | .countdown <year> <month> <day> - displays a countdown to a given date. |  | countdown |
 | .btc<br>.bitcoin | *No documentation found.* | .btc 20 EUR | currency |
@@ -88,7 +88,7 @@ modules will not be shown here.
 | .update | Wrapper for allowing delivery of .update command via PM |  | reload |
 | .at | Gives you a reminder at the given time. Takes `hh:mm:ssTimezone message`.<br>Timezone is any timezone Sopel takes elsewhere; the best choices are those<br>from the tzdb; a list of valid options is available at<br><https://sopel.chat/tz>. The seconds and timezone are optional. | .at 13:47 Do your homework! | remind |
 | .in | Gives you a reminder in the given amount of time. | .in 3h45m Go to class | remind |
-| .safety | Set safety setting for channel |  | safety |
+| .safety | Set safety setting for channel  |  | safety |
 | .bing | Queries Bing for the specified input. | .bing sopel irc bot | search |
 | .duck<br>.ddg<br>.g | Queries Duck Duck Go for the specified input. | .duck sopel irc bot | search |
 | .search | Searches Bing and Duck Duck Go. | .search sopel irc bot | search |
