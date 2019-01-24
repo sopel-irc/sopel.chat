@@ -11,9 +11,11 @@ redcarpet:
 exclude:
   - LICENSE
   - README.md
+  - UPDATING.md
   - Gemfile
   - Gemfile.lock
   - upload.sh
+  - document_sopel_modules.py
 
 collections:
   tutorials:
