@@ -2,8 +2,8 @@
 
 echo "Starting custom build script..."
 
-echo "Installing Sphinx & plugins"
-pip install sphinx sphinxcontrib-versioning
+echo "Installing Sphinx"
+pip install sphinx
 
 echo "Building Jekyll site"
 bundler exec jekyll build
@@ -19,7 +19,7 @@ else
 fi
 
 echo "Building Sphinx docs"
-sphinx-versioning build docs build/html
+make html
 cd ../../
 
 echo "Moving Sphinx docs to Jekyll output folder"
