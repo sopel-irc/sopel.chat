@@ -8,7 +8,12 @@ highlighter: rouge
 redcarpet:
     extensions: [tables]
 
-exclude: ['LICENSE', 'README.md', 'Gemfile', 'Gemfile.lock', 'upload.sh']
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - upload.sh
 
 collections:
   tutorials:
