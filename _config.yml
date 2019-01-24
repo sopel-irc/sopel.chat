@@ -14,6 +14,7 @@ exclude:
   - UPDATING.md
   - Gemfile
   - Gemfile.lock
+  - netlify-build.sh
   - upload.sh
   - document_sopel_modules.py
 
