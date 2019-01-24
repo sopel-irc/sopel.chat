@@ -2,6 +2,7 @@
 title: Phenny compatibility
 migrated: true
 source: wiki
+order: 4000
 ---
 
 Sopel is, by and large, compatible with Phenny and Jenni. It is a goal of the project that modules written for those bots will work with Sopel, with a minimal amount of effort. Modules originally written for Willie (before the rename to Sopel) should work, too.

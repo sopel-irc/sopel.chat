@@ -2,6 +2,7 @@
 title: Guidelines for writing core modules
 migrated: true
 source: wiki
+order: 3000
 ---
 
 In order to keep the bot easy to set up and run, and avoid bunches of unknown code cluttering things up and creating maintenance burden, there are a few things that should be considered before a module is added to the default set. None of them is a hard requirement, but they're important.

@@ -2,6 +2,7 @@
 title: IRCv3 compatibility
 migrated: true
 source: wiki
+order: 2000
 ---
 
 From version 4.1.0, Sopel supports [IRCv3](https://ircv3.net/). This page details how different pieces of the new standard are supported.

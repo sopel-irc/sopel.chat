@@ -2,7 +2,7 @@
 title: Comparison to other bots (outdated)
 migrated: true
 source: wiki
-order: 9200
+order: 9000
 ---
 
 This is an incomplete (and probably outdated) comparison of sopel, jenni, phenny, Supybot, Limnoria, and eggdrop. With Eggdrop, only limited research was done, so some information may be incorrect or missing.

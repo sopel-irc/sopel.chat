@@ -2,6 +2,7 @@
 title: Formatting & color codes
 migrated: true
 source: wiki
+order: 1000
 ---
 
 Sopel will accept formatted IRC messages. You just need to put IRC control codes in your `bot.say`/`bot.action` strings.
