@@ -18,6 +18,9 @@ exclude:
   - upload.sh
   - document_sopel_modules.py
 
+include:
+  - _redirects
+
 collections:
   tutorials:
     output: true
