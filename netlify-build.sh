@@ -3,7 +3,7 @@
 echo "Starting custom build script..."
 
 echo "Installing Sphinx & plugins"
-pip3 install sphinx sphinxcontrib-versioning
+pip install sphinx sphinxcontrib-versioning
 
 echo "Building Jekyll site"
 bundler exec jekyll build
