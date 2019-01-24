@@ -37,11 +37,13 @@
             <h2>{{ site.tagline }}</h2>{% if site.subtitle %}
             <h3>{{ site.subtitle }}</h3>
             {% endif %}<ul id="nav">
-                <li class="first"><a href="{{ site.repo }}">Source Code</a></li>
-                <li><a href="https://sopel.chat/docs/">API Documentation</a></li>
-                <li><a href="{{ site.repo }}/issues">Issue Tracker</a></li>
-                <li><a href="{{ site.repo }}/wiki">Wiki</a></li>
+                <li class="first"><a href="{% link _usage/index.md %}">Usage</a></li>
+                <li><a href="{% link _tutorials/index.md %}">Tutorials</a></li>
+                <li><a href="{% link _appendices/index.md %}">Appendix</a></li>
+                <li><a href="{{ site.docs }}">API Documentation</a></li>
                 <li><a href="{% link download.md %}">Download</a></li>
+                <li><a href="{{ site.repo }}/issues">Issue Tracker</a></li>
+                <li><a href="{{ site.repo }}">Source Code</a></li>
             </ul>
           </div>
           <div class="content">

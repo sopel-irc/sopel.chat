@@ -1,10 +1,51 @@
 title: Sopel
 tagline: The Python IRC Bot
 repo: https://github.com/sopel-irc/sopel
+docs: /docs/
 
 markdown: redcarpet
 highlighter: rouge
 redcarpet:
     extensions: [tables]
 
-exclude: ['LICENSE', 'README.md', 'Gemfile', 'Gemfile.lock', 'upload.sh']
+exclude:
+  - LICENSE
+  - README.md
+  - UPDATING.md
+  - Gemfile
+  - Gemfile.lock
+  - netlify-build.sh
+  - upload.sh
+  - document_sopel_modules.py
+
+include:
+  - _redirects
+
+collections:
+  tutorials:
+    output: true
+  usage:
+    output: true
+  appendices:
+    output: true
+
+defaults:
+  - scope:
+      path: "_tutorials"
+    values:
+      layout: article
+      permalink: /tutorials/:name/
+  - scope:
+      path: "_usage"
+    values:
+      layout: article
+      permalink: /usage/:name/
+  - scope:
+      path: "_appendices"
+    values:
+      layout: article
+      permalink: /appendix/:name/
+  - scope:
+      path: "_*/index.*"
+    values:
+      is_index: true

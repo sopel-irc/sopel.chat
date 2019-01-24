@@ -11,12 +11,12 @@ easy to use, easy to run, and easy to make new features for.
 
 <span class="Sopel">Sopel</span> comes with a ton of ready-made features for
 you to use. It can leave notes for people, give you reminders, and
-[much more](https://github.com/sopel-irc/sopel/wiki/Commands).
+[much more]({% link _usage/commands.md %}).
 
 <span class="Sopel">Sopel</span> also comes with a
-[fully-documented](/docs/) and
+[fully-documented]({{ site.docs }}) and
 easy-to-use API, so you can write your own features. There's also an
-[easy tutorial](https://github.com/sopel-irc/sopel/wiki/Sopel-tutorial,-Part-1)
+[easy tutorial]({% link _tutorials/index.md %})
 you can follow along with, to help you learn.
 
 Developing for <span class="Sopel">Sopel</span> is a great way to familiarize

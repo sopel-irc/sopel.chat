@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://sopel.netlify.com/* https://sopel.chat/:splat 301!
