@@ -42,7 +42,8 @@ def main(argv=None):
     else:
         args = parser.parse_args()
 
-    print("Using " + args.sopel_root)
+    print("Generating module docs using Sopel from " + args.sopel_root)
+    print("...")
     os.sys.path.insert(0, args.sopel_root)
 
     filenames = []
@@ -53,6 +54,8 @@ def main(argv=None):
     for fn in os.listdir(modules_dir):
         if fn.endswith('.py') and not fn.startswith('_'):
             filenames.append(os.path.join(modules_dir, fn))
+
+    filenames.sort()
 
     filenames.append(os.path.join(args.sopel_root, 'sopel', 'coretasks.py'))
 
@@ -70,15 +73,12 @@ def main(argv=None):
         documentation, or are using a secondary modules directory, those
         modules will not be shown here.
 
-        Modules
-        =======
+        ## Modules
         """))
         for filename in filenames:
             c = document_module(filename, f)
             if c:
                 commands.extend(c)
-
-    commands.sort(key=operator.itemgetter(0))
 
     with open(commands_file, 'w') as f:
         f.write(trim("""\
@@ -87,11 +87,17 @@ def main(argv=None):
         order: 10
         ---
 
+        This page contains a list of all commands from modules within Sopel's
+        main modules directory. If you have added modules without rebuilding
+        the documentation, or are using a secondary modules directory, those
+        modules will not be shown here.
         """))
-        f.write("\n\n| Commands | Purpose | Example | Module |\n")
-        f.write("| -------- | ------- | ------- | ------ |\n")
+        f.write("\n\n| Command(s) | Purpose | Example | Module |\n")
+        f.write("| ---------- | ------- | ------- | ------ |\n")
         for c in commands:
             process_command(f, c)
+
+    print("Done!")
 
 def document_module(module_file, f):
     try: module = imp.load_source(os.path.basename(module_file)[:-3], module_file)
@@ -101,7 +107,7 @@ def document_module(module_file, f):
     else:
         commands = []
         if hasattr(module, 'configure'):
-            f.write('\n%s\n%s\n'%(module.__name__, '-'*len(module.__name__)))
+            f.write('\n\n### %s\n\n'%(module.__name__))
             if not module.configure.__doc__:
                 module.configure.__doc__ = 'This module has configuration options that are not documented. Go bludgeon the author.'
             f.write(trim(module.configure.__doc__))
@@ -115,13 +121,15 @@ def document_module(module_file, f):
                 setattr(func, 'module_name', module.__name__)
                 commands.append((name, func))
 
+        # return the commands from each module in (roughly) alphabetical order
+        commands.sort()
         return commands
 
 def process_command(f, func):
     name = func[0]
     func = func[1]
 
-    purpose = (func.__doc__ or '*No documentation found.*').replace('\n', '<br>')
+    purpose = (trim(func.__doc__) or '*No documentation found.*').replace('\n', '<br>')
     if hasattr(func, 'example'):
         example = func.example[0]["example"].replace('$nickname', 'Sopel')
     else:
