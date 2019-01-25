@@ -54,6 +54,9 @@ a.nohighlight:visited {
     border-radius: 4px;
     padding: 5px;
 }
+.content.centered-text {
+    text-align: center;
+}
 .content p {
     margin: 5px;
     margin-bottom: 10px;
