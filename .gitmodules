@@ -1,0 +1,4 @@
+[submodule "_sopel"]
+	path = _sopel
+	url = https://github.com/sopel-irc/sopel.git
+	branch = master
