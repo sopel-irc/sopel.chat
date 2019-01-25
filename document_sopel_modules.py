@@ -5,7 +5,7 @@ This script creates (either Markdown or reST) files, documenting the commands
 and module configuration options in a Sopel instance.
 
 Copyright 2012 Edward Powell, embolalia.net
-Copyright 2018 dgw, technobabbl.es
+Copyright 2019 dgw, technobabbl.es
 Licensed under the Eiffel Forum License 2.
 
 https://sopel.chat
