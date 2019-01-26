@@ -157,6 +157,7 @@ a:hover {
 .content article.migrated aside {
     margin: 0 1em;
     float: right;
+    clear: right;
     width: fit-content;
     max-width: 25%;
     padding: 0.5em;
