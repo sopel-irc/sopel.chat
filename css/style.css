@@ -9,6 +9,9 @@ body {
     
 }
 .header ul {
+    max-width: 75%;
+    margin: 1em auto;
+    padding: 0;
     list-style: none;
 }
 .header ul li {
@@ -48,7 +51,7 @@ a.nohighlight:visited {
 }
 .content {
     width: 75%;
-    margin-left: 15%;
+    margin: auto;
     border: 1px solid black;
     background: #E0EBEB;
     border-radius: 4px;
