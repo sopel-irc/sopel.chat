@@ -6,16 +6,27 @@ body {
     text-align: center;
     border: 1px 0px 0px solid black;
     border-radius: 0px 0px 6px 6px
-    
+}
+.header .masthead a {
+    color: #000;
 }
 .header ul {
+    max-width: 75%;
+    margin: 1em auto;
+    padding: 0.2em 1em;
     list-style: none;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 .header ul li {
-    border-left:1px solid #AAAAAA;
-    display:inline;
-    margin-left:-1px;
-    padding:0 0.75ex;
+    padding: 0.75ex;
+    margin: 0.1em 0.25em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 a, a:visited {
     text-decoration: none;
@@ -23,10 +34,6 @@ a, a:visited {
 }
 a:hover {
     color: #44e;
-}
-.header ul li.first {
-    border-left:medium none;
-    padding-left: 1px;
 }
 
 .header h1, .header h2, .header h3 {
@@ -37,9 +44,6 @@ a:hover {
     font-family: 'McLaren', cursive;
     display: inline-block;
 }
-a.nohighlight:visited {
-    color: black;
-}
 .header h2 {
     font-size: 20px;
     display: inline-block;
@@ -48,17 +52,23 @@ a.nohighlight:visited {
 }
 .content {
     width: 75%;
-    margin-left: 15%;
+    margin: auto;
     border: 1px solid black;
     background: #E0EBEB;
     border-radius: 4px;
-    padding: 5px;
+    padding: 0.1em 1em;
 }
 .content.centered-text {
     text-align: center;
 }
+.content h1 {
+    margin: 1em 0 0.2em;
+    border-bottom: 1px dotted #aaa;
+}
+.content :first-child {
+    margin-top: 0.4em;
+}
 .content p {
-    margin: 5px;
     margin-bottom: 10px;
 }
 .content ul.faq {
@@ -166,6 +176,13 @@ a.nohighlight:visited {
     text-align: center;
     font-weight: bold;
     font-size: small;
+}
+@media (max-width: 768px) {
+    .content article.migrated aside {
+        background-position: center 12px, center, center;
+        padding-left: 0.5em;
+        padding-top: 80px;
+    }
 }
 .content article.migrated aside p {
     margin: 0.5em;
