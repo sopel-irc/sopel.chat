@@ -130,7 +130,7 @@ def process_command(f, func):
     func = func[1]
 
     purpose = (func.__doc__ or '*No documentation found.*')
-    purpose = inspect.cleandoc(purpose).replace('\n', '<br>')
+    purpose = inspect.cleandoc(purpose).replace('\n', '<br>').replace('|', '\\|')
     if hasattr(func, 'example'):
         example = '`%s`' % func.example[0]["example"].replace('$nickname', 'Sopel')
     else:

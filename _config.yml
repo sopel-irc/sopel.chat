@@ -3,10 +3,8 @@ tagline: The Python IRC Bot
 repo: https://github.com/sopel-irc/sopel
 docs: /docs/
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: rouge
-redcarpet:
-    extensions: [tables]
 
 exclude:
   - LICENSE

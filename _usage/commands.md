@@ -42,7 +42,7 @@ modules will not be shown here.
 | .countdown | .countdown <year> <month> <day> - displays a countdown to a given date. |  | countdown |
 | .btc<br>.bitcoin | *No documentation found.* | `.btc 20 EUR` | currency |
 | .cur<br>.currency<br>.exchange | Show the exchange rate between two currencies | `.cur 20 EUR in USD` | currency |
-| .choose<br>.ch<br>.choice | .choice option1|option2|option3 - Makes a difficult choice easy. |  | dice |
+| .choose<br>.ch<br>.choice | .choice option1\|option2\|option3 - Makes a difficult choice easy. |  | dice |
 | .d<br>.dice<br>.roll | .dice XdY[vZ][+N], rolls dice and reports the result.<br><br>X is the number of dice. Y is the number of faces in the dice. Z is the<br>number of lowest dice to be dropped from the result. N is the constant to<br>be applied to the end result. | `.roll 1d1+1d1` | dice |
 | .afraid | *No documentation found.* | `.afraid` | emoticons |
 | .rage<br>.anger | *No documentation found.* | `.anger` | emoticons |
