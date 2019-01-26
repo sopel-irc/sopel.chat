@@ -167,6 +167,13 @@ a.nohighlight:visited {
     font-weight: bold;
     font-size: small;
 }
+@media (max-width: 768px) {
+    .content article.migrated aside {
+        background-position: center 12px, center, center;
+        padding-left: 0.5em;
+        padding-top: 80px;
+    }
+}
 .content article.migrated aside p {
     margin: 0.5em;
 }
