@@ -13,12 +13,19 @@ body {
     margin: 1em auto;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex: 0 0 content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.header ul li:not(:first-child) {
+    border-left: 1px solid #aaa;
 }
 .header ul li {
-    border-left:1px solid #AAAAAA;
-    display:inline;
-    margin-left:-1px;
-    padding:0 0.75ex;
+    padding: 0 0.75ex;
 }
 a, a:visited {
     text-decoration: none;
@@ -26,10 +33,6 @@ a, a:visited {
 }
 a:hover {
     color: #44e;
-}
-.header ul li.first {
-    border-left:medium none;
-    padding-left: 1px;
 }
 
 .header h1, .header h2, .header h3 {
