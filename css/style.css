@@ -6,7 +6,9 @@ body {
     text-align: center;
     border: 1px 0px 0px solid black;
     border-radius: 0px 0px 6px 6px
-    
+}
+.header .masthead a {
+    color: #000;
 }
 .header ul {
     max-width: 75%;
@@ -41,9 +43,6 @@ a:hover {
     font-size: 60px;
     font-family: 'McLaren', cursive;
     display: inline-block;
-}
-a.nohighlight:visited {
-    color: black;
 }
 .header h2 {
     font-size: 20px;
