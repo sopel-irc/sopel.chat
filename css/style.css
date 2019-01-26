@@ -56,13 +56,19 @@ a:hover {
     border: 1px solid black;
     background: #E0EBEB;
     border-radius: 4px;
-    padding: 5px;
+    padding: 0.1em 1em;
 }
 .content.centered-text {
     text-align: center;
 }
+.content h1 {
+    margin: 1em 0 0.2em;
+    border-bottom: 1px dotted #aaa;
+}
+.content :first-child {
+    margin-top: 0.4em;
+}
 .content p {
-    margin: 5px;
     margin-bottom: 10px;
 }
 .content ul.faq {
