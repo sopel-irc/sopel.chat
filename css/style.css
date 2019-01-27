@@ -125,6 +125,11 @@ header h2 {
     background-color: #D3DEDE;
 }
 
+.content pre {
+    overflow-x: auto;
+    padding: 1em;
+}
+
 .content article a.to-parent {
     float: right;
     margin: 1em 1em 1em 4em;
