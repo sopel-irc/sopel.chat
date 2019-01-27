@@ -71,28 +71,29 @@ a:hover {
 .content p {
     margin-bottom: 10px;
 }
-.content ul.faq {
-    list-style: none;
+
+.content dl.faq {
+    margin: 0.5em 1em;
 }
-.content ul.faq li.q:before {
+.content dl.faq dt:before {
     content: "Q: ";
     font-family: 'McLaren', cursive;
     font-size: 20px;
 }
-
-.content ul.faq li.a:before {
+.content dl.faq dd:before {
     content: "A: ";
     font-family: 'McLaren', cursive;
     font-size: 20px;
 }
-.content ul.faq li.a {
+.content dl.faq dd {
     margin-bottom: 15px;
+    margin-left: 0;
 }
+
 .content .Sopel {
     font-family: 'McLaren', cursive;
     font-size: 20px;
 }
-
 
 .content table {
     border-width: 1px;

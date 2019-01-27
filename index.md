@@ -65,72 +65,63 @@ Sopel's source code.
 
 # Frequently Asked Questions
 
-<ul class="faq">
-<li class="q">Where can I report a problem with Sopel?</li>
+<dl class="faq">
+<dt>Where can I report a problem with Sopel?</dt>
+<dd>You can file a ticket in our <a href="{{ site.repo }}/issues">GitHub issue
+tracker</a>, or join the developers in <a href="irc://irc.freenode.net/#sopel">
+#sopel</a> on Freenode.</dd>
 
-<li class="a">You can file a ticket in our <a href="{{ site.repo }}/issues">
-GitHub issue tracker</a>, or join the developers in
-<a href="irc://irc.freenode.net/#sopel">#sopel</a> on Freenode.</li>
+<dt>Is there somewhere I can go to find modules other people have written for
+Sopel?</dt>
+<dd>You can install modules from <a href="https://pypi.org/search/?q=%22sopel_modules%22">
+PyPI</a>, or use your favorite search engine to find modules on GitHub, etc.
+There's also a <a href="https://github.com/sopel-irc/sopel-cookiecutter">
+template</a> you can work from to publish your own modules on PyPI.</dd>
 
-<li class="q">Is there somewhere I can go to find modules other people have
-written for Sopel?</li>
-
-<li class="a">You can install modules from <a href="https://pypi.org/search/?q=%22sopel_modules%22">PyPI</a>,
-or use your favorite search engine to find modules on GitHub, etc. There's also
-a <a href="https://github.com/sopel-irc/sopel-cookiecutter">template</a> you
-can work from to publish your own modules on PyPI.</li>
-
-<li class="q">Will phenny/jenni modules work with Sopel?</li>
-
-<li class="a"><a href="{% link _appendices/phenny-compatibility.md %}">Probably</a>.
+<dt>Will phenny/jenni modules work with Sopel?</dt>
+<dd><a href="{% link _appendices/phenny-compatibility.md %}">Probably</a>.
 There are a small number of features in the older versions which are implemented
 differently in Sopel. The vast majority of modules should work without problems,
-though.</li>
+though.</dd>
 
-<li class="q">Can I use Sopel with Docker?</li>
+<dt>Can I use Sopel with Docker?</dt>
+<dd>Probably, but there's not much reason to. We only provide support for one
+version of Sopel at a time, and it already supports running multiple instances
+side-by-side. If you really need to containerize dependencies, virtualenv is
+probably a lot easier—but there is <a href="https://github.com/sopel-irc/sopel-docker">an
+Officially Unofficial™ Docker container</a> available.</dd>
 
-<li class="a">Probably, but there's not much reason to. We only provide support
-for one version of Sopel at a time, and it already supports running multiple
-instances side-by-side. If you really need to containerize dependencies,
-virtualenv is probably a lot easier—but there is <a href="https://github.com/sopel-irc/sopel-docker">an
-Officially Unofficial™ Docker container</a> available.</li>
+<dt>Does Sopel work on Google App Engine?</dt>
+<dd>Probably not. App Engine doesn't currently support SQLite, which Sopel
+requires for its database.</dd>
 
-<li class="q">Does Sopel work on Google App Engine?</li>
+<dt>Does Sopel run on OSX? Windows? PyPy? Jython?</dt>
+<dd>Probably, probably, probably, probably. Sopel itself is pure Python, and an
+effort is made to be as platform-independent as possible. That said, most of
+the development is done on Linux, so some platform-specific bugs may be missed.
+If you do run into a bug, be sure to report it, because otherwise we won't know
+about it.</dd>
 
-<li class="a">Probably not. App Engine doesn't currently support SQLite, which
-Sopel requires for its database.</li>
+<dt>How do I make Sopel give me ops when I enter a channel?</dt>
+<dd>You should use your network's services to do this. If you're on a network
+like EFnet which doesn't have services, you can write a module to make Sopel do
+it. Sopel will never be as good at it as network services, though, so we don't
+include that functionality in our default set of modules.</dd>
 
-<li class="q">Does Sopel run on OSX? Windows? PyPy? Jython?</li>
+<dt>Why is Sopel saying <code>...</code>?</dt>
+<dd>Sopel is built to avoid being spammy as much as possible, so it keeps track
+of the last few things it's said. If too many of those last few things are the
+same, it says <code>...</code> a few times instead of repeating itself (and
+then stops trying to say that thing entirely, until it's said some other
+things). Usually, this happens because someone is spamming the same command
+over and over, or something is just broken. It doesn't keep the bot from saying
+anything else, and it can say the same thing as often as you want, as long as
+it says some other stuff, too.</dd>
 
-<li class="a">Probably, probably, probably, probably. Sopel itself is pure
-Python, and an effort is made to be as platform-independent as possible. That
-said, most of the development is done on Linux, so some platform-specific bugs
-may be missed. If you do run into a bug, be sure to report it, because
-otherwise we won't know about it.</li>
-
-<li class="q">How do I make Sopel give me ops when I enter a channel?</li>
-
-<li class="a">You should use your network's services to do this. If you're on a
-network like EFnet which doesn't have services, you can write a module to make
-Sopel do it. Sopel will never be as good at it as network services, though,
-so we don't include that functionality in our default set of modules.</li>
-
-<li class="q">Why is Sopel saying <code>...</code>?</li>
-
-<li class="a">Sopel is built to avoid being spammy as much as possible, so it
-keeps track of the last few things its said. If too many of those last few
-things are the same, it says <code>...</code> a few times instead of repeating
-itself (and then stops trying to say that thing entirely, until its said some
-other things). Usually, this happens because someone is spamming the same
-command over and over, or something is just broken. It doesn't keep the bot
-from saying anything else, and it can say the same thing as often as you want,
-as long as it says some other stuff, too.</li>
-
-<li class="q">Why does Sopel spit out a bunch of warnings when I have the 
-iPython module loaded?</li>
-
-<li class="a">This is because by default, iPython re-enables the deprecation 
-warnings which python ignores most of the time. To suppress these warnings, 
-put <a href="https://github.com/sopel-irc/sopel/blob/5f60756e1a975a1a978c322949d8ba9b4a2b4d71/contrib/suppress-warnings.py">this
-file</a> in <code>~/.ipython/profile_default/startup/</code></li>
-</ul>
+<dt>Why does Sopel spit out a bunch of warnings when I have the iPython module
+loaded?</dt>
+<dd>This is because by default, iPython re-enables the deprecation warnings
+which python ignores most of the time. To suppress these warnings, put
+<a href="https://github.com/sopel-irc/sopel/blob/5f60756e1a975a1a978c322949d8ba9b4a2b4d71/contrib/suppress-warnings.py">this
+file</a> in <code>~/.ipython/profile_default/startup/</code></dd>
+</dl>
