@@ -7,17 +7,16 @@ title: Sopel - The Python IRC Bot
 
 <span class="Sopel">Sopel</span> is a simple, easy-to-use, open-source IRC
 utility bot, written in [Python](https://www.python.org/). It's designed to be
-easy to use, easy to run, and easy to make new features for.
+easy to use, easy to run, and easy to extend.
 
 <span class="Sopel">Sopel</span> comes with a ton of ready-made features for
 you to use. It can leave notes for people, give you reminders, and
 [much more]({% link _usage/commands.md %}).
 
-<span class="Sopel">Sopel</span> also comes with a
-[fully-documented]({{ site.docs }}) and
-easy-to-use API, so you can write your own features. There's also an
-[easy tutorial]({% link _tutorials/index.md %})
-you can follow along with, to help you learn.
+<span class="Sopel">Sopel</span> also comes with a [fully-documented]
+({{ site.docs }}) and easy-to-use API, so you can write your own features.
+There's also an [easy tutorial]({% link _tutorials/index.md %}) you can follow,
+to help you get started.
 
 Developing for <span class="Sopel">Sopel</span> is a great way to familiarize
 yourself with Python. It's easy to start, but there's no limit to the cool
@@ -29,16 +28,14 @@ things you can do with it.
 
 # Features
 
-* Fully documented API for writing new modules
-* SSL Support
+* Fully [documented]({{ site.docs }}) API for writing new modules
+* SSL/TLS connection support
 * [IRCv3](https://ircv3.net/) support, with SASL authentication
 * Can authenticate admins with services on networks which support it
 * Easy quickstart wizard
 * Dynamic topic support using topic masks
 * Numerous modules: Wikipedia, Reddit, Bugzilla, unit conversion, and more
-* Support for remembering timezone, weather location, and other information for
-users
-* Persistent user and channel settings database using SQLite
+* Persistent user and channel settings/preferences database using SQLite
 * Ability to easily run as a daemon
 * Safe asynchronous inter-module communication
 * And much, much more
