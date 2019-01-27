@@ -64,6 +64,7 @@ a:hover {
 .content h1 {
     margin: 1em 0 0.2em;
     border-bottom: 1px dotted #aaa;
+    padding-bottom: 4px;
 }
 .content :first-child {
     margin-top: 0.4em;
@@ -193,5 +194,5 @@ a:hover {
 .creativecommons {
     width: 75%;
     text-align: center;
-    margin: auto;
+    margin: 2em auto 1em;
 }
