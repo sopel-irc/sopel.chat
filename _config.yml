@@ -14,7 +14,6 @@ exclude:
   - Gemfile.lock
   - netlify-build.sh
   - runtime.txt
-  - upload.sh
   - document_sopel_modules.py
 
 include:
