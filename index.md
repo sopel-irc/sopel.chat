@@ -68,35 +68,36 @@ Sopel's source code.
 <ul class="faq">
 <li class="q">Where can I report a problem with Sopel?</li>
 
-<li class="a">You can file a ticket in our <a
-href="https://github.com/sopel-irc/sopel/issues">GitHub issue tracker</a>, or
-join the developers in <a href="irc://irc.freenode.net/#sopel">#sopel</a>
-on Freenode.</li>
+<li class="a">You can file a ticket in our <a href="{{ site.repo }}/issues">
+GitHub issue tracker</a>, or join the developers in
+<a href="irc://irc.freenode.net/#sopel">#sopel</a> on Freenode.</li>
 
 <li class="q">Is there somewhere I can go to find modules other people have
 written for Sopel?</li>
 
 <li class="a">You can install modules from <a href="https://pypi.org/search/?q=%22sopel_modules%22">PyPI</a>,
-or use your favorite search engine to find modules on GitHub, etc.
-There's also a <a href="https://github.com/sopel-irc/sopel-cookiecutter">template</a>
-you can work from to publish your own modules on PyPI.
+or use your favorite search engine to find modules on GitHub, etc. There's also
+a <a href="https://github.com/sopel-irc/sopel-cookiecutter">template</a> you
+can work from to publish your own modules on PyPI.</li>
 
-<li class="q">Will Phenny/jenni modules work with Sopel?</li>
+<li class="q">Will phenny/jenni modules work with Sopel?</li>
 
-<li class="a">Probably. There are a small number of features in the older
-versions which are implemented differently in Sopel. The vast majority of
-modules should work without problems, though.</li>
+<li class="a"><a href="{% link _appendices/phenny-compatibility.md %}">Probably</a>.
+There are a small number of features in the older versions which are implemented
+differently in Sopel. The vast majority of modules should work without problems,
+though.</li>
 
 <li class="q">Can I use Sopel with Docker?</li>
 
 <li class="a">Probably, but there's not much reason to. We only provide support
 for one version of Sopel at a time, and it already supports running multiple
 instances side-by-side. If you really need to containerize dependencies,
-virtualenv is a lot easier.</li>
+virtualenv is probably a lot easier—but there is <a href="https://github.com/sopel-irc/sopel-docker">an
+Officially Unofficial™ Docker container</a> available.</li>
 
 <li class="q">Does Sopel work on Google App Engine?</li>
 
-<li class="a">Probably not. App Engine doesn't currently do sqlite, which
+<li class="a">Probably not. App Engine doesn't currently support SQLite, which
 Sopel requires for its database.</li>
 
 <li class="q">Does Sopel run on OSX? Windows? PyPy? Jython?</li>
@@ -130,6 +131,6 @@ iPython module loaded?</li>
 
 <li class="a">This is because by default, iPython re-enables the deprecation 
 warnings which python ignores most of the time. To suppress these warnings, 
-put <a href="https://github.com/sopel-irc/sopel/blob/5f60756e1a975a1a978c322949d8ba9b4a2b4d71/contrib/suppress-warnings.py">this file
-</a> in <code>~/.ipython/profile_default/startup/</code>
+put <a href="https://github.com/sopel-irc/sopel/blob/5f60756e1a975a1a978c322949d8ba9b4a2b4d71/contrib/suppress-warnings.py">this
+file</a> in <code>~/.ipython/profile_default/startup/</code></li>
 </ul>
