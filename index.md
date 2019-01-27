@@ -13,8 +13,8 @@ easy to use, easy to run, and easy to extend.
 you to use. It can leave notes for people, give you reminders, and
 [much more]({% link _usage/commands.md %}).
 
-<span class="Sopel">Sopel</span> also comes with a [fully-documented]
-({{ site.docs }}) and easy-to-use API, so you can write your own features.
+<span class="Sopel">Sopel</span> also comes with a [fully-documented](
+{{ site.docs }}) and easy-to-use API, so you can write your own features.
 There's also an [easy tutorial]({% link _tutorials/index.md %}) you can follow,
 to help you get started.
 
