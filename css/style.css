@@ -66,9 +66,6 @@ header h2 {
     border-bottom: 1px dotted #aaa;
     padding-bottom: 4px;
 }
-.content :first-child {
-    margin-top: 0.4em;
-}
 .content p {
     margin-bottom: 10px;
 }
@@ -139,10 +136,19 @@ header h2 {
 }
 
 .content article nav ul {
-    margin: 1em 0;
+    /* bottom navbar is the most used, and not always classed, *
+     * so these are the default measurements.                  */
+    margin: 2em 0 1em;
     padding: 0;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    font-size: smaller;
+}
+.content article nav.top ul {
+    /* navbar on top of a page is currently only for changelogs */
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 .content article nav ul li {
     display: inline;
@@ -154,11 +160,33 @@ header h2 {
 .content article nav ul li.prevlink a:before {
     content: "←";
 }
+.content article nav ul li.uplink {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .content article nav ul li.nextlink {
     margin-left: auto;
 }
 .content article nav ul li.nextlink a:after {
     content: "→";
+}
+
+.content article.column-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: auto 4em;
+}
+.content article.column-list ul li {
+    display: block;
+    width: 8em;
+    padding: 1em 1ex;
+    list-style: none;
 }
 
 .content article.migrated aside {
