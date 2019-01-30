@@ -8,7 +8,8 @@ order: 9000
 This is an incomplete (and probably outdated) comparison of sopel, jenni, phenny, Supybot, Limnoria, and eggdrop. With Eggdrop, only limited research was done, so some information may be incorrect or missing.
 
 # Core features
-| Feature                          | sopel           | jenni            | phenny           | Supybot          | Limnoria         | Eggdrop          |
+
+| Feature                          | sopel            | jenni            | phenny           | Supybot          | Limnoria         | Eggdrop          |
 | -------------------------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
 | Language                         | Python 2.7<br />Python 3 | Python 2.4-2.7 | Python 2.4-2.7 | Python 2.3-2.7   | Python 2.6-2.7<br />Python 3 | C, Tcl           |
 | OS Support                       | Cross-platform   | Linux            | ?                | Cross-platform   | Cross-platform   | Cross-platform   |
@@ -26,8 +27,8 @@ This is an incomplete (and probably outdated) comparison of sopel, jenni, phenny
 | Daemonizable with systemd        | Yes              | No               | No               | No               | Yes              | Yes              |
 | Persistent user/channel settings database | Yes     | No               | No               | Yes              | Yes              | No               |
 | Safe inter-module communication  | Yes              | No               | No               | ?                | ?                | No               |
-| RFC-compliant nick comparison    | Yes              | No               | No               | Yes              | Yes              | ?               |
-| Command rate-limiting            | Yes              | Yes              | No               | Yes              | Yes  | ? | |                |
+| RFC-compliant nick comparison    | Yes              | No               | No               | Yes              | Yes              | ?                |
+| Command rate-limiting            | Yes              | Yes              | No               | Yes              | Yes              | ?                |
 | Commands can override their rate limit (e.g. on failure) | Yes | No    | N/A              | No               | No               | ?                |
 | Bot administration authentication | nick, hostmask  | nick, hostmask   | nick             | nick, hostmask   | nick, hostmask, GPG, network services | nick, hostmask, telnet  |
 | Channel administration authentication | IRC modes   | Freenode services | N/A             | nick, hostmask   | nick, hostmask, GPG, network services | ?                |
@@ -40,6 +41,7 @@ This is an incomplete (and probably outdated) comparison of sopel, jenni, phenny
 1. <span id=note1 />phenny, jenni, and limnoria do not have discrete versioned releases. They are available as git repos or snapshot tarballs only.
 
 # Module features
+
 This section currently only compares between sopel, jenni, and phenny.
 
 | Feature | sopel | jenni | phenny |
@@ -52,6 +54,7 @@ This section currently only compares between sopel, jenni, and phenny.
 
 
 ## Information provided for URLs
+
 | Feature | sopel | jenni | phenny |
 | ------- | ------ | ----- | ------ |
 | Bugzilla bug data | Yes | No | No |
