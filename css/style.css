@@ -136,11 +136,19 @@ header h2 {
 }
 
 .content article nav ul {
-    margin: 1em 0;
+    /* bottom navbar is the most used, and not always classed, *
+     * so these are the default measurements.                  */
+    margin: 2em 0 1em;
     padding: 0;
     display: flex;
     justify-content: space-between;
     position: relative;
+    font-size: smaller;
+}
+.content article nav.top ul {
+    /* navbar on top of a page is currently only for changelogs */
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 .content article nav ul li {
     display: inline;
@@ -157,10 +165,6 @@ header h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: smaller;
-}
-.content article nav.bottom ul li.uplink {
-    bottom: 0;
 }
 .content article nav ul li.nextlink {
     margin-left: auto;
