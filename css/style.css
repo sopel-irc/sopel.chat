@@ -140,6 +140,7 @@ header h2 {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .content article nav ul li {
     display: inline;
@@ -150,6 +151,16 @@ header h2 {
 }
 .content article nav ul li.prevlink a:before {
     content: "←";
+}
+.content article nav ul li.uplink {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: smaller;
+}
+.content article nav.bottom ul li.uplink {
+    bottom: 0;
 }
 .content article nav ul li.nextlink {
     margin-left: auto;
