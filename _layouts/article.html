@@ -1,49 +1,54 @@
 ---
 layout: default
 ---
-<article{% if page.migrated %} class="migrated"{% endif %}>
-  <a class="to-parent" href="../">Up a level</a>
-  <h1>{{ page.title }}</h1>{% if page.migrated and page.source == "wiki" %}
-  <aside>
-    <p>This article was migrated here from the old GitHub wiki.</p>
-    <p>It might be a little outdated and/or have a broken layout.</p>
-    <p>Your help fixing any errors is appreciated! <a href="https://github.com/sopel-irc/sopel-website/edit/wiki-migration/{{ page.path }}">Edit this page</a></p>
-  </aside>
-  {% endif %}{{ content }}{% if page.collection %}
-    {% unless page.is_index %}
-      {% assign list = site[page.collection] | where_exp: "item", "item.is_index != true" %}
-      {% if page.order %}
-        {% assign sortedList = list | sort: "order" %}
-      {% else %}
-        {% assign sortedList = list %}
+{% if page.collection %}
+  {% unless page.is_index %}
+    {% assign list = site[page.collection] | where_exp: "item", "item.is_index != true" %}
+    {% if page.order %}
+      {% assign sortedList = list | sort: "order" %}
+    {% else %}
+      {% assign sortedList = list %}
+    {% endif %}
+    {% for item in sortedList %}
+      {% if item.title == page.title %}
+        {% unless forloop.first %}
+          {% assign prevurl = prev.url %}
+          {% assign prevtitle = prev.title %}
+        {% endunless %}
+        {% unless forloop.last %}
+          {% assign next = sortedList[forloop.index] %}
+          {% assign nexturl = next.url %}
+          {% assign nexttitle = next.title %}
+        {% endunless %}
       {% endif %}
-      {% for item in sortedList %}
-        {% if item.title == page.title %}
-          {% unless forloop.first %}
-            {% assign prevurl = prev.url %}
-            {% assign prevtitle = prev.title %}
-          {% endunless %}
-          {% unless forloop.last %}
-            {% assign next = sortedList[forloop.index] %}
-            {% assign nexturl = next.url %}
-            {% assign nexttitle = next.title %}
-          {% endunless %}
-        {% endif %}
-        {% assign prev = item %}
-      {% endfor %}
-  <nav>
+      {% assign prev = item %}
+    {% endfor %}
+    {% capture navlinks %}
     <ul>
       {% if prevurl %}
       <li class="prevlink">
         <a href="{{ prevurl }}">{{ prevtitle }}</a>
       </li>
       {% endif %}
+      <li class="uplink"><a class="to-parent" href="../">Up a level</a></li>
       {% if nexturl %}
       <li class="nextlink">
         <a href="{{ nexturl }}">{{ nexttitle }}</a>
       </li>
       {% endif %}
     </ul>
-  </nav>
+    {% endcapture %}
   {% endunless %}
-{% endif %}</article>
+{% endif %}
+<article{% if page.migrated %} class="migrated"{% endif %}>
+  {% if navlinks %}<nav class="top">{{ navlinks }}</nav>{% endif %}
+  <h1>{{ page.title }}</h1>{% if page.migrated and page.source == "wiki" %}
+  <aside>
+    <p>This article was migrated here from the old GitHub wiki.</p>
+    <p>It might be a little outdated and/or have a broken layout.</p>
+    <p>Your help fixing any errors is appreciated! <a href="https://github.com/sopel-irc/sopel-website/edit/wiki-migration/{{ page.path }}">Edit this page</a></p>
+  </aside>
+  {% endif %}
+  {{ content }}
+  {% if navlinks %}<nav class="bottom">{{ navlinks }}</nav>{% endif %}
+</article>
