@@ -66,9 +66,6 @@ header h2 {
     border-bottom: 1px dotted #aaa;
     padding-bottom: 4px;
 }
-.content :first-child {
-    margin-top: 0.4em;
-}
 .content p {
     margin-bottom: 10px;
 }
@@ -159,6 +156,22 @@ header h2 {
 }
 .content article nav ul li.nextlink a:after {
     content: "→";
+}
+
+.content article.column-list ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: auto 4em;
+}
+.content article.column-list ul li {
+    display: block;
+    width: 8em;
+    padding: 1em 1ex;
+    list-style: none;
 }
 
 .content article.migrated aside {

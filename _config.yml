@@ -15,6 +15,7 @@ exclude:
   - netlify-build.sh
   - runtime.txt
   - document_sopel_modules.py
+  - generate_changelogs.py
 
 include:
   - _redirects
@@ -25,6 +26,8 @@ collections:
   usage:
     output: true
   appendices:
+    output: true
+  changelogs:
     output: true
 
 defaults:
@@ -43,6 +46,11 @@ defaults:
     values:
       layout: article
       permalink: /appendix/:name/
+  - scope:
+      path: "_changelogs"
+    values:
+      layout: changelog
+      permalink: /changelog/:path/
   - scope:
       path: "_*/index.*"
     values:

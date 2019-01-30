@@ -2,3 +2,4 @@
 _site/*
 build/*
 Gemfile.lock
+_changelogs/*.*.md
