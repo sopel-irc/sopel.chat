@@ -1,10 +1,12 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 """
-Sopel module documentation utility
-This script creates (either Markdown or reST) files, documenting the commands
-and module configuration options in a Sopel instance.
+Sopel changelog page generation utility
 
-Copyright 2012 Edward Powell, embolalia.net
+This script creates discrete Markdown files for each version section in Sopel's
+NEWS file, in the "changelogs" collection of the Jekyll site, so the changelog
+entries will always be up-to-date with the Sopel version checked out for
+building the Sphinx docs.
+
 Copyright 2019 dgw, technobabbl.es
 Licensed under the Eiffel Forum License 2.
 
@@ -49,10 +51,11 @@ def main(argv=None):
                 os.remove(entry)
         return
 
-    print("Generating changelog pages using NEWS file: " + args.news_file)
-    print("...")
+    news_file = os.path.abspath(os.path.expanduser(args.news_file))
 
-    with open(args.news_file, 'r') as f:
+    print("Generating changelog pages using NEWS file: " + news_file)
+
+    with open(news_file, 'r') as f:
         news = f.read()
 
     split_news = re.split(r'Changes between \d+\.\d+(?:\.\d+)? and ', news)[1:]
