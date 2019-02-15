@@ -3,3 +3,5 @@ _site/*
 build/*
 Gemfile.lock
 _changelogs/*.*.md
+_usage/commands.md
+_usage/module-configuration.md
