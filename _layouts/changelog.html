@@ -5,9 +5,9 @@ layout: default
     {% unless page.is_index %}
       {% assign list = site[page.collection] | where_exp: "item", "item.is_index != true" %}
       {% if page.order %}
-        {% assign sortedList = list | sort: "order" | reverse %}
+        {% assign sortedList = list | sort: "order" %}
       {% else %}
-        {% assign sortedList = list | reverse %}
+        {% assign sortedList = list %}
       {% endif %}
       {% for item in sortedList %}
         {% if item.title == page.title %}
