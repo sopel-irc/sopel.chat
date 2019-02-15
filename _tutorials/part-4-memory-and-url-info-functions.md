@@ -40,14 +40,17 @@ the API spells out no special rules here. However, one of the ones used by the
 modules the bot ships with is `last_seen_url` which, as you'd expect, contains
 the last seen URL. The key itself is a Python dict of channel names to the
 last URL seen in that channel. So when the `.duck` command wants to update it,
-it uses this line of code:
+it uses code like this:
 
 ```py
+    if 'last_seen_url' not in bot.memory:
+        bot.memory['last_seen_url'] = SopelMemory()
     bot.memory['last_seen_url'][trigger.sender] = url
 ```
 
 Where `trigger.sender`, as you'll recall, is the channel (or nick, if a PM)
-the message came from, and `url` is the result from the search.
+the message came from, and `url` is the result from the search. To make the bot
+memory thread-safe, we use `SopelMemory` objects instead of normal dicts.
 
 ## URL info functions
 
