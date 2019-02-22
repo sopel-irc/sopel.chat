@@ -1,34 +1,63 @@
 # Updating automatically generated pages
 
 Some of the website pages are automatically generated using the
-[document_sopel_modules.py](document_sopel_modules.py) script in the root of
-this repository. These pages are the [command list](_usage/commands.md) and the
-[module configuration](_usage/module-configuration.md) list.
+[document_sopel_modules.py](document_sopel_modules.py) and
+[generate_changelogs.py](generate_changelogs.py) scripts in the root of this
+repository, and the Sphinx Makefile included with Sopel's docs.
 
-Generally, these pages should be updated after a new version of Sopel releases.
-This is how to do it. You will need local clones of sopel-irc/sopel-website
-(this repo) & sopel-irc/sopel (Sopel itself), and a reasonably current version
-of `sopel` installed globally on your system.
+For website deploys, the [Netlify build script](netlify-build.sh) handles all
+of that automatically. There's no need to manually update anything after
+releasing a new version of Sopel; updating the commit that the `_sopel`
+submodule points to is sufficient.
 
-The script is very old. It has been updated to mostly-working condition, but it
-cannot document module configuration options any more due to changes in how the
-standard `configure()` method works. This function would be nice to have back,
-of course, so any help fixing it for current module code is much appreciated!
+The module-doc script is very old. It has been updated to mostly-working
+condition, but it cannot document module configuration options any more due to
+changes in how the standard `configure()` method works. This function would be
+nice to have back, of course, so any help fixing it for current module code is
+much appreciated! (For the moment, we're embedding Markdown tables in
+docstrings in the module code, which is… kludgy, but it works for now.)
 
-## Quick guide
 
-Preferably, this script should be run under a version of Python 3 that
-Sopel supports. If your `python` points to an old version, substitute `python3`
-or whatever name is appropriate for your system.
+## Manual guide
 
-The script expects that `sopel` is at least installed globally, even if the
-installed version is not the latest release, so that it can open module files.
+Preferably, the scripts should be run under a version of Python 3 that Sopel
+supports. If your `python` points to an old version, substitute `python3` or
+whatever name is appropriate for your system.
 
-From the root of `sopel-website`, run the following command:
+All example commands are run from the root of the local `sopel.chat` repo,
+except where otherwise noted.
+
+Changelog generation will "just work" using whatever entries exist in the
+`_sopel` submodule:
+
+    python generate_changelogs.py
+
+or you can manually point it to a NEWS file that lives elsewhere:
+
+    python generate_changelogs.py --news=/path/to/NEWS
+
+Clean up the generated changelog files if needed with:
+
+    python generate_changelogs.py --clean
+
+The module-doc script expects that `sopel` is at least installed globally,
+even if the installed version is not the latest release, so that it can open
+module files without import errors.
+
+If Sopel is stored in (from this repo's perspective) `../sopel`, just run:
 
     python document_sopel_modules.py
 
-If Sopel's code is not stored in (from this repo's perspective) `../sopel`, use
-the `--sopel` argument like so:
+If Sopel's code is stored elsewhere, use the `--sopel` argument like so:
 
     python document_sopel_modules.py --sopel=/path/to/sopel/repo
+
+Finally, the `/docs/` folder is built with Sphinx from `_sopel/docs`:
+
+    cd _sopel/docs
+    make html
+    mv build/html ../../_site/docs
+
+Jekyll might wipe this depending on how you test locally, but you can probably
+just trust that the site deployment will get the API docs right and not worry
+about them too much when testing.
