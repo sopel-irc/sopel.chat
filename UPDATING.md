@@ -52,6 +52,10 @@ If Sopel's code is stored elsewhere, use the `--sopel` argument like so:
 
     python document_sopel_modules.py --sopel=/path/to/sopel/repo
 
+This script also supports cleaning up after itself:
+
+    python document_sopel_modules.py --clean
+
 Finally, the `/docs/` folder is built with Sphinx from `_sopel/docs`:
 
     cd _sopel/docs

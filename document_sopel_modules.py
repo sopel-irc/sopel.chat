@@ -24,6 +24,8 @@ except:
 
 def main(argv=None):
     this_dir = os.path.dirname(os.path.abspath(__file__))
+    config_vals_file = os.path.join(this_dir, '_usage/module-configuration.md')
+    commands_file = os.path.join(this_dir, '_usage/commands.md')
 
     parser = argparse.ArgumentParser(
         description="Sopel module documentation utility",
@@ -36,11 +38,22 @@ def main(argv=None):
         help="Specify the location of Sopel's code.",
         default=os.path.join(os.path.dirname(this_dir), 'sopel')
         )
+    parser.add_argument(
+        '--clean',
+        action='store_true',
+        help="Clean up the generated page files."
+        )
 
     if argv:
         args = parser.parse_args(argv)
     else:
         args = parser.parse_args()
+
+    if args.clean:
+        print("Cleaning up generated module documentation...")
+        os.remove(config_vals_file)
+        os.remove(commands_file)
+        return
 
     print("Generating module docs using Sopel from " + args.sopel_root)
     print("...")
@@ -48,8 +61,6 @@ def main(argv=None):
 
     filenames = []
     modules_dir = os.path.join(args.sopel_root, 'sopel', 'modules')
-    config_vals_file = os.path.join(this_dir, '_usage/module-configuration.md')
-    commands_file = os.path.join(this_dir, '_usage/commands.md')
 
     for fn in os.listdir(modules_dir):
         if fn.endswith('.py') and not fn.startswith('_'):
