@@ -1,5 +1,5 @@
-sopel-website
-=============
+sopel.chat
+==========
 
 Website for [Sopel](https://github.com/sopel-irc/sopel), deployed at https://sopel.chat
 
