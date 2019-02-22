@@ -15,7 +15,7 @@ exclude:
   - netlify-build.sh
   - runtime.txt
   - document_sopel_modules.py
-  - generate_changelogs.py
+  - document_versions.py
 
 include:
   - _redirects

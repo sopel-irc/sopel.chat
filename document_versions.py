@@ -49,6 +49,7 @@ def main(argv=None):
         for entry in glob.glob('_changelogs/*.md'):
             if not entry.endswith('index.md'):
                 os.remove(entry)
+        os.remove('latest.json')
         return
 
     news_file = os.path.abspath(os.path.expanduser(args.news_file))
@@ -72,6 +73,16 @@ def main(argv=None):
                     .format(version=version, log_entry=text))
 
     print("Done! {} versions documented.".format(len(versions.keys())))
+
+    latest = list(versions.keys())[0]
+    with open('latest.json', 'w') as f:
+        f.write("{{\n"  # double braces so Python doesn't get confused
+                "    \"version\": \"{version}\",\n"
+                "    \"unstable\": \"{version}\",\n"
+                "    \"release_notes\": \"https://sopel.chat/changelog/{version}/\"\n"
+                "}}".format(version=latest))
+
+    print("Generated latest.json file pointing to version {}.".format(latest))
 
 if __name__ == '__main__':
     main()

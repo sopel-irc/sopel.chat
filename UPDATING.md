@@ -2,7 +2,7 @@
 
 Some of the website pages are automatically generated using the
 [document_sopel_modules.py](document_sopel_modules.py) and
-[generate_changelogs.py](generate_changelogs.py) scripts in the root of this
+[document_versions.py](document_versions.py) scripts in the root of this
 repository, and the Sphinx Makefile included with Sopel's docs.
 
 For website deploys, the [Netlify build script](netlify-build.sh) handles all
@@ -30,15 +30,15 @@ except where otherwise noted.
 Changelog generation will "just work" using whatever entries exist in the
 `_sopel` submodule:
 
-    python generate_changelogs.py
+    python document_versions.py
 
 or you can manually point it to a NEWS file that lives elsewhere:
 
-    python generate_changelogs.py --news=/path/to/NEWS
+    python document_versions.py --news=/path/to/NEWS
 
 Clean up the generated changelog files if needed with:
 
-    python generate_changelogs.py --clean
+    python document_versions.py --clean
 
 The module-doc script expects that `sopel` is at least installed globally,
 even if the installed version is not the latest release, so that it can open
