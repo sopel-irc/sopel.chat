@@ -1,5 +1,5 @@
 ---
-title: "Sopel tutorial, Part 6: Modules in folders, and distributing to PyPI"
+title: "Sopel tutorial, Part 5: Modules in folders, and distributing to PyPI"
 migrated: true
 source: wiki
 ---

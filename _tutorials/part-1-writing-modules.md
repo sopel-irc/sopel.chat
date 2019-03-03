@@ -1,5 +1,5 @@
 ---
-title: "Sopel tutorial, Part 2: Introduction to writing modules"
+title: "Sopel tutorial, Part 1: Introduction to writing modules"
 migrated: true
 source: wiki
 ---
@@ -191,4 +191,4 @@ For commands that use `@sopel.module.rate`, it is better to use
 rate-limiting (see [issue 824](https://github.com/sopel-irc/sopel/issues/824)).
 
 Want to learn about the configuration wizard?
-[Continue to part 3!]({% link _tutorials/part-3-config-wizard-and-setup-functions.md %})
+[Continue to part 2!]({% link _tutorials/part-2-config-wizard-and-setup-functions.md %})

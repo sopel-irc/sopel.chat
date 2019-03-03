@@ -8,8 +8,8 @@ tutorial sequence covers all the basics, from installing Sopel through to
 documenting & distributing your modules. We'll have you up to speed in no time!
 
 Users who just want to _use_ Sopel without writing new code should read the
-[installation tutorial]({% link _tutorials/part-1-installation.md %}) and then
-head for the [usage]({% link _usage/index.md %}) articles.
+[installation tutorial]({% link _usage/installing.md %}) and then head for the
+rest of the [usage]({% link _usage/index.md %}) articles.
 
 {% assign tuts = site.tutorials | where_exp: "tut", "tut.url != page.url" %}
 {% for tut in tuts %}

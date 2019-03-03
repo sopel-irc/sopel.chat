@@ -1,5 +1,5 @@
 ---
-title: "Sopel tutorial, Part 4: Memory and URL info functions"
+title: "Sopel tutorial, Part 3: Memory and URL info functions"
 migrated: true
 source: wiki
 ---
@@ -126,4 +126,4 @@ just a few lines of code, get the video ID from the URL regardless of where
 this function was called.
 
 Want to learn about how to document (and test!) your module's commands?
-[Continue to part 5!]({% link _tutorials/part-5-the-help-command.md %})
+[Continue to part 4!]({% link _tutorials/part-4-the-help-command.md %})

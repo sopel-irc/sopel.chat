@@ -1,5 +1,5 @@
 ---
-title: "Sopel tutorial, Part 5: The .help command"
+title: "Sopel tutorial, Part 4: The .help command"
 migrated: true
 source: wiki
 ---
@@ -119,4 +119,4 @@ module, instantly seeing the difference between expectation and reality:
 TODO
 
 Want to distribute your module as a package on [PyPI](https://pypi.org/)?
-[Continue to part 6!]({% link _tutorials/part-6-packaging-and-distributing-modules.md %})
+[Continue to part 5!]({% link _tutorials/part-5-packaging-and-distributing-modules.md %})

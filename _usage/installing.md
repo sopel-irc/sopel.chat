@@ -1,7 +1,8 @@
 ---
-title: "Sopel tutorial, Part 1: Installation and first run"
+title: Installing and running Sopel
 migrated: true
 source: wiki
+order: -9100
 ---
 
 **NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1
@@ -31,6 +32,12 @@ The best way to get Sopel is to just `sudo pip install sopel` (leave out the
 the instructions [here](https://pip.readthedocs.org/en/stable/installing/)
 to do so. If you get an error, our [download page]({% link download.md %})
 has more instructions.
+
+### Creating a service
+
+Sopel's source repository has example `systemd` unit files in [the `contrib`
+folder]({{ site.repo }}/tree/master/contrib). Both single- (`sopel.service`)
+and multi-instance (`sopel@.service`) examples exist.
 
 ## First run
 
@@ -71,6 +78,8 @@ the owner of a username. This is configurable in Sopel with these settings:
 [`auth_target`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_target),
 and [`auth_username`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_username).
 
-Want to learn how to write modules for Sopel? [Continue to part 2!]({% link _tutorials/part-2-writing-modules.md %})
+----
 
-Just want to play around with your new IRC bot? [Head for the usage articles!]({% link _usage/index.md %})
+Want to learn how to write modules for Sopel? [Continue to the tutorial!]({% link _tutorials/part-1-writing-modules.md %})
+
+Just want to play around with your new IRC bot? [Read more usage articles!]({% link _usage/index.md %})

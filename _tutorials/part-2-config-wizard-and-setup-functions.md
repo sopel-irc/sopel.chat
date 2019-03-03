@@ -1,5 +1,5 @@
 ---
-title: "Sopel tutorial, Part 3: The config file, and the configure & setup functions"
+title: "Sopel tutorial, Part 2: The config file, and the configure & setup functions"
 migrated: true
 source: wiki
 ---
@@ -10,8 +10,8 @@ re-written, so most of this will not work in lower versions.**
 Sopel has a config file, written in an INI-like format. It can provide
 configuration options not just for the bot itself, but for modules as well.
 Here, we're going to cover how you can leverage that configuration, as well as
-how to make your module configurable in the wizard like we showed back in [Part
-1]({% link _tutorials/part-1-installation.md %}).
+how to make your module configurable in the wizard like we showed in [the
+installation guide]({% link _usage/installing.md %}).
 
 ## Config Basics
 
@@ -114,4 +114,4 @@ value already in the config, or the user tries to put in a bad value, we'll
 again.
 
 Want to learn about URLs and remembering things?
-[Continue to part 4!]({% link _tutorials/part-4-memory-and-url-info-functions.md %})
+[Continue to part 3!]({% link _tutorials/part-3-memory-and-url-info-functions.md %})
