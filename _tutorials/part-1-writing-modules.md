@@ -2,6 +2,8 @@
 title: "Sopel tutorial, Part 1: Introduction to writing modules"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-2-writing-modules/
 ---
 
 **NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1

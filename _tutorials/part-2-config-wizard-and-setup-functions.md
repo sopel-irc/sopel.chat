@@ -2,6 +2,8 @@
 title: "Sopel tutorial, Part 2: The config file, and the configure & setup functions"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-3-config-wizard-and-setup-functions/
 ---
 
 **NOTE: This page is being updated for 6.0. The config module has been largely

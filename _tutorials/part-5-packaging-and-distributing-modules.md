@@ -2,6 +2,8 @@
 title: "Sopel tutorial, Part 5: Modules in folders, and distributing to PyPI"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-6-packaging-and-distributing-modules/
 ---
 
 **Note: This applies to features that are only in 6.0, which is in beta, and

@@ -2,6 +2,8 @@
 title: "Sopel tutorial, Part 4: The .help command"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-5-the-help-command/
 ---
 
 **NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1

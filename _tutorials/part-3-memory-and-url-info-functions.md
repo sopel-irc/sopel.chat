@@ -2,6 +2,8 @@
 title: "Sopel tutorial, Part 3: Memory and URL info functions"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-4-memory-and-url-info-functions/
 ---
 
 **NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1

@@ -3,6 +3,8 @@ title: Installing and running Sopel
 migrated: true
 source: wiki
 order: -9100
+previously:
+  - /tutorials/part-1-installation/
 ---
 
 **NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1
