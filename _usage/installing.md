@@ -63,6 +63,29 @@ The only one that's needed for the bot itself to work is
 Other things are needed for modules to work properly. If you get errors about
 being unable to import modules when you start the bot, search for them on PyPI.
 
+### Upgrading
+
+If you already have an older version of Sopel (or Willie) installed, and want
+to upgrade to the newest version, you should consult the migration guides.
+
+{% assign ups = site.upgrading | sort: "covers_to"
+  %}{% for up in ups %}{%
+    assign from_name = "Sopel" %}{%
+    assign to_name = "Sopel" %}{%
+    assign covers_from = up.covers_from | plus: 0 %}{%
+    assign covers_to = up.covers_to | plus: 0 %}{%
+    if covers_from < 6.0 %}{% assign from_name = "Willie" %}{% endif
+    %}{%
+    if covers_to < 6.0 %}{% assign to_name = "Willie" %}{% endif
+%}  * [Upgrading from {{ from_name }} {{ up.covers_from }} to {{ to_name }} {{ up.covers_to }}]({{ up.url }})
+{% endfor %}
+
+You might need to read more than one if your existing Sopel instance is old
+enough. Each guide only covers migrating from the previous major version. So
+for example, if you still have Willie 4 running, and you want to get Sopel 6,
+you should read the Willie 5 migration guide (covers going from 4 to 5) _and_
+the Sopel 6 migration guide (covers going from 5 to 6).
+
 ## Creating a service (optional)
 
 Sopel's source repository has example `systemd` unit files in [the `contrib`

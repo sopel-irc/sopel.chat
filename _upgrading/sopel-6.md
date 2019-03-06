@@ -1,6 +1,9 @@
 ---
-layout: default
 title: Sopel 6.0 Name Change and Migration
+covers_from: 5.x
+covers_to: 6.0
+previously:
+  - /willie_6.html
 ---
 
 # Sopel 6.0 Name Change and Migration

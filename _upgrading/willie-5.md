@@ -1,6 +1,9 @@
 ---
-layout: default
 title: Willie 5.0 Migration
+covers_from: 4.x
+covers_to: 5.0
+previously:
+  - /willie_5.html
 ---
 
 # Willie 5.0 Migration
