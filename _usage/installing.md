@@ -11,23 +11,7 @@ previously:
 "Willie", we highly encourage you to upgrade, as such old versions are no
 longer supported.**
 
-This tutorial is intended to give you an overview of all the features Sopel
-has to offer. In this part, we'll start by getting Sopel running, and then
-make a simple Hello, world! complete with proper documentation. This guide
-assumes you are running version 6.0 or higher of Sopel. (You can find this by
-giving Sopel the `.version` command.)
-
-This guide assumes you have at least some familiarity with programming. You
-should know the basics of what functions are and stuff like that. Since Sopel
-is written in Python, knowing Python will help, but if you've worked with
-most other languages you should be able to infer enough from the examples to
-get things done.
-
-While this guide does cover a lot of what is available, there is much more than
-can be described here. The API documentation is available [online]({{ site.docs }}),
-and serves as a useful reference.
-
-## Installing
+## Installing Sopel
 
 The best way to get Sopel is to just `sudo pip install sopel` (leave out the
 `sudo` on Windows). If you don't have pip already installed, you should follow
