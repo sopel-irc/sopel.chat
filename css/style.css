@@ -148,6 +148,7 @@ header h2 {
 }
 .content article nav ul li.prevlink {
     margin-right: auto;
+    max-width: 30%;
 }
 .content article nav ul li.prevlink a:before {
     content: "←";
@@ -157,9 +158,11 @@ header h2 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 30%;
 }
 .content article nav ul li.nextlink {
     margin-left: auto;
+    max-width: 30%;
 }
 .content article nav ul li.nextlink a:after {
     content: "→";
