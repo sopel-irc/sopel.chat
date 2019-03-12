@@ -6,8 +6,9 @@ previously:
   - /tutorials/part-6-packaging-and-distributing-modules/
 ---
 
-**Note: This applies to features that are only in 6.0, which is in beta, and
-may change before release.**
+**NOTE: This guide is for Sopel 6.0+. If you are still using a version named
+"Willie", we strongly encourage you to upgrade, as such old versions are no
+longer supported.**
 
 Sopel makes it easy to share modules, and get modules from other people,
 through the Python Package Index. Even if you aren't sharing your module, if it

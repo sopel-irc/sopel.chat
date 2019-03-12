@@ -6,9 +6,9 @@ previously:
   - /tutorials/part-2-writing-modules/
 ---
 
-**NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1
-or above, but below 6.0 you may need to replace "sopel" with "willie" in some
-places.**
+**NOTE: This guide is for Sopel 6.0+. If you are still using a version named
+"Willie", we strongly encourage you to upgrade, as such old versions are no
+longer supported.**
 
 This tutorial is intended to give you an overview of all the features Sopel
 has to offer. In this part, we'll make a simple "Hello, world!"" complete with

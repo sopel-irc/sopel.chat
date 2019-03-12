@@ -6,8 +6,10 @@ previously:
   - /tutorials/part-3-config-wizard-and-setup-functions/
 ---
 
-**NOTE: This page is being updated for 6.0. The config module has been largely
-re-written, so most of this will not work in lower versions.**
+**NOTE: This guide is for 6.0. Most of this will not work in lower versions,
+due to significant changes in the config module. If you are still using a
+version named "Willie", we strongly encourage you to upgrade, as such old
+versions are no longer supported.**
 
 Sopel has a config file, written in an INI-like format. It can provide
 configuration options not just for the bot itself, but for modules as well.
