@@ -1,9 +1,9 @@
 ---
-layout: default
 title: Using Python 3 on CentOS 7 (the easy way)
+order: 5000
+previously:
+  - /python3-centos7.html
 ---
-
-# Using Python 3 on CentOS 7 (the easy way)
 
 Whether you're running Sopel, or any other Python application, the best way to
 install Python 3 on CentOS 7 is with [Software Collection Libraries][scl]. Many
