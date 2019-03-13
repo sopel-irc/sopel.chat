@@ -1,10 +1,9 @@
 ---
 title: Installing and running Sopel
-migrated: true
-source: wiki
 order: -9100
 previously:
   - /tutorials/part-1-installation/
+  - /download.html
 ---
 
 **NOTE: This guide is for Sopel 6.0+. If you are still using a version named
@@ -13,13 +12,54 @@ longer supported.**
 
 ## Installing Sopel
 
-The best way to get Sopel is to just `sudo pip install sopel` (leave out the
-`sudo` on Windows). If you don't have pip already installed, you should follow
-the instructions [here](https://pip.readthedocs.org/en/stable/installing/)
-to do so. If you get an error, our [download page]({% link download.md %})
-has more instructions.
+Sopel requires Python 2.7.x or Python 3.3+ to run. Under Python 2.7, Sopel
+requires `backports.ssl_match_hostname` to be installed. Use `pip install
+backports.ssl_match_hostname` or `yum install
+python-backports.ssl_match_hostname` to install it, or download and install it
+manually [from PyPI](https://pypi.org/project/backports.ssl_match_hostname).
 
-### Creating a service
+If you want to use Python 3 on CentOS, you may want to see [this guide]({% link
+python3-centos7.md %}) on getting that set up easily.
+
+### Latest stable release
+
+On most systems where you can run Python, the best way to install Sopel is to
+just `sudo pip install sopel`. (On Windows, leave out the `sudo`.) Installing
+with pip will "just handle" dependencies for you, so you won't need to do so
+manually (except for installing `backports.ssl_match_hostname` as described
+[above](#installing-sopel), if you're on Python 2.7).
+
+Nearly all Python versions Sopel supports should include pip out of the box. But
+if your installation doesn't have it, you'll have to get it yourself. On Debian
+and Ubuntu, you can do this by running `sudo apt-get install python-pip` in a
+terminal. For macOS and Windows, follow the `pip` setup instructions
+[here](https://pip.readthedocs.org/en/latest/installing/).
+
+Arch users can install the `sopel` package from the [community] repository,
+though new versions might take slightly longer to become available.
+
+Failing both of those options, you can grab the latest tarball [from GitHub]({{
+site.repo }}/releases/latest) and follow the steps for installing from the
+latest source below.
+
+### Latest source
+
+First, either clone the repository with `git clone
+git://github.com/sopel-irc/sopel.git` or download a tarball [from GitHub]({{
+site.repo }}/releases/latest).
+
+In the source directory (whether cloned or from the tarball) run `python
+setup.py install`. You can then run `sopel` to configure and start the bot.
+Alternately, you can just run the `sopel.py` file in the source directory.
+
+You will need to download all of Sopel's dependencies and install them manually
+as well. These can be found on the [Python Package Index](https://pypi.org/).
+The only one that's needed for the bot itself to work is
+[backports.ssl\_match\_hostname](https://pypi.org/project/backports.ssl_match_hostname/).
+Other things are needed for modules to work properly. If you get errors about
+being unable to import modules when you start the bot, search for them on PyPI.
+
+## Creating a service (optional)
 
 Sopel's source repository has example `systemd` unit files in [the `contrib`
 folder]({{ site.repo }}/tree/master/contrib). Both single- (`sopel.service`)
