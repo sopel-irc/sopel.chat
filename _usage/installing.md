@@ -18,6 +18,10 @@ backports.ssl_match_hostname` or `yum install
 python-backports.ssl_match_hostname` to install it, or download and install it
 manually [from PyPI](https://pypi.org/project/backports.ssl_match_hostname).
 
+There is also a detailed [system requirements]({% link
+_usage/system-requirements.md %}) page that is kept more-or-less updated (by a
+human) with what is required for each module.
+
 If you want to use Python 3 on CentOS, you may want to see [this guide]({% link
 _appendices/using-python-3-on-centos-7.md %}) on getting that set up easily.
 
