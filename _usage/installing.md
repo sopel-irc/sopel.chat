@@ -65,6 +65,10 @@ Sopel's source repository has example `systemd` unit files in [the `contrib`
 folder]({{ site.repo }}/tree/master/contrib). Both single- (`sopel.service`)
 and multi-instance (`sopel@.service`) examples exist.
 
+If you create a script or configuration file to run Sopel under another init
+system, feel free to submit it to [the repo]({{ site.repo }}) for other users'
+convenience.
+
 ## First run
 
 > If you're running Sopel on Windows, replace all following occurrences of `sopel` with `python sopel.py`
