@@ -51,7 +51,8 @@ header h2 {
     font-family: 'Courgette', cursive;
 }
 .content {
-    width: 75%;
+    width: 80%;
+    max-width: 60em;
     margin: auto;
     background: #E0EBEB;
     border-radius: 1.5em;
@@ -189,7 +190,7 @@ header h2 {
     float: right;
     clear: right;
     width: fit-content;
-    max-width: 25%;
+    max-width: 30em;
     padding: 0.5em;
     padding-left: 80px;
     background-color: #ffb;
@@ -213,6 +214,7 @@ header h2 {
         background-position: center 12px, center, center;
         padding-left: 0.5em;
         padding-top: 80px;
+        max-width: 25%;
     }
 }
 .content article.migrated aside p {
