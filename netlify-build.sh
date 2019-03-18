@@ -14,7 +14,7 @@ echo "Generating module command/config pages"
 python document_sopel_modules.py --sopel=_sopel
 
 echo "Building Jekyll site"
-bundler exec jekyll build
+jekyll build
 
 echo "Installing Sphinx"
 pip install sphinx
