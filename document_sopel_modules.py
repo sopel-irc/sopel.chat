@@ -124,6 +124,9 @@ def document_module(module_file, f):
             f.write(inspect.cleandoc(module.configure.__doc__))
         for obj in dir(module):
             func = getattr(module, obj)
+            if not callable(func):
+                # guard against modules that use `from sopel import module`
+                continue
             if (hasattr(func, 'commands')):
                 if not hasattr(func, 'name'):
                     name = func.__name__
