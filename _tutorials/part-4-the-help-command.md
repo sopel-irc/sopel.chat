@@ -1,12 +1,14 @@
 ---
-title: "Sopel tutorial, Part 5: The .help command"
+title: "Sopel tutorial, Part 4: The .help command"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-5-the-help-command/
 ---
 
-**NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1
-or above, but below 6.0 you may need to replace "sopel" with "willie" in some
-places.**
+**NOTE: This guide is for Sopel 6.0+. If you are still using a version named
+"Willie", we strongly encourage you to upgrade, as such old versions are no
+longer supported.**
 
 Sopel has a built in `.help` command that can be used to get information about a
 particular command. You can add information to `.help` about your command in two
@@ -119,4 +121,4 @@ module, instantly seeing the difference between expectation and reality:
 TODO
 
 Want to distribute your module as a package on [PyPI](https://pypi.org/)?
-[Continue to part 6!]({% link _tutorials/part-6-packaging-and-distributing-modules.md %})
+[Continue to part 5!]({% link _tutorials/part-5-packaging-and-distributing-modules.md %})

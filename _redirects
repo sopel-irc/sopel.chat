@@ -1,2 +1,14 @@
+---
+---
 # Redirect default Netlify subdomain to primary domain
 https://sopel.netlify.com/* https://sopel.chat/:splat 301!
+
+# Auto-generated redirects for renamed pages based on YAML front-matter
+{% for collection in site.collections
+  %}{% for page in collection.docs
+    %}{% for link in page.previously
+      %}{{ link }} {{ page.url }} 301
+{%    endfor %}{%
+    endfor %}{%
+  endfor
+%}

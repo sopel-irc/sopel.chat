@@ -1,12 +1,14 @@
 ---
-title: "Sopel tutorial, Part 4: Memory and URL info functions"
+title: "Sopel tutorial, Part 3: Memory and URL info functions"
 migrated: true
 source: wiki
+previously:
+  - /tutorials/part-4-memory-and-url-info-functions/
 ---
 
-**NOTE: This tutorial is being updated for 6.0. Most of it will work with 5.4.1
-or above, but below 6.0 you may need to replace "sopel" with "willie" in some
-places.**
+**NOTE: This guide is for Sopel 6.0+. If you are still using a version named
+"Willie", we strongly encourage you to upgrade, as such old versions are no
+longer supported.**
 
 Communicating safely between modules can be very useful. Sopel provides for
 this with the Memory system. The intended use is for when you have volatile
@@ -126,4 +128,4 @@ just a few lines of code, get the video ID from the URL regardless of where
 this function was called.
 
 Want to learn about how to document (and test!) your module's commands?
-[Continue to part 5!]({% link _tutorials/part-5-the-help-command.md %})
+[Continue to part 4!]({% link _tutorials/part-4-the-help-command.md %})
