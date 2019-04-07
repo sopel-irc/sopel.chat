@@ -217,6 +217,51 @@ header h2 {
         max-width: 25%;
     }
 }
+@media (max-width: 1024px) {
+    /* Table responsiveness based on https://css-tricks.com/responsive-data-tables/ */
+    /* Force table to not be like tables anymore */
+    .content table, .content thead, .content tbody, .content th, .content td, .content tr {
+        display: block;
+        border: 0;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .content thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .content tr { border: 1px solid #ccc; }
+
+    .content td {
+        /* Behave like a "row" */
+        border: none;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .content td br,
+    .content td br:after {
+        content: ' ';
+    }
+
+    .content td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .content tbody td:nth-child(1) {
+        font-weight: bold;
+        padding: 0.5em 5%;
+    }
+    /* end table responsiveness */
+}
 .content article.migrated aside p {
     margin: 0.5em;
 }
