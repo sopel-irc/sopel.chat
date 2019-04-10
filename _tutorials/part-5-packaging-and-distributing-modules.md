@@ -43,12 +43,12 @@ things it needs.
 
 The easiest way to make a module in a folder, all prepped and ready to be
 published to PyPI, is to use our
-[cookiecutter template](https://github.com/sopel-irc/sopel-cookiecutter). It's
+[cookiecutter template](https://github.com/sopel-irc/cookiecutter-sopel). It's
 easy:
 
 ```sh
 pip install cookiecutter
-cookiecutter gh:sopel-irc/sopel-cookiecutter
+cookiecutter gh:sopel-irc/cookiecutter-sopel
 ```
 
 Answer all the prompts, and you'll have a ready-made repo structure to plop

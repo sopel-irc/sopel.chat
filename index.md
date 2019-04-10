@@ -72,7 +72,7 @@ tracker</a>, or join the developers in <a href="irc://irc.freenode.net/#sopel">
 Sopel?</dt>
 <dd>You can install modules from <a href="https://pypi.org/search/?q=%22sopel_modules%22">
 PyPI</a>, or use your favorite search engine to find modules on GitHub, etc.
-There's also a <a href="https://github.com/sopel-irc/sopel-cookiecutter">
+There's also a <a href="https://github.com/sopel-irc/cookiecutter-sopel">
 template</a> you can work from to publish your own modules on PyPI.</dd>
 
 <dt>Will phenny/jenni modules work with Sopel?</dt>
