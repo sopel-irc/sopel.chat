@@ -11,21 +11,22 @@ previously:
 longer supported.**
 
 Communicating safely between modules can be very useful. Sopel provides for
-this with the Memory system. The intended use is for when you have volatile
+this with its memory system. The intended use is for when you have volatile
 information which needs to be quickly and safely accessed and updated while the
 bot is running. In this part of the guide, we're going to cover how to use it.
 
 ## Memory basics
 
-The bot object that gets passed to callables has the attribute `memory`. This
-is basically a Python dict with some added thread safety. True to form, though,
-you don't need to worry about how that works. The only difference is that, if
-you want to be thread safe (and you do), you should use the `contains` function
-rather than the `in` keyword when checking if memory contains a given key. So
-very simply, to see if a key is in memory you can just do 
-`bot.memory.contains(key)`. If you want to access that key, you just do
-`bot.memory[key]`. Keys can be any of the same things they can be in regular
-Python dicts - numbers, strings, tuples, etc. - but they're usually strings.
+The bot object that gets passed to callables has the attribute `memory`, which
+works exactly like a plain old dict. (It's really a `SopelMemory` object, but
+true to form, you don't need to worry about how that works.) To see if a key
+is in the bot's memory you use `key in bot.memory`, exactly like a plain old
+dict. If you want to access that key, you use `bot.memory[key]`, exactly like
+a plain old dict. Keys can be strings (usually), but also numbers, tuples,
+etc., exactly like a plain old dict.
+
+If you said "exactly like a plain old dict" before reading it just now, you're
+*definitely* ready for an example.
 
 ### Sample use: Keeping track of the last URL
 
@@ -51,8 +52,7 @@ it uses code like this:
 ```
 
 Where `trigger.sender`, as you'll recall, is the channel (or nick, if a PM)
-the message came from, and `url` is the result from the search. To make the bot
-memory thread-safe, we use `SopelMemory` objects instead of normal dicts.
+the message came from, and `url` is the result from the search.
 
 ## URL info functions
 
