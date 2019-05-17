@@ -10,9 +10,11 @@ header {
 header .masthead a {
     color: #000;
 }
-header ul {
+header nav {
     max-width: 75%;
     margin: 1em auto;
+}
+header nav ul {
     padding: 0.2em 1em;
     list-style: none;
     display: inline-flex;
@@ -23,7 +25,7 @@ header ul {
     align-content: center;
     align-items: center;
 }
-header ul li {
+header nav ul li {
     padding: 0.75ex;
     margin: 0.1em 0.25em;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
