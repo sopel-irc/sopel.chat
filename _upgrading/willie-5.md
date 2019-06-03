@@ -27,7 +27,7 @@ provided [here][db_script] for all of the included functionality. Note that
 there's no guarantee any custom modules will migrate with that script; you may
 need to migrate them manually.
 
-[db_script]: https://github.com/sopel-irc/sopel/blob/master/contrib/update_db.py
+[db_script]: https://github.com/sopel-irc/sopel/blob/165d297b56449931c25670d90bec4210b5ef7a4a/contrib/update_db.py
 
 ### Database system support
 
