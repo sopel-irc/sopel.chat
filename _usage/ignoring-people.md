@@ -14,7 +14,7 @@ The `.blocks` command is used by giving it one of three different commands: `lis
 ```
 .blocks add nick somenickhere
 .blocks del nick somenickhere
-.blocks add hostmask hostmask *@*.bad.actor.net
+.blocks add hostmask .*@.*\.bad\.actor\.net
 .blocks list nick
 .blocks list hostmask
 ```
