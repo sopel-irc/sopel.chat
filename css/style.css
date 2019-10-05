@@ -273,3 +273,15 @@ footer {
     text-align: center;
     margin: 2em auto 1em;
 }
+footer p {
+    margin: 0;
+}
+footer p.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+footer p.flex a {
+    margin: 0.1em 1em;
+}
