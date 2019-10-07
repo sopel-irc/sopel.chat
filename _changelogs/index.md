@@ -12,3 +12,4 @@ automatically parsed and broken into pages for your reading pleasure.
 {% for doc in docs %}
   <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
 {% endfor %}
+</ul>
