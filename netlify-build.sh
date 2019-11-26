@@ -7,8 +7,6 @@ echo "Generating changelogs & latest.json file"
 python3 document_versions.py --news=_sopel/NEWS
 
 echo "Installing Sopel globally for plugin autodoc script"
-grep -v "pyenchant" _sopel/requirements.txt > _sopel/requirements.noenchant
-mv _sopel/requirements.noenchant _sopel/requirements.txt
 pip3 install ./_sopel
 
 echo "Generating plugin command/config pages"
