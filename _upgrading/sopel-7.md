@@ -339,16 +339,20 @@ meaningful, unique entries.
 And of course, if you need more in-depth assistance with fixing a failed
 migration, [our IRC channel][sopel-freenode] always welcomes questions.
 
-### Rewrite of `spellcheck`
+### Core plugin removals
+
+### `spellcheck`
 
 As of February 2018, the Python bindings for `enchant` [became unmaintained][
 pyenchant-unmaintained]. This made it increasingly difficult to install the
-dependencies required for the `spellcheck` plugin work, and often [caused][
+dependencies required for the `spellcheck` plugin to work, and often [caused][
 windows-enchant] [problems][linux-enchant] with new installations.
 
-Because of this, the `spellcheck` plugin was rewritten to use `aspell` instead.
-In the process, it also gained support for a custom word list, managed by a set
-of new commands:
+Because of this, the `spellcheck` plugin was rewritten to use `aspell` instead,
+and extracted into a [standalone PyPI package][pypi-spellcheck] to eliminate
+those non-Python dependencies for installing Sopel itself.
+
+The rewrite also added new commands to manage a custom word list:
 
   - `.scadd` - stages a word for adding to the bot's word list
   - `.scpending` - lists words pending addition to the bot's custom list
@@ -361,12 +365,23 @@ dictionary. To *remove* a custom word, a user must manually edit the dictionary
 file, so we decided to go with a two-step process. Hopefully it will help Sopel
 admins around the world avoid adding typos to their bots' custom dictionaries!
 
-Depending on how much trouble the `aspell` dependencies cause, support for the
-`spellcheck` plugin might become a setuptools extra. Feedback is welcome!
-
   [pyenchant-unmaintained]: https://github.com/rfk/pyenchant/commit/4df35b7
   [windows-enchant]: https://github.com/sopel-irc/sopel/issues/1142
   [linux-enchant]: https://github.com/sopel-irc/sopel/pull/1454
+  [pypi-spellcheck]: https://pypi.org/project/sopel-spellcheck/
+
+### `ipython`
+
+We've made the `ipython` plugin into [its own PyPI package][pypi-ipython],
+further reducing the packages required to install Sopel itself. Mostly, though,
+this decision was based on the limited utility of this plugin for
+non-developers. Its main use case is poking around in Sopel's state while
+debugging a new plugin or plugin feature, with Sopel running in an interactive
+shell. It's unusable when Sopel is run as a service/daemon (which is how most
+deployments *should* run Sopel), and we decided it doesn't make sense to
+continue bundling this plugin and its requirements with the core bot.
+
+  [pypi-ipython]: https://pypi.org/project/sopel-ipython/
 
 
 ## Planned user-facing changes
