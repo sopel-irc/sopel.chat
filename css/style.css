@@ -72,6 +72,9 @@ header h2 {
 .content p {
     margin-bottom: 10px;
 }
+.content p, .content li, .content dd {
+    line-height: 1.4;
+}
 
 .content dl.faq {
     margin: 0.5em 1em;
