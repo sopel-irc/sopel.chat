@@ -85,7 +85,7 @@ though.</dd>
 <dd>Probably, but there's not much reason to. We only provide support for one
 version of Sopel at a time, and it already supports running multiple instances
 side-by-side. If you really need to containerize dependencies, virtualenv is
-probably a lot easier—but there is <a href="https://github.com/sopel-irc/sopel-docker">an
+probably a lot easier—but there is <a href="https://github.com/sopel-irc/docker-sopel">an
 Officially Unofficial™ Docker container</a> available.</dd>
 
 <dt>Does Sopel work on Google App Engine?</dt>
