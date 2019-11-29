@@ -116,11 +116,3 @@ things). Usually, this happens because someone is spamming the same command
 over and over, or something is just broken. It doesn't keep the bot from saying
 anything else, and it can say the same thing as often as you want, as long as
 it says some other stuff, too.</dd>
-
-<dt>Why does Sopel spit out a bunch of warnings when I have the iPython plugin
-loaded?</dt>
-<dd>This is because by default, iPython re-enables the deprecation warnings
-which python ignores most of the time. To suppress these warnings, put
-<a href="https://github.com/sopel-irc/sopel/blob/5f60756e1a975a1a978c322949d8ba9b4a2b4d71/contrib/suppress-warnings.py">this
-file</a> in <code>~/.ipython/profile_default/startup/</code></dd>
-</dl>
