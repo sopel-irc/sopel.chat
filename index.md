@@ -89,8 +89,10 @@ probably a lot easier—but there is <a href="https://github.com/sopel-irc/docke
 Officially Unofficial™ Docker container</a> available.</dd>
 
 <dt>Does Sopel work on Google App Engine?</dt>
-<dd>Probably not. App Engine doesn't currently support SQLite, which Sopel
-requires for its database.</dd>
+<dd>A few scattered tutorials for using SQLAlchemy on App Engine appear to
+exist, but we haven't formally tested anything. If you want to run Sopel on
+App Engine, and you find a way that works, we'd love to have instructions here!
+</dd>
 
 <dt>Does Sopel run on OSX? Windows? PyPy? Jython?</dt>
 <dd>Probably, probably, probably, probably. Sopel itself is pure Python, and an
