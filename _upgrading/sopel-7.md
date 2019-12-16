@@ -303,6 +303,31 @@ on account of the attributes themselves always being empty. They were just
 placeholders to avoid anything raising `AttributeError`. (Sopel's current
 maintenance team wouldn't have done it that way, but we can't undo the past.)
 
+### Improvements to testing tools
+
+An absolute *ton* of work went into refactoring how the bot works internally
+for Sopel 7, and one side benefit (nay, a goal) of the changes was to make
+things more directly testable, without needing to create special "mock"
+objects. If you have used `sopel.test_tools` to write unit tests for your
+plugin code, you're probably familiar with at least one of `MockConfig`,
+`MockSopel`, and `MockSopelWrapper`—three classes Sopel itself used in its own
+tests until this release.
+
+With the rewrites for Sopel 7, though, Sopel's tests don't need these mock
+classes any more. We test directly on the "real" objects, only switching out
+the IRC connection for a fake one that just logs its input and output instead
+of actually opening a socket to a remote server. This means that our `Mock*`
+classes can be marked as **deprecated**; we will remove them in Sopel 8.
+
+Fortunately, there's also another bit of good news: Sopel now comes with a
+`pytest` plugin and a whole set of fixtures, factories, and mocks in
+`sopel.tests`. We encourage you to [explore them][docs-test-tools] and update
+your plugins' tests (or write them, if you haven't already, you naughty
+developer!) to use the new goodies. Trust us—they're *much* nicer to write
+tests with than the old tools were!
+
+  [docs-test-tools]: https://sopel.chat/docs/tests.html
+
 
 ## Sopel 7 plugin changes
 
