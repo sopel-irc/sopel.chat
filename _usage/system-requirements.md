@@ -16,9 +16,7 @@ Sopel itself has few external dependencies, besides Python. There are a couple, 
 Most of Sopel's dependencies are only needed for specific plugins. Below is a listing of some of these. If you don't want to use a specific plugin, you do not need its dependencies.
 
 * [geoip2](https://github.com/maxmind/GeoIP2-python) - ip. You will also need the appropriate database files, which Sopel will download automatically if they are not found.
-* [ipython](https://github.com/ipython/ipython) - ipython
 * [praw](https://github.com/praw-dev/praw) - reddit
-* [pyenchant](https://github.com/rfk/pyenchant) - spellcheck. You may also need to install the system-level `enchant` library.
 * [pytz](https://launchpad.net/pytz) - remind, clock, seen, tell
 * [requests](https://github.com/requests/requests) - [many]. Used by nearly every plugin that needs to talk to a web service.
 * [xmltodict](https://github.com/martinblech/xmltodict) - bugzilla, search
