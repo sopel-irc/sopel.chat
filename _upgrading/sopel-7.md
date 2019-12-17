@@ -167,6 +167,38 @@ Suggestions are welcomed and encouraged!
 
 ## Sopel 7 API changes
 
+### `Identifier` case-mapping
+
+In a twist of fate (and old spaghetti code), it turns out that Sopel has been
+mapping `Identifier`s to lowercase incorrectly for a *long* time. Like, since
+`Identifier` was called `Nick`, [over 7 years ago][commit-adding-nick-class].
+Ever since version 3.2.0, the first version to introduce case-mapping for
+nicknames, it's been non-compliant with the RFC.
+
+Sopel 7 finally fixes that. Existing instances will opportunistically convert
+values from the old (incorrect) representation to the new (correct) one as
+needed, but we can't do that for plugins. With our apologies for the
+inconvenience, you'll have to implement your own migration logic.
+
+Everything you'll need from Sopel's API is still in the `Identifier` class.
+You can use [`Identifier._lower()`][docs-identifier-lower] to get the
+corrected representation of a nick or channel name. Call on
+[`Identifier._lower_swapped()`][docs-identifier-lower-swapped] for the
+previous, incorrect, representation.
+
+Whether to write a one-off migration that converts everything at once, extra
+logic that converts values on-the-fly as needed, or something else is *all* up
+to you, based on your own plugin's considerations. Different plugin projects
+will have different needs. For example, if you're the only user of your
+plugin, you might simply write a short script to run once against your bot's
+database and be done with it—but if your plugin is uploaded to PyPI, you might
+choose to release the migration as part of your next version bump. The choice
+is yours; we just provide the tools you need to get started.
+
+  [commit-adding-nick-class]: https://github.com/sopel-irc/sopel/commit/f8ca0b9
+  [docs-identifier-lower]: /docs/api.html#sopel.tools.Identifier._lower
+  [docs-identifier-lower-swapped]: /docs/api.html#sopel.tools.Identifier._lower_swapped
+
 ### Managing URL callbacks
 
 For quite a while, Sopel plugins wishing to override the `url.py` plugin's
