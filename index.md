@@ -45,7 +45,7 @@ things you can do with it.
 [Sean Palmer](http://inamidst.com/) was the original creator of the bot, which
 he called phenny.
 
-[Michael Yanovich](https://yanovich.net/) improved it, and changed the name to
+[yano](https://yanovich.net/) improved it, and changed the name to
 [jenni](https://github.com/myano/jenni).
 
 [Embolalia](https://embolalia.com/) improved it even more, with a lot of
