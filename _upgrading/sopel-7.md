@@ -225,15 +225,17 @@ handlers at plugin unload:
 
 Going forward, a new set of API methods should be used instead:
 
-  - `bot.register_url_callback(pattern, methodname)`, to call `methodname` when
-    a URL in a message matches the `pattern`
-  - `bot.unregister_url_callback(pattern)`, to unregister the `pattern` and its
-    associated callback(s)
+  - `bot.register_url_callback(pattern, callback)`, to invoke `callback` when a
+    URL in a message matches the `pattern`
+  - `bot.unregister_url_callback(pattern, callback)`, to stop invoking the
+    `callback` when a URL in a message matches the `pattern`
   - `bot.search_url_callbacks(url)`, to find callbacks matching the given `url`
 
-Manually accessing `bot.memory['url_callbacks']` as before will continue to work
-for the life of Sopel 7.x, at a minimum. However, doing so is considered
-deprecated, leaving future versions free to move the callback storage if needed.
+`bot.memory['url_callbacks']` will remain unchanged for the life of Sopel 7.x.
+We plan to make this data structure private in Sopel 8.0, so we can improve it
+(e.g. allowing multiple callbacks for the same pattern). The new API methods
+are already future-proofed against the changes we plan to make; that's why the
+callback function is required both when registering *and* unregistering.
 
 ### Adding multiple command examples
 
