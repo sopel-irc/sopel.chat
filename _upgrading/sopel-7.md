@@ -199,25 +199,30 @@ nicknames, it's been non-compliant with the RFC.
 
 Sopel 7 finally fixes that. Existing instances will opportunistically convert
 values from the old (incorrect) representation to the new (correct) one as
-needed, but we can't do that for plugins. With our apologies for the
-inconvenience, you'll have to implement your own migration logic.
+needed, but that can't cover all plugins. With our apologies for the
+inconvenience, you'll have to implement your own migration logic if your plugin
+stores and/or manipulates `Identifier`s in any way outside the
+`set/get_*_value()` functions provided by Sopel's DB API.
 
-Everything you'll need from Sopel's API is still in the `Identifier` class.
-You can use [`Identifier._lower()`][docs-identifier-lower] to get the
-corrected representation of a nick or channel name. Call on
+Everything you'll need from Sopel's API is still in the `Identifier` class. You
+can use [`Identifier._lower()`][docs-identifier-lower] to get the corrected
+representation of a nick or channel name. Call on
 [`Identifier._lower_swapped()`][docs-identifier-lower-swapped] for the
-previous, incorrect, representation.
+previous, incorrect, representation. When working with channel names
+specifically, the [`bot.db.get_channel_slug()`][docs-db-get-channel-slug]
+method might be helpful.
 
 Whether to write a one-off migration that converts everything at once, extra
 logic that converts values on-the-fly as needed, or something else is *all* up
 to you, based on your own plugin's considerations. Different plugin projects
-will have different needs. For example, if you're the only user of your
-plugin, you might simply write a short script to run once against your bot's
-database and be done with it—but if your plugin is uploaded to PyPI, you might
-choose to release the migration as part of your next version bump. The choice
-is yours; we just provide the tools you need to get started.
+will have different needs. For example, if you're the only user of your plugin,
+you might simply write a short script to run once against your bot's database
+and be done with it—but if your plugin is uploaded to PyPI, you might choose to
+release the migration as part of your next version bump. The choice is yours;
+we just provide the tools you need to get started.
 
   [commit-adding-nick-class]: https://github.com/sopel-irc/sopel/commit/f8ca0b9
+  [docs-db-get-channel-slug]: /docs/db.html#sopel.db.SopelDB.get_channel_slug
   [docs-identifier-lower]: /docs/api.html#sopel.tools.Identifier._lower
   [docs-identifier-lower-swapped]: /docs/api.html#sopel.tools.Identifier._lower_swapped
 
