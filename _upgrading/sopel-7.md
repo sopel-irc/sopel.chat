@@ -167,6 +167,28 @@ Suggestions are welcomed and encouraged!
 
 ## Sopel 7 API changes
 
+This is a good time to remind you that your plugins should specify a maximum
+Sopel version in their requirements. Doing so reduces the likelihood that users
+will be able to install your plugin alongside an incompatible version of Sopel,
+and thus minimizes the risk of compatibility errors during startup or runtime.
+
+We do everything possible to introduce breaking API changes *only* in major
+versions, so it's typically safe for your plugin to require (for example)
+`sopel>=6.0,<8.0`—at least the earliest major version you've tested, and less
+than the next unreleased major version. Occasionally you might need to require
+a specific minor version, if your code needs a new feature that was introduced
+in between major releases, but major-version compatibility is typically all
+you'll need to worry about.
+
+Normally, when a feature needs to be removed from the API, we try to allow for
+a deprecation period, during which the feature to be removed continues to work
+but logs a warning if used. It is extremely rare for an API feature to be
+removed in a minor release—and if we do so, that means there was no way to keep
+that feature around in a working state until the next major Sopel version. The
+[changelog][sopel-changelog] always notes deprecations and removals.
+
+  [sopel-changelog]: {% link _changelogs/index.md %}
+
 ### `Identifier` case-mapping
 
 In a twist of fate (and old spaghetti code), it turns out that Sopel has been
