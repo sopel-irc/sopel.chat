@@ -226,6 +226,21 @@ we just provide the tools you need to get started.
   [docs-identifier-lower]: /docs/api.html#sopel.tools.Identifier._lower
   [docs-identifier-lower-swapped]: /docs/api.html#sopel.tools.Identifier._lower_swapped
 
+### Accessing the database
+
+While Sopel's [migration to SQLAlchemy](#database-support) doesn't affect
+*most* of the `bot.db` API, some plugins that make use of the more direct
+methods might need to be rewritten for Sopel 7. Non-exhaustively:
+
+* `bot.db.connect()` now returns a SQLAlchemy `Connection` object that
+  doesn't have all the same attributes as the one provided by native `sqlite`
+  (e.g. `connection.cursor`)
+* `bot.db.execute()` *should* still return an object that behaves like a
+  `Cursor`, but since it's actually a SQLAlchemy wrapper not everything is
+  guaranteed to work exactly the same
+* `bot.db.get_uri()` hasn't functionally changed, but it's important to
+  remember that it now *might* return a URI with a non-`sqlite` dialect
+
 ### Managing URL callbacks
 
 For quite a while, Sopel plugins wishing to override the `url.py` plugin's
