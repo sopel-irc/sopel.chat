@@ -57,13 +57,10 @@ Keeping all this in mind, the current plan is as follows. Note that it is
 subject to change, as Sopel's development pace remains quite leisurely relative
 to the overall Python ecosystem.
 
-  - Sopel 7 will maintain the same Python version compatibility range as 6.x,
-    barring any major roadblocks
-    - This may change as Sopel 7 gets closer to release, depending on how our
-      testing infrastructure and dependencies look, but we're motivated to keep
-      things as-is (one of Sopel's maintainers still runs a production instance
-      on Python 2.7, and cannot upgrade that system to a compatible version of
-      Python 3 without significant work)
+  - Sopel 7 maintains the same Python version compatibility range as 6.x
+    - If our testing infrastructure becomes unable to run the older versions of
+      Python, we might have to bend this one, but the goal is to avoid dropping
+      any supported versions during the life of Sopel 7.x
   - Sopel 8 will drop support for EOL Python releases immediately at the start
     of its development cycle, and adjust version support based on the estimated
     release date target as that becomes clearer
