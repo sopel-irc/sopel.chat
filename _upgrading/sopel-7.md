@@ -226,17 +226,31 @@ we just provide the tools you need to get started.
 ### Accessing the database
 
 While Sopel's [migration to SQLAlchemy](#database-support) doesn't affect
-*most* of the `bot.db` API, some plugins that make use of the more direct
-methods might need to be rewritten for Sopel 7. Non-exhaustively:
+*most* of [the `bot.db` API][docs-db], some plugins that make use of the more
+direct methods might need to be rewritten for Sopel 7. Non-exhaustively:
 
-* `bot.db.connect()` now returns a SQLAlchemy `Connection` object that
-  doesn't have all the same attributes as the one provided by native `sqlite`
-  (e.g. `connection.cursor`)
-* `bot.db.execute()` *should* still return an object that behaves like a
-  `Cursor`, but since it's actually a SQLAlchemy wrapper not everything is
-  guaranteed to work exactly the same
-* `bot.db.get_uri()` hasn't functionally changed, but it's important to
-  remember that it now *might* return a URI with a non-`sqlite` dialect
+* [`bot.db.execute()`][docs-db-execute] *should* still return an object that
+  behaves like a `Cursor`, but since it's actually a SQLAlchemy wrapper not
+  everything is guaranteed to work exactly the same
+* [`bot.db.get_uri()`][docs-db-get_uri] hasn't functionally changed, but it's
+  important to remember that the returned URI *might* not point to SQLite
+* [`bot.db.connect()`][docs-db-connect] is likewise functionally unchanged,
+  except that it can now return a non-SQLite DBAPI connection object,
+  potentially one with behavior different from the SQLite connections always
+  returned in older versions
+
+We recommend that authors of plugins which use a raw database connection from
+`bot.db.connect()` aim to rewrite their code so it uses the ORM approach and
+[`bot.db.session()`][docs-db-session] instead. In the interim, it never hurts
+to update your plugin's documentation to warn users that non-SQLite databases
+haven't been tested, or make sure the plugin is marked as compatible with Sopel
+<7.0 only until it can be tested and/or updated.
+
+  [docs-db]: /docs/db.html
+  [docs-db-connect]: /docs/db.html#sopel.db.SopelDB.connect
+  [docs-db-execute]: /docs/db.html#sopel.db.SopelDB.execute
+  [docs-db-get_uri]: /docs/db.html#sopel.db.SopelDB.get_uri
+  [docs-db-session]: /docs/db.html#sopel.db.SopelDB.session
 
 ### Managing URL callbacks
 
