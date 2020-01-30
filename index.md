@@ -82,11 +82,10 @@ differently in Sopel. The vast majority of modules should work without problems,
 though.</dd>
 
 <dt>Can I use Sopel with Docker?</dt>
-<dd>Probably, but there's not much reason to. We only provide support for one
-version of Sopel at a time, and it already supports running multiple instances
-side-by-side. If you really need to containerize dependencies, virtualenv is
-probably a lot easier—but there is <a href="https://github.com/sopel-irc/docker-sopel">an
-Officially Unofficial™ Docker container</a> available.</dd>
+<dd>Yes. there is <a href="https://github.com/sopel-irc/docker-sopel">an
+Officially Unofficial™ Docker image</a> available (<em>N.B.</em> official
+support is only provided for one version of Sopel at a time; your mileage may
+vary with support for the Unofficial™ Docker image)</dd>
 
 <dt>Does Sopel work on Google App Engine?</dt>
 <dd>A few scattered tutorials for using SQLAlchemy on App Engine appear to
