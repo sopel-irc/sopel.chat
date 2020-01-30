@@ -455,10 +455,10 @@ migration, [our IRC channel][sopel-freenode] always welcomes questions.
 
 ### `spellcheck`
 
-As of February 2018, the Python bindings for `enchant` [became unmaintained][
-pyenchant-unmaintained]. This made it increasingly difficult to install the
-dependencies required for the `spellcheck` plugin to work, and often [caused][
-windows-enchant] [problems][linux-enchant] with new installations.
+As of February 2018, the Python bindings for `enchant` [became
+unmaintained][pyenchant-unmaintained]. This made installing the `spellcheck`
+plugin's dependencies increasingly difficult, and often
+[caused][windows-enchant] [problems][linux-enchant] with new installations.
 
 Because of this, the `spellcheck` plugin was rewritten to use `aspell` instead,
 and extracted into a [standalone PyPI package][pypi-spellcheck] to eliminate
