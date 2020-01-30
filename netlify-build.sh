@@ -4,21 +4,19 @@ set -e
 echo "Starting custom build script..."
 
 echo "Generating changelogs & latest.json file"
-python document_versions.py --news=_sopel/NEWS
+python3 document_versions.py --news=_sopel/NEWS
 
-echo "Installing Sopel globally for module autodoc script"
-grep -v "pyenchant" _sopel/requirements.txt > _sopel/requirements.noenchant
-mv _sopel/requirements.noenchant _sopel/requirements.txt
-pip install ./_sopel
+echo "Installing Sopel globally for plugin autodoc script"
+pip3 install ./_sopel
 
-echo "Generating module command/config pages"
-python document_sopel_modules.py --sopel=_sopel
+echo "Generating plugin command/config pages"
+python3 document_sopel_plugins.py --sopel=_sopel
 
 echo "Building Jekyll site"
 jekyll build
 
-echo "Installing Sphinx"
-pip install sphinx
+echo "Installing Sopel's dev dependencies"
+pip3 install -r ./_sopel/dev-requirements.txt
 
 echo "Building Sphinx docs"
 cd _sopel/docs

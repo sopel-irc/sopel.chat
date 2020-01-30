@@ -3,9 +3,7 @@ title: Per-channel configuration
 order: 50
 ---
 
-**Note: This guide applies to Sopel 7, which is still in development. You can
-try out these features by [running Sopel from source]({{ site.repo
-}}#latest-source).**
+**Note: This feature is available only in Sopel 7.0 and later.**
 
 If your Sopel bot is in many channels, you've probably run into at least one
 case where a plugin that one channel loves is hated by the users and/or
