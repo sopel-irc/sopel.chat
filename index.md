@@ -88,6 +88,12 @@ side-by-side. If you really need to containerize dependencies, virtualenv is
 probably a lot easier—but there is <a href="https://github.com/sopel-irc/docker-sopel">an
 Officially Unofficial™ Docker container</a> available.</dd>
 
+<dt>Can I use Sopel with Ansible?</dt>
+<dd>One of our users created <a href="https://github.com/sopel-irc/ansible-sopel">an
+Officially Unofficial™ Ansible role</a> to deploy Sopel. It supports running
+multiple instances in parallel. As with the Docker image, availability of
+technical support may vary.</dd>
+
 <dt>Does Sopel work on Google App Engine?</dt>
 <dd>A few scattered tutorials for using SQLAlchemy on App Engine appear to
 exist, but we haven't formally tested anything. If you want to run Sopel on
