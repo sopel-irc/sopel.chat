@@ -82,10 +82,10 @@ differently in Sopel. The vast majority of modules should work without problems,
 though.</dd>
 
 <dt>Can I use Sopel with Docker?</dt>
-<dd>Yes. there is <a href="https://github.com/sopel-irc/docker-sopel">an
-Officially Unofficial™ Docker image</a> available (<em>N.B.</em> official
-support is only provided for one version of Sopel at a time; your mileage may
-vary with support for the Unofficial™ Docker image)</dd>
+<dd>Yes, there is <a href="https://github.com/sopel-irc/docker-sopel">an
+Officially Unofficial™ Docker image</a> available. Sopel's development team is
+not involved in its maintenance, and there is no Unofficially Official™ support
+to go with it; your mileage may vary if you need to ask for help.</dd>
 
 <dt>Does Sopel work on Google App Engine?</dt>
 <dd>A few scattered tutorials for using SQLAlchemy on App Engine appear to
