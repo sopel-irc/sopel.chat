@@ -3,12 +3,23 @@
 # Redirect default Netlify subdomain to primary domain
 https://sopel.netlify.com/* https://sopel.chat/:splat 301!
 
-# Auto-generated redirects for renamed pages based on YAML front-matter
+# YAML front-matter-based redirects for renamed pages
 {% for collection in site.collections
   %}{% for page in collection.docs
     %}{% for link in page.previously
       %}{{ link }} {{ page.url }} 301
 {%    endfor %}{%
+    endfor %}{%
+  endfor
+%}
+
+# YAML front-matter-based redirects from "deleted" pages to their replacements
+# The '!' makes them redirect even though the page exists
+{% for collection in site.collections
+  %}{% for page in collection.docs
+    %}{% if page.redirect_to
+      %}{{ page.url }}* {{ page.redirect_to }} 301!
+{%    endif %}{%
     endfor %}{%
   endfor
 %}
