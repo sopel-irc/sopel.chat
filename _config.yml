@@ -19,6 +19,8 @@ exclude:
 
 include:
   - _redirects
+  # Can't use docs/_static - see jekyll/jekyll#1352
+  - _static
 
 collections:
   tutorials:
