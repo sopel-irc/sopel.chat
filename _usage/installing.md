@@ -52,16 +52,15 @@ First, either clone the repository with `git clone
 git://github.com/sopel-irc/sopel.git` or download a tarball [from GitHub]({{
 site.repo }}/releases/latest).
 
-In the source directory (whether cloned or from the tarball) run `python
-setup.py install`. You can then run `sopel` to configure and start the bot.
-Alternately, you can just run the `sopel.py` file in the source directory.
+In the source directory (whether cloned or extracted from the tarball) run
+`pip install -e .`. During the installation process, `pip` should install any
+missing dependencies automatically. After it finishes, you can run `sopel` to
+configure and start the bot.
 
-You will need to download all of Sopel's dependencies and install them manually
-as well. These can be found on the [Python Package Index](https://pypi.org/).
-The only one that's needed for the bot itself to work is
-[backports.ssl\_match\_hostname](https://pypi.org/project/backports.ssl_match_hostname/).
-Other things are needed for plugins to work properly. If you get errors about
-being unable to import plugins when you start the bot, search for them on PyPI.
+Installing this way ([an "editable"
+install](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs))
+will let you tweak Sopel's code to test out changes without having to
+reinstall the package every time you make an edit.
 
 ### Upgrading
 
