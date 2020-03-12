@@ -6,7 +6,7 @@ previously:
   - /download.html
 ---
 
-**NOTE: This guide is for Sopel 6.0+. If you are still using a version named
+**NOTE: This guide is for Sopel 7.0+. If you are still using a version named
 "Willie", we highly encourage you to upgrade, as such old versions are no
 longer supported.**
 
@@ -116,7 +116,7 @@ configuration utility if they have one.
 Your configuration file will be stored in `~/.sopel`. The file will be called
 `default.cfg` by default. You can access the configuration wizard again by
 running `sopel -w`. You can also get just the plugin options with
-`sopel --configure-modules`. You can specify another configuration file with
+`sopel configure --plugins`. You can specify another configuration file with
 `sopel -c filename`. This works both for the configuration utility and for
 running the bot. This way, you can keep multiple different config files for
 different networks, for example. You can see a list of all these options by
