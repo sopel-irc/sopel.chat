@@ -125,6 +125,23 @@ running `sopel -h` or `sopel --help`.
 Once you've finished the configuration tool, Sopel will automatically start,
 connect to the network, and join the channels you specified.
 
+## Adding plugins
+
+The easiest place to put new plugins is in `~/.sopel/plugins`. Simply create
+this directory if it does not exist, and drop `.py` plugin files into it.
+Sopel will auto-load them unless [configured otherwise][config-plugins].
+
+Plugin authors might also publish their works as packages; you can find them
+[by searching PyPI](https://pypi.org/search/?q=%22sopel%22), or by using your
+favorite search engine to search for e.g. "sopel weather plugin".
+
+Of course, you can also write your own custom plugins! Check out the
+[tutorial]({% link _tutorials/part-1-writing-plugins.md %}) and Sopel's
+[plugin API documentation][docs-plugin] to get started.
+
+  [config-plugins]: /docs/configuration.html#plugins
+  [docs-plugin]: /docs/plugin.html
+
 ## Authentication
 
 Most IRC networks have a service that allows you to authenticate yourself as
