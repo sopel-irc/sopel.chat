@@ -69,6 +69,9 @@ to upgrade to the newest version, you should consult the migration guides.
 
 {% assign ups = site.upgrading | sort: "covers_to"
   %}{% for up in ups %}{%
+    unless up.covers_to and up.covers_from %}{%
+      continue %}{% comment %} Skips guides that aren't ready {% endcomment %}{%
+    endunless %}{%
     assign from_name = "Sopel" %}{%
     assign to_name = "Sopel" %}{%
     assign covers_from = up.covers_from | plus: 0 %}{%
