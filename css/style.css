@@ -271,6 +271,15 @@ header h2 {
     margin: 0.5em;
 }
 
+.content article h2 + div.sidebar-note {
+    float: right;
+    font-size: 85%;
+    font-style: italic;
+    border: 1px dotted #000;
+    background-color: #ccc;
+    padding: 0.2em;
+}
+
 footer {
     width: 75%;
     text-align: center;
