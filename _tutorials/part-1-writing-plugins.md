@@ -41,9 +41,9 @@ A "Hello, world" command is very simple in Sopel. In the folder I mentioned
 above, make a file called `helloworld.py`. In it, put the following and save:
 
 ```python
-import sopel.module
+from sopel import module
 
-@sopel.module.commands('helloworld')
+@module.commands('helloworld')
 def helloworld(bot, trigger):
     bot.say('Hello, world!')
 ```
@@ -178,7 +178,7 @@ detailed information below. For example:
 ```python
 """Frobnication plugin for Sopel
 
-Includes commands for frobnicating synchronous and asyncronous Werlingford
+Includes commands for frobnicating synchronous and asynchronous Werlingford
 paradigms. Uses a configurable HPADP endpoint to defalicate user-provided
 almication schemata.
 """
