@@ -25,6 +25,8 @@ human) with what is required for each plugin.
 If you want to use Python 3 on CentOS, you may want to see [this guide]({% link
 _appendices/using-python-3-on-centos-7.md %}) on getting that set up easily.
 
+**Important:** Sopel 8.0, the next major update, will support Python 3.6+ only.
+
 ### Latest stable release
 
 On most systems where you can run Python, the best way to install Sopel is to

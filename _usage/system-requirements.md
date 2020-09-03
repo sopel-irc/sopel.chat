@@ -5,7 +5,9 @@ source: wiki
 order: -9999
 ---
 
-Sopel is designed to run on Linux with Python 2.7 or 3.3+. It should probably work in other POSIX-compliant OSes, and seems to more-or-less work on Windows.
+Sopel is designed to run with Python 2.7 or 3.3+. (**Note:** The next major version, Sopel 8, will require Python 3.6+.)
+
+While all development and "official" tests run on Linux, Sopel should probably work in other POSIX-compliant OSes, and seems to more-or-less work on Windows.
 
 Sopel itself has few external dependencies, besides Python. There are a couple, though:
 
