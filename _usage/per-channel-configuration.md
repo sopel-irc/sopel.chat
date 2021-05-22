@@ -50,4 +50,4 @@ names makes it possible to disable things like URL handlers, too.
 *Note: A future version of Sopel might move to a YAML config file format instead
 of the INI format it uses now, to simplify the inclusion of more complex,
 structured options like this. Let us know [on
-IRC](irc://irc.freenode.net/#sopel) if you think this is a good idea.*
+IRC](irc://irc.libera.chat/#sopel) if you think this is a good idea.*

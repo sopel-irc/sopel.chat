@@ -84,13 +84,13 @@ database type with a bit of search-fu. Sopel's database support is built on
 SQLAlchemy, which has [ample documentation][sqlalchemy-dialects] of its own
 about getting up and running with various back-ends.
 
-Please don't hesitate to offer feedback in [our IRC channel][sopel-freenode] or
+Please don't hesitate to offer feedback in [our IRC channel][sopel-channel] or
 [a GitHub issue][gh-new-issue]. This is a huge feature, and with a small team
 it's simply not possible for us to test everything—especially the less common
 database types (paid ones like Oracle, especially).
 
 [gh-new-issue]: https://github.com/sopel-irc/sopel/issues/new
-[sopel-freenode]: irc://chat.freenode.net/sopel
+[sopel-channel]: irc://irc.libera.chat/sopel
 [sqlalchemy-dialects]: https://docs.sqlalchemy.org/en/13/dialects/index.html
 
 
@@ -449,7 +449,7 @@ title="Tab-Separated Values">TSV</abbr>, and they can be merged by hand
 meaningful, unique entries.
 
 And of course, if you need more in-depth assistance with fixing a failed
-migration, [our IRC channel][sopel-freenode] always welcomes questions.
+migration, [our IRC channel][sopel-channel] always welcomes questions.
 
 ### Core plugin removals
 
