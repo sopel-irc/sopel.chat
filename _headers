@@ -1,0 +1,5 @@
+---
+---
+# Opt out of FLoC cohort calculations
+/*
+  Permissions-Policy: interest-cohort=()
