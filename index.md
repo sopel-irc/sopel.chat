@@ -65,8 +65,8 @@ Sopel's source code.
 <dl class="faq">
 <dt>Where can I report a problem with Sopel?</dt>
 <dd>You can file a ticket in our <a href="{{ site.repo }}/issues">GitHub issue
-tracker</a>, or join the developers in <a href="irc://irc.freenode.net/#sopel">
-#sopel</a> on Freenode.</dd>
+tracker</a>, or join the developers in <a href="irc://irc.libera.chat/#sopel">
+#sopel</a> on Libera Chat.</dd>
 
 <dt>Is there somewhere I can go to find plugins other people have written for
 Sopel?</dt>

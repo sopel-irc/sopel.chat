@@ -18,6 +18,7 @@ exclude:
   - document_versions.py
 
 include:
+  - _headers
   - _redirects
   # Can't use docs/_static - see jekyll/jekyll#1352
   - _static
