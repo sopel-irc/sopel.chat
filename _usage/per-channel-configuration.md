@@ -20,7 +20,7 @@ specially. For example:
 ```cfg
 [#FunHaters]
 disable_plugins = emoticons,instagram,reddit,xkcd
-disable_commands = {"dice": ["roll", "choose"], "url": ["title_auto"]}
+disable_commands = {"search": ["bing", "search"], "url": ["title_auto"]}
 ```
 
 The channel name is taken literally; no pattern-matching is supported, for now.
@@ -28,8 +28,8 @@ The channel name is taken literally; no pattern-matching is supported, for now.
 In channels named `#FunHaters`, this would disable the `emoticons`, `instagram`,
 `reddit`, and `xkcd` plugins entirely; it would also prevent the automatic
 title-fetcher from `url` from running (but still allow the manual `.title`
-command), and block use of the `.roll` and `.ch` commands from the `dice`
-plugin. Details for each option below.
+command), and block use of the `.bing` and `.search` commands from the `search`
+plugin (while still allowing `.duck`). Details for each option below.
 
 ### `disable_plugins`
 
