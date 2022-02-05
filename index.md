@@ -14,9 +14,9 @@ you to use. It can leave notes for people, give you reminders, and
 [much more]({% link _usage/commands.md %}).
 
 <span class="Sopel">Sopel</span> also comes with a [fully-documented](
-{{ site.docs }}) and easy-to-use API, so you can write your own features.
-There's also an [easy tutorial]({% link _tutorials/index.md %}) you can follow,
-to help you get started.
+{{ site.docs }}) and easy-to-use API, so you can write your own features. See
+the [developer guide to plugins]({% link docs/plugin.html %}) for help getting
+started on writing your own Sopel plugins.
 
 Developing for <span class="Sopel">Sopel</span> is a great way to familiarize
 yourself with Python. It's easy to start, but there's no limit to the cool

@@ -23,3 +23,11 @@ https://sopel.netlify.com/* https://sopel.chat/:splat 301!
     endfor %}{%
   endfor
 %}
+
+# Hard-coded redirects for sections we've entirely replaced
+# Old tutorials need to die; send people to the modern docs
+# (this has to be after the `page.previously` rules so the old tutorial link
+# about installing Sopel keeps pointing to the new Installing page)
+/tutorials/* /docs/plugin.html 301
+# Specific appendix pages that have been superseded
+/appendix/formatting/ /docs/plugin/bot.html#do-it-with-style 301

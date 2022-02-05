@@ -21,7 +21,7 @@ These are likely to affect many or all plugins and deployments.
 ### Minor issues
 These only affect a small number of plugins, and/or will fail gracefully
 
-* Phenny's `last_seen_uri` and `seen` are replaced by Sopel's [memory system]({% link _tutorials/part-3-memory-and-url-info-functions.md %}). Plugins using them will likely still work, but may not interoperate with newer plugins as expected.
+* Phenny's `last_seen_uri` and `seen` are replaced by Sopel's [memory system]({{ site.docs }}bot.html#sopel.bot.Sopel.memory). Plugins using them will likely still work, but may not interoperate with newer plugins as expected.
 * `phenny.stats` will be an empty dict, which will negatively impact any plugin which uses it. This is likely limited to the `.stats` command in Phenny's `info` plugin.
 * Imports of `icao` are broken, as `icao.py` is not included in Sopel. This likely only breaks phenny's weather plugin, the functionality of which is replaced and improved in the third-party PyPI package [sopel-modules.weather](https://pypi.org/projects/sopel-modules.weather/).
 * Imports of `bot` and `irc` are broken. There is not necessarily a simple solution, but the only plugin this is likely to affect is `reload`, the functionality of which is replaced and improved in Sopel.

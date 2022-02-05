@@ -6,7 +6,7 @@ permalink: /usage/
 Some of Sopel's features warrant additional documentation, beyond what can be
 (readily) included in Sopel's `.help` output.
 
-While the [tutorials]({% link _tutorials/index.md %}) are intended mostly for
+While the [plugin documentation]({% link docs/plugin.html %}) is intended for
 developers, these usage documents are targeted squarely at users—those running
 or using the bot. The goal is to explain how to do useful things with Sopel,
 without writing any code.
