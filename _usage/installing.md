@@ -141,8 +141,8 @@ Plugin authors might also publish their works as packages; you can find them
 favorite search engine to search for e.g. "sopel weather plugin".
 
 Of course, you can also write your own custom plugins! Check out the
-[tutorial]({% link _tutorials/part-1-writing-plugins.md %}) and Sopel's
-[plugin API documentation][docs-plugin] to get started.
+[plugin development overview]({% link docs/plugin.html %}) and Sopel's
+[API documentation][docs-plugin] to get started.
 
   [config-plugins]: /docs/configuration.html#plugins
   [docs-plugin]: /docs/plugin.html
@@ -155,9 +155,3 @@ the owner of a username. This is configurable in Sopel with these settings:
 [`auth_password`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_password),
 [`auth_target`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_target),
 and [`auth_username`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_username).
-
-----
-
-Want to learn how to write plugins for Sopel? [Continue to the tutorial!]({% link _tutorials/part-1-writing-plugins.md %})
-
-Just want to play around with your new IRC bot? [Read more usage articles!]({% link _usage/index.md %})
