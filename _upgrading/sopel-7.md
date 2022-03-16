@@ -34,8 +34,8 @@ robust using features added to the language in Python 3.4.
 The crux of the matter is this: Sopel's range of supported Python releases
 remained stagnant for far too long. While the Sopel project was effectively
 unmaintained between late 2016 and early 2018, Python 3.3 reached end-of-life
-(September 29, 2017). During the lengthy development period of Sopel 7, Python
-3.4 reached end-of-life (March 18, 2019). Sopel 7 is likely to be released very
+(September 29, 2017). During the lengthy development period of Sopel 7,
+Python 3.4 reached end-of-life (March 18, 2019). Sopel 7 was released very
 close to the EOL of Python 2.7 (January 1, 2020).
 
 We can't keep testing support for these old versions forever. At some point,
@@ -61,14 +61,15 @@ to the overall Python ecosystem.
     - If our testing infrastructure becomes unable to run the older versions of
       Python, we might have to bend this one, but the goal is to avoid dropping
       any supported versions during the life of Sopel 7.x
-  - Sopel 8 will drop support for EOL Python releases immediately at the start
-    of its development cycle, and adjust version support based on the estimated
-    release date target as that becomes clearer
-    - This **definitely** means dropping 2.7, 3.3, and 3.4 (already EOL)
-    - Python 3.5 support **might** be dropped, depending on timing; it's set
-      to reach EOL around September 2020 (but no hard date yet)
-    - Python 3.6 is [tentatively][PEP-494] EOL in December 2021, but Sopel 8
-      should be finished long before then
+  - Sopel 8 will no longer support EOL Python releases, and the supported
+    range will be adjusted as needed during development
+    - Python 2.7, 3.3, 3.4, and 3.5 were already EOL when work on Sopel 8
+      began in earnest, and were dropped immediately
+    - Python 3.6 was dropped following its [December 2021][PEP-494] EOL date
+
+Whatever minimum Python version is required for Sopel 8.0.0 will remain
+supported (by best effort) throughout the 8.x series, just as has been
+done during the life of Sopel 7.x.
 
 [PEP-494]: https://www.python.org/dev/peps/pep-0494/
 
