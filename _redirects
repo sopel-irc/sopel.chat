@@ -3,6 +3,12 @@
 # Redirect default Netlify subdomain to primary domain
 https://sopel.netlify.com/* https://sopel.chat/:splat 301!
 
+# Shortcuts used in plugins
+## issues
+/i/* https://github.com/sopel-irc/sopel/issues/:splat 302
+## pull requests
+/p/* https://github.com/sopel-irc/sopel/pull/:splat 302
+
 # YAML front-matter-based redirects for renamed pages
 {% for collection in site.collections
   %}{% for page in collection.docs
