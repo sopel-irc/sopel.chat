@@ -4,8 +4,10 @@
 https://sopel.netlify.com/* https://sopel.chat/:splat 301!
 
 # Shortcuts used in plugins
-## search
-/site-op https://github.com/sopel-irc/sopel/issues/1415 302
+## issues
+/i/* https://github.com/sopel-irc/sopel/issues/:splat 302
+## pull requests
+/p/* https://github.com/sopel-irc/sopel/pull/:splat 302
 
 # YAML front-matter-based redirects for renamed pages
 {% for collection in site.collections
