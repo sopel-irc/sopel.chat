@@ -220,9 +220,9 @@ release the migration as part of your next version bump. The choice is yours;
 we just provide the tools you need to get started.
 
   [commit-adding-nick-class]: https://github.com/sopel-irc/sopel/commit/f8ca0b9
-  [docs-db-get-channel-slug]: /docs/db.html#sopel.db.SopelDB.get_channel_slug
-  [docs-identifier-lower]: /docs/api.html#sopel.tools.Identifier._lower
-  [docs-identifier-lower-swapped]: /docs/api.html#sopel.tools.Identifier._lower_swapped
+  [docs-db-get-channel-slug]: /docs/package/db.html#sopel.db.SopelDB.get_channel_slug
+  [docs-identifier-lower]: /docs/package/tools/identifiers.html#sopel.tools.identifiers.Identifier._lower
+  [docs-identifier-lower-swapped]: /docs/package/tools/identifiers.html#sopel.tools.identifiers.Identifier._lower_swapped
 
 ### Accessing the database
 
@@ -247,11 +247,11 @@ to update your plugin's documentation to warn users that non-SQLite databases
 haven't been tested, or make sure the plugin is marked as compatible with Sopel
 <7.0 only until it can be tested and/or updated.
 
-  [docs-db]: /docs/db.html
-  [docs-db-connect]: /docs/db.html#sopel.db.SopelDB.connect
-  [docs-db-execute]: /docs/db.html#sopel.db.SopelDB.execute
-  [docs-db-get_uri]: /docs/db.html#sopel.db.SopelDB.get_uri
-  [docs-db-session]: /docs/db.html#sopel.db.SopelDB.session
+  [docs-db]: /docs/package/db.html
+  [docs-db-connect]: /docs/package/db.html#sopel.db.SopelDB.connect
+  [docs-db-execute]: /docs/package/db.html#sopel.db.SopelDB.execute
+  [docs-db-get_uri]: /docs/package/db.html#sopel.db.SopelDB.get_uri
+  [docs-db-session]: /docs/package/db.html#sopel.db.SopelDB.session
 
 ### Managing URL callbacks
 
