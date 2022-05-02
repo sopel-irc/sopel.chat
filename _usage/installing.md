@@ -111,8 +111,8 @@ brackets, that's the default setting, and you can just hit enter to keep it.
 When asked for the channels to connect to, enter them separated by commas
 (e.g. `#spam,#eggs,#cheese`) This wizard doesn't cover every option, only the
 ones which are needed to get the bot running. The core config settings are all
-[documented]({{ site.docs }}config.html#the-core-configuration-section),
-if you want to make other tweaks.
+[documented]({{ site.docs }}configuration.html), if you want to make other
+tweaks.
 
 Finally, it will ask you about configuration settings for plugins. This will
 automatically detect what plugins you have available, and run their
@@ -151,7 +151,12 @@ Of course, you can also write your own custom plugins! Check out the
 
 Most IRC networks have a service that allows you to authenticate yourself as
 the owner of a username. This is configurable in Sopel with these settings:
-[`auth_method`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_method),
-[`auth_password`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_password),
-[`auth_target`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_target),
-and [`auth_username`]({{ site.docs }}config.html#sopel.config.core_section.CoreSection.auth_username).
+[`auth_method`]({{ site.docs }}package/config/core_section.html#sopel.config.core_section.CoreSection.auth_method),
+[`auth_password`]({{ site.docs }}package/config/core_section.html#sopel.config.core_section.CoreSection.auth_password),
+[`auth_target`]({{ site.docs }}package/config/core_section.html#sopel.config.core_section.CoreSection.auth_target),
+and [`auth_username`]({{ site.docs }}package/config/core_section.html#sopel.config.core_section.CoreSection.auth_username).
+
+You can read more about [authentication configuration](config-auth) in the
+documentation.
+
+  [config-auth] /docs/configuration.html#authentication
