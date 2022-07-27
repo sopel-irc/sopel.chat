@@ -167,13 +167,20 @@ convenience.
 
 ## Adding plugins
 
-The easiest place to put new plugins is in `~/.sopel/plugins`. Simply create
-this directory if it does not exist, and drop `.py` plugin files into it.
-Sopel will auto-load them unless [configured otherwise][config-plugins].
+There are a wide variety of plugins available to extend Sopel's functionality.
+You can find many by [searching PyPI](https://pypi.org/search/?q=sopel). To
+install a plugin that's hosted there, just activate your virtualenv, run
+e.g. `pip install --upgrade sopel-youtube`, configure the plugin if necessary,
+and restart your Sopel bot.
 
-Plugin authors might also publish their works as packages; you can find them
-[by searching PyPI](https://pypi.org/search/?q=%22sopel%22), or by using your
-favorite search engine to search for e.g. "sopel weather plugin".
+Plugins which are python packages but aren't published on PyPI can be installed
+by downloading the source code, activating your virtualenv, running
+`pip install --upgrade path/to/sopel-foobar/`, configuring the plugin if
+necessary, and restarting the bot.
+
+Finally, some plugins consist of just a .py file. These can be installed by
+creating the directory `~/.sopel/plugins/` and placing the plugin file inside
+it. Sopel will auto-load them unless [configured otherwise][config-plugins].
 
 Of course, you can also write your own custom plugins! Check out the
 [plugin development overview]({% link docs/plugin.html %}) and Sopel's
