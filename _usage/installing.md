@@ -6,63 +6,79 @@ previously:
   - /download.html
 ---
 
-**NOTE: This guide is for Sopel 7.0+. If you are still using a version named
-"Willie", we highly encourage you to upgrade, as such old versions are no
-longer supported.**
-
 ## Installing Sopel
 
-Sopel requires Python 2.7.x or Python 3.3+ to run. Under Python 2.7, Sopel
-requires `backports.ssl_match_hostname` to be installed. Use `pip install
-backports.ssl_match_hostname` or `yum install
-python-backports.ssl_match_hostname` to install it, or download and install it
-manually [from PyPI](https://pypi.org/project/backports.ssl_match_hostname).
+Sopel 7 requires Python 2.7, or Python 3.3+. Sopel 8 will require Python 3.7 or
+newer.
 
-There is also a detailed [system requirements]({% link
-_usage/system-requirements.md %}) page that is kept more-or-less updated (by a
-human) with what is required for each plugin.
+**The recommended way to install Sopel is using `pip`.** Your distro may have a
+package available, but these are not maintained by the Sopel team, and are
+[often out of date](https://repology.org/project/sopel/versions).
+- Alpine: [sopel](https://pkgs.alpinelinux.org/packages?name=sopel)
+- Arch and derivatives:
+  [community/sopel](https://archlinux.org/packages/community/any/sopel/)
+  [aur/sopel-git](https://aur.archlinux.org/packages/sopel-git)
+- Debian: Install with `pip`, the
+  [packages](https://packages.debian.org/search?keywords=sopel) are extremely
+  out of date.
+- NixOS: `python3.10-sopel`
+- Ubuntu: Install with `pip`, the
+  [packages](https://packages.ubuntu.com/search?keywords=sopel) are extremely
+  out of date.
 
 If you want to use Python 3 on CentOS, you may want to see [this guide]({% link
 _appendices/using-python-3-on-centos-7.md %}) on getting that set up easily.
 
-**Important:** Sopel 8.0, the next major update, will support Python 3.7+ only.
 
-### Latest stable release
+### Recommended installation
 
-On most systems where you can run Python, the best way to install Sopel is to
-just `sudo pip install sopel`. (On Windows, leave out the `sudo`.) Installing
-with pip will "just handle" dependencies for you, so you won't need to do so
-manually (except for installing `backports.ssl_match_hostname` as described
-[above](#installing-sopel), if you're on Python 2.7).
+#### Installing pip
 
-Nearly all Python versions Sopel supports should include pip out of the box. But
-if your installation doesn't have it, you'll have to get it yourself. On Debian
-and Ubuntu, you can do this by running `sudo apt-get install python-pip` in a
-terminal. For macOS and Windows, follow the `pip` setup instructions
-[here](https://pip.readthedocs.org/en/latest/installing/).
+Pip is often automatically installed alongside Python, but if it isn't, you'll
+need to install it yourself. On most distributions you can just install the
+`python-pip` package, e.g. `sudo apt install python-pip`.
+For macOS and Windows, follow the `pip`
+[setup instructions](https://pip.readthedocs.org/en/latest/installing/).
 
-Arch users can install the `sopel` package from the [community] repository,
-though new versions might take slightly longer to become available.
+#### Installing Sopel
 
-Failing both of those options, you can grab the latest tarball [from GitHub]({{
-site.repo }}/releases/latest) and follow the steps for installing from the
-latest source below.
+To install or update Sopel system-wide, you can usually just run
+`sudo pip install --upgrade sopel` – or on windows, just
+`pip install --upgrade sopel`.
 
-### Latest source
+If you prefer to install it in a
+[virtualenv](https://docs.python.org/3/library/venv.html), first create it with
+`python3 -m venv path/to/sopel/venv`. Every time you open your terminal,
+before running `sopel` commands you must activate the virtualenv by running
+`source path/to/sopel/venv`. You can then run `pip install --upgrade sopel`
+to install or upgrade Sopel and its dependencies.
 
-First, either clone the repository with `git clone
-git://github.com/sopel-irc/sopel.git` or download a tarball [from GitHub]({{
-site.repo }}/releases/latest).
+Don't forget to check the [upgrade notes](#upgrading) before upgrading!
 
-In the source directory (whether cloned or extracted from the tarball) run
-`pip install -e .`. During the installation process, `pip` should install any
-missing dependencies automatically. After it finishes, you can run `sopel` to
-configure and start the bot.
+Once the `sopel` package is installed, see below for how to
+[configure](#configuring) the bot and have it start automatically as a
+[service](#creating-a-service).
 
-Installing this way ([an "editable"
-install](https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs))
-will let you tweak Sopel's code to test out changes without having to
-reinstall the package every time you make an edit.
+
+### Installing from source
+
+First, follow the above instructions to [install `pip`](#installing-pip)
+if necessary, and create and activate a virtualenv if you prefer.
+
+Next, you'll need the source code. You can get this by downloading and
+extracting a tarball from the [releases page]({{ site.repo }}/releases/latest)
+on the Sopel GitHub, or by cloning the repository with
+`git clone https://github.com/sopel-irc/sopel.git`.
+
+You can then run `pip install --upgrade --editable path/to/sopel`.
+This will install all of Sopel's dependencies and create an
+["editable" installation](https://pip.pypa.io/en/stable/topics/local-project-installs/#editable-installs),
+which allows you to make and test changes to Sopel's source code without having
+to reinstall it with `pip` each time.
+
+To update installations from source, you will need to either download a new
+tarball or use git to fetch updates.
+
 
 ### Upgrading
 
@@ -90,17 +106,14 @@ for example, if you still have Willie 4 running, and you want to get Sopel 6,
 you should read the Willie 5 migration guide (covers going from 4 to 5) _and_
 the Sopel 6 migration guide (covers going from 5 to 6).
 
-## Creating a service (optional)
+Once you're aware of any changes you may need to make for major upgrades, you
+can use the instructions in the
+[Recommended installation](#installing-sopel) or
+[Installing from source](#installing-from-source) sections to install the
+updates.
 
-Sopel's source repository has example `systemd` unit files in [the `contrib`
-folder]({{ site.repo }}/tree/master/contrib). Both single- (`sopel.service`)
-and multi-instance (`sopel@.service`) examples exist.
 
-If you create a script or configuration file to run Sopel under another init
-system, feel free to submit it to [the repo]({{ site.repo }}) for other users'
-convenience.
-
-## First run
+## Configuring
 
 > If you're running Sopel on Windows, replace all following occurrences of `sopel` with `python sopel.py`
 
@@ -108,27 +121,49 @@ To run Sopel, just type the command `sopel` in your terminal. The first time
 you run Sopel, it will bring you through a quick setup wizard. Most of the
 questions should be pretty straightforward. When you see something in square
 brackets, that's the default setting, and you can just hit enter to keep it.
-When asked for the channels to connect to, enter them separated by commas
-(e.g. `#spam,#eggs,#cheese`) This wizard doesn't cover every option, only the
-ones which are needed to get the bot running. The core config settings are all
-[documented]({{ site.docs }}config.html#the-core-configuration-section),
-if you want to make other tweaks.
+When asked for a list of items like which channels to connect to, enter one
+per line, then an empty line when you're done. This wizard doesn't cover every
+option, only the ones which are needed to get the bot running. The core config
+settings are all [documented]({{ site.docs }}config.html#the-core-configuration-section),
+if you want to make other tweaks in the config file.
 
 Finally, it will ask you about configuration settings for plugins. This will
 automatically detect what plugins you have available, and run their
 configuration utility if they have one.
 
-Your configuration file will be stored in `~/.sopel`. The file will be called
-`default.cfg` by default. You can access the configuration wizard again by
-running `sopel configure`. You can also get just the plugin options with
-`sopel configure --plugins`. You can specify another configuration file with
-`sopel -c filename`. This works both for the configuration utility and for
-running the bot. This way, you can keep multiple different config files for
-different networks, for example. You can see a list of all these options by
-running `sopel -h` or `sopel --help`.
+By default, your configuration file will be stored as `~/.sopel/default.cfg`.
+You can change this with the `-c` flag, e.g. `sopel -c other/config.cfg` or
+`sopel configure -c oftc.cfg`. This allows you to easily keep multiple config
+files for running multiple bots, for example on different networks.
+You can access the configuration wizard again by running `sopel configure`,
+or configure only plugins with `sopel configure --plugins`.
+You can get a list of all available options by running `sopel --help`.
 
-Once you've finished the configuration tool, Sopel will automatically start,
-connect to the network, and join the channels you specified.
+Once you're done configuring Sopel, you can start it by running the command
+`sopel`.
+
+
+## Creating a service
+
+Configuring a service for Sopel is optional, but makes it easy to have the bot
+start automatically.
+
+In the [`contrib` folder]({{ site.repo }}/tree/master/contrib) of Sopel's
+source repository are several example files to help with this.
+
+For distros using systemd, there are examples for both single-instance
+(`sopel.service`) and multi-instance (`sopel@.service`) setups.
+To use one, edit it if necessary, then copy it to `/etc/systemd/system/`,
+run `sudo systemctl daemon-reload`, and enable/start the service
+(`sudo systemctl enable --now sopel.service` or `sopel@myconfig.service`).
+
+If you are using a virtualenv, the `sopel` program will be e.g.
+`your/venv/bin/sopel`.
+
+If you create a script or configuration file to run Sopel under another init
+system, feel free to submit it to [the repo]({{ site.repo }}) for other users'
+convenience.
+
 
 ## Adding plugins
 
@@ -146,6 +181,7 @@ Of course, you can also write your own custom plugins! Check out the
 
   [config-plugins]: /docs/configuration.html#plugins
   [docs-plugin]: /docs/plugin.html
+
 
 ## Authentication
 
