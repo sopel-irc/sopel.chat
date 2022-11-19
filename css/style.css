@@ -158,6 +158,7 @@ header h2 {
 }
 .content article nav ul li.prevlink a:before {
     content: "←";
+    padding-right: 0.25em;
 }
 .content article nav ul li.uplink {
     display: inline-block;
@@ -172,6 +173,7 @@ header h2 {
 }
 .content article nav ul li.nextlink a:after {
     content: "→";
+    padding-left: 0.25em;
 }
 
 .content article.column-list ul {
