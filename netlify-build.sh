@@ -13,7 +13,9 @@ echo "Generating plugin command/config pages"
 python3 document_sopel_plugins.py --sopel=_sopel
 
 echo "Installing Sopel's dev dependencies"
-pip3 install -r ./_sopel/dev-requirements.txt
+# Jinja2 pin for dependency hell on Sopel 7.x;
+# shouldn't be necessary once we switch to docs for 8.0
+pip3 install -r ./_sopel/dev-requirements.txt 'Jinja2<3.1'
 
 echo "Building Sphinx docs"
 cd _sopel/docs
