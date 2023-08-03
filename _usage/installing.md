@@ -51,10 +51,10 @@ latest source below.
 ### Latest source
 
 First, either clone the repository with `git clone
-git://github.com/sopel-irc/sopel.git` or download a tarball [from GitHub]({{
-site.repo }}/releases/latest).
+git://github.com/sopel-irc/sopel.git` or download a [source zip from GitHub]({{
+site.repo }}/archive/refs/heads/master.zip).
 
-In the source directory (whether cloned or extracted from the tarball) run
+In the source directory (whether cloned or extracted from the zipfile), run
 `pip install -e .`. During the installation process, `pip` should install any
 missing dependencies automatically. After it finishes, you can run `sopel` to
 configure and start the bot.
