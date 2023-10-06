@@ -51,7 +51,7 @@ latest source below.
 ### Latest source
 
 First, either clone the repository with `git clone
-git://github.com/sopel-irc/sopel.git` or download a [source zip from GitHub]({{
+https://github.com/sopel-irc/sopel.git` or download a [source zip from GitHub]({{
 site.repo }}/archive/refs/heads/master.zip).
 
 In the source directory (whether cloned or extracted from the zipfile), run
