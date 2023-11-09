@@ -37,3 +37,13 @@ https://sopel.netlify.com/* https://sopel.chat/:splat 301!
 /tutorials/* /docs/plugin.html 301
 # Specific appendix pages that have been superseded
 /appendix/formatting/ /docs/plugin/bot.html#do-it-with-style 301
+
+# Moving package documentation to its own folder
+/docs/api.html /docs/package/api.html 301
+/docs/bot.html /docs/package/bot.html 301
+/docs/config.html /docs/package/config.html 301
+/docs/db.html /docs/package/db.html 301
+/docs/irc.html /docs/package/irc.html 301
+/docs/lifecycle.html /docs/package/lifecycle.html 301
+/docs/plugin/internals.html /docs/package/plugins.html 301
+/docs/trigger.html /docs/package/trigger.html 301

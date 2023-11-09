@@ -35,9 +35,9 @@ plugin (while still allowing `.duck`). Details for each option below.
 
 The `disable_plugins` option is a simple comma-separated list of plugin names,
 just like [`core.enable`]({{ site.docs
-}}config.html#sopel.config.core_section.CoreSection.enable) or
+}}package/config/core_section.html#sopel.config.core_section.CoreSection.enable) or
 [`core.exclude`]({{ site.docs
-}}config.html#sopel.config.core_section.CoreSection.exclude).
+}}package/config/core_section.html#sopel.config.core_section.CoreSection.exclude).
 
 ### `disable_commands`
 
