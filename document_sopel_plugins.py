@@ -60,7 +60,7 @@ def main(argv=None):
     os.sys.path.insert(0, args.sopel_root)
 
     filenames = []
-    plugins_dir = os.path.join(args.sopel_root, 'sopel', 'modules')
+    plugins_dir = os.path.join(args.sopel_root, 'sopel', 'builtins')
 
     for fn in os.listdir(plugins_dir):
         if fn.endswith('.py') and not fn.startswith('_'):
