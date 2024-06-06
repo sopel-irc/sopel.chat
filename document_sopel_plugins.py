@@ -11,10 +11,10 @@ Licensed under the Eiffel Forum License 2.
 https://sopel.chat
 """
 import argparse
+from importlib.machinery import SourceFileLoader
 import inspect
 import operator
 import os
-import imp
 import sys
 try:
     import sopel
@@ -113,7 +113,8 @@ def main(argv=None):
     print("Done!")
 
 def document_plugin(plugin_file, f):
-    try: plugin = imp.load_source(os.path.basename(plugin_file)[:-3], plugin_file)
+    try:
+        plugin = SourceFileLoader(os.path.basename(plugin_file)[:-3], plugin_file).load_module()
     except Exception as e:
         print ("Error loading %s: %s\nThis plugin will not be documented."
                % (plugin_file, e))
