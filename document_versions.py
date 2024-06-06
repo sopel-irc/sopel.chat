@@ -74,15 +74,6 @@ def main(argv=None):
 
     print("Done! {} versions documented.".format(len(versions.keys())))
 
-    latest = list(versions.keys())[0]
-    with open('latest.json', 'w') as f:
-        f.write("{{\n"  # double braces so Python doesn't get confused
-                "    \"version\": \"{version}\",\n"
-                "    \"unstable\": \"{version}\",\n"
-                "    \"release_notes\": \"https://sopel.chat/changelog/{version}/\"\n"
-                "}}".format(version=latest))
-
-    print("Generated latest.json file pointing to version {}.".format(latest))
 
 if __name__ == '__main__':
     main()
