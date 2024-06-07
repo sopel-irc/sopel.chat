@@ -3,7 +3,6 @@
 _site/*
 build/*
 docs/*
-Gemfile.lock
 _changelogs/*.*.md
 _usage/commands.md
 _usage/plugin-configuration.md

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'ffi', '<1.17'
 gem 'jekyll', '3.8.7'
 gem 'redcarpet'
 gem 'rouge'
