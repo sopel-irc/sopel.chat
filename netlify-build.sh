@@ -3,11 +3,14 @@ set -e
 
 echo "Starting custom build script..."
 
-echo "Generating changelogs & latest.json file"
+echo "Generating changelogs"
 python3 document_versions.py --news=_sopel/NEWS
 
 echo "Installing Sopel globally for plugin autodoc script"
 pip3 install ./_sopel
+
+echo "Generating latest.json file"
+python3 generate_latest_json.py
 
 echo "Generating plugin command/config pages"
 python3 document_sopel_plugins.py --sopel=_sopel
