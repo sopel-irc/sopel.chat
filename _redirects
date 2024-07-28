@@ -24,7 +24,7 @@ https://sopel.netlify.com/* https://sopel.chat/:splat 301!
 {% for collection in site.collections
   %}{% for page in collection.docs
     %}{% if page.redirect_to
-      %}{{ page.url }}* {{ page.redirect_to }} 301!
+      %}{{ page.url }} {{ page.redirect_to }} 301!
 {%    endif %}{%
     endfor %}{%
   endfor
